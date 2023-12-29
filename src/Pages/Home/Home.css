@@ -1,0 +1,33 @@
+.home{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.title-container{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    /* background-color: red; */
+    margin-bottom: 32px;
+}
+
+.flex{
+    display: flex;
+    gap: 64px;
+}
+
+.brands{
+    padding-top: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brands-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}

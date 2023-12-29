@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Inder";
+  src: url("./assets/font/Inder-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Imperial Script";
+  src: url("./assets/font/ImperialScript-Regular.ttf") format("truetype");
+}
+
+:root {
+  --bg-color : #F9F5F6;
+  --chinese-red : #C90A1E;
+  --info-blue : #25CBE1;
+
+  --body-font: "Inder", cursive;
+  --company-name-font: "imperial script", cursive;
+
+  --gapping-tape: 47px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-color);
+  font-family: var(--body-font);
+  padding: 0 16px;
+
+  max-width: 1080px;
+  margin: auto;
+}
+
+
+
+h1, h2{
+  font-size: 32px;
+  font-weight: normal;
+}
+
+p{
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.company-font{
+  font-family: var(--company-name-font);
+  font-size: 48px;
+}
+
+.font-48{
+  font-size: 48px;
+}
+
+.font-40{
+  font-size: 40px;
+}
+
+.font-32{
+  font-size: 32px;
+}
+
+.font-24{
+  font-size: 24px;
+}
+
+.font-20{
+  font-size: 20px;
+}
+
+.font-16{
+  font-size: 16px;
+}
+
+.font-14{
+  font-size: 14px;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.logo{
+  height: 24px;
+}
+
+.chinese-red{
+  color: var(--chinese-red);
+}
+
+.bg-color{
+  color: var(--bg-color);
+}
+
+.text-center{
+  text-align: center;
+}
+
+.mb-8{
+  margin-bottom: 8px;
+}
+.mb-16{
+  margin-bottom: 16px
+}
+
+.width-64{
+  width: 64px;
+}
+
+.width-48{
+  width: 48px
+}
