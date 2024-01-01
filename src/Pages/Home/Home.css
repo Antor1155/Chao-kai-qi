@@ -39,3 +39,8 @@
 }
 
 
+.d-flex-between{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:var(--gapping-tape)
+}
