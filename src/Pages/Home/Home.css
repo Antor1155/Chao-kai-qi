@@ -1,8 +1,8 @@
-.landing-screen{
+#landing-screen{
     display: flex;
     justify-content: space-between;
-    border: 1px solid;
 
+    margin-bottom: calc(2* var(--gapping-tape));
 }
 
 .main-content{
@@ -37,3 +37,5 @@
     align-items: center;
     gap: 16px;
 }
+
+

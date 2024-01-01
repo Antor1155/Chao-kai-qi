@@ -8,7 +8,7 @@ import "./Home.css"
 const Home = () => {
     return (
         <>
-        <section className="landing-screen">
+        <section id="landing-screen">
             <div className="main-content">
                 <div className="title-container">
                     <h1>Global Wholesale <span className="chinese-red">supplier</span> <br />
@@ -50,7 +50,7 @@ const Home = () => {
             </div>
         </section>
 
-        <section style={{height: "200vh", background: "red"}}>
+        <section style={{height: "200vh", border: "1px solid red"}}>
 
         </section>
 
