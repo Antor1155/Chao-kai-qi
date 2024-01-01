@@ -1,0 +1,48 @@
+.singleProduct{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: white;
+    z-index: 1;
+
+    transition:all .5s;
+
+    & img{
+        width: 250px;
+        height: 225px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+
+    & button{
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        padding:7px 0 6px 0;
+        background-color: #ECC35C;
+
+        transition: background-color .5s;
+    }
+}
+
+.singleProduct:hover{
+    transform: translate(0,-15px);
+    box-shadow: 4px 9px 4px #00000052;
+
+    & button{
+        background-color: #EDAB00;
+    }
+}
+
+.color-options{
+    display: flex;
+    gap: 8px;
+    
+    & div{
+        width: 16px;
+        height: 16px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    
+}

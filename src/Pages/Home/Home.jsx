@@ -1,7 +1,7 @@
 import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 import brands from "../../assets/brands/brands.png";
-import banner from "../../assets/banner/carbanner.avif"
+import banner from "../../assets/banner/banner.png"
 
 import "./Home.css"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
@@ -11,7 +11,7 @@ const Home = () => {
     const [products, setProducts] = useState([])
     
     useEffect(()=>{
-     setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21, 22 ])   
+     setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21 ])   
     },[])
 
     return (
@@ -58,13 +58,13 @@ const Home = () => {
             </div>
         </section>
 
-        <section style={{height: "200vh", border: "1px solid red"}}>
+        <section className="products-section">
             <div className="d-flex-between">
                 <h2>Our <span className="chinese-red">Top</span> Products</h2>
                 <h2>At best price</h2>
             </div>
 
-            <div>
+            <div className="top-product-container">
                 {products.map((product, index) => <SingleProduct key={index} product={product}></SingleProduct>)}
             </div>
         </section>

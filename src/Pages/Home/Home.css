@@ -38,9 +38,21 @@
     gap: 16px;
 }
 
+/* product section starts form here  */
+
+.products-section{
+margin-bottom: calc(2 * var(--gapping-tape));
+}
 
 .d-flex-between{
     display: flex;
     justify-content: space-between;
     margin-bottom:var(--gapping-tape)
+}
+
+.top-product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
 }

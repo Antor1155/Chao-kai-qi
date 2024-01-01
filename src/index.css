@@ -40,6 +40,7 @@ h1, h2{
   font-weight: normal;
 }
 
+
 p{
   font-size: 16px;
 }
@@ -80,6 +81,14 @@ a{
 
 .font-14{
   font-size: 14px;
+}
+
+.font-normal{
+  font-weight: normal;
+}
+
+.font-bold{
+  font-weight: bold;
 }
 
 .align-center{
