@@ -16,5 +16,13 @@ nav{
         display: flex;
         align-items: center;
         gap: 24px;
+
+        & span{
+            transition: .3s;
+        }
+
+        & span:hover{
+            scale: 1.1;
+        }
     }
 }

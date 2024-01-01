@@ -31,19 +31,19 @@ const Navbar = () => {
                     animate="show"
                 >
 
-                    <motion.span variants={item} ><Link to="/">HOME</Link></motion.span>
-                    <motion.span variants={item} ><Link to="/">CATAGORY</Link></motion.span>
-                    <motion.span variants={item} ><Link to="/">ALL PRODUCTS</Link></motion.span>
-                    <motion.span variants={item} ><Link to="/">ABOUT US</Link></motion.span>
-                    <motion.span variants={item} ><Link to="/">CONTACT US</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">HOME</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">CATAGORY</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">ALL PRODUCTS</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">ABOUT US</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">CONTACT US</Link></motion.span>
 
-                    <motion.span variants={item} >
+                    <motion.span variants={item} whileTap={{scale: .7}}>
                         <Link to="/">
                             <img src={languageButton} alt="language changing button" className="logo" />
                         </Link>
                     </motion.span>
 
-                    <motion.span variants={item} >
+                    <motion.span variants={item} whileTap={{scale: .7}}>
                         <Link to="/">
                             <img src={cart} alt="cart page of products" className="logo" />
                         </Link>
