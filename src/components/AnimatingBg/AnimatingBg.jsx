@@ -6,9 +6,7 @@ import el2 from "../../assets/bg/Ellipse3.svg"
 import el3 from "../../assets/bg/Ellipse4.svg"
 import el4 from "../../assets/bg/Ellipse5.svg"
 
-import st1 from "../../assets/bg/Star1.svg"
 import st2 from "../../assets/bg/Star2.svg"
-import st3 from "../../assets/bg/Star3.svg"
 
 
 const AnimatingBg = () => {
@@ -49,27 +47,17 @@ const AnimatingBg = () => {
 
             <motion.img
                 variants={animationValue}
-                initial={{left: " 70%"}}
+                initial={{left: " 50%"}}
                 animate="animate"
                 src={el4} alt="background Image mesh gradient" />
 
-            <motion.img
-                variants={animationValue}
-                initial={{top: " 25%"}}
-                animate="animate"
-                src={st1} alt="background Image mesh gradient" />
+            
 
             <motion.img
                 variants={animationValue}
                 initial={{left: " 10%"}}
                 animate="animate"
                 src={st2} alt="background Image mesh gradient" />
-
-            <motion.img
-                variants={animationValue}
-                initial={{top: " 5%"}}
-                animate="animate"
-                src={st3} alt="background Image mesh gradient" />
 
         </motion.div>
     );
