@@ -1,19 +1,75 @@
 import { motion } from "framer-motion"
+import "./AnimatingBg.css"
+
+import el1 from "../../assets/bg/Ellipse1.svg"
+import el2 from "../../assets/bg/Ellipse3.svg"
+import el3 from "../../assets/bg/Ellipse4.svg"
+import el4 from "../../assets/bg/Ellipse5.svg"
+
+import st1 from "../../assets/bg/Star1.svg"
+import st2 from "../../assets/bg/Star2.svg"
+import st3 from "../../assets/bg/Star3.svg"
+
 
 const AnimatingBg = () => {
 
-    
+    const animationValue = {
+        animate: {
+            x: ["0%", "50%", "50%", "-50%", "-50%", "0%"],
+            y: ["0%", "0%", "50%", "50%", "-50%", "0%"],
+
+            transition: {
+                duration: 15,
+                ease: "linear",
+                repeat: "loop"
+            }
+        },
+    }
 
     return (
-        <motion.div
-            style={{
-                width: '50vw',
-                height: '70vh',
-                background: "rgba(201, 10, 30, 9)",
-                position: 'absolute',
-                zIndex: -1,
-            }}
+        <motion.div id="bg-div"
         >
+            <motion.img
+                variants={animationValue}
+                initial={{ top: " 50%" }}
+                animate="animate"
+                src={el1} alt="background Image mesh gradient" />
+
+            <motion.img
+                variants={animationValue}
+                initial={{ top: " 10%" }}
+                animate="animate"
+                src={el2} alt="background Image mesh gradient" />
+
+            <motion.img
+                variants={animationValue}
+                initial={{left: " 50%"}}
+                animate="animate"
+                src={el3} alt="background Image mesh gradient" />
+
+            <motion.img
+                variants={animationValue}
+                initial={{left: " 70%"}}
+                animate="animate"
+                src={el4} alt="background Image mesh gradient" />
+
+            <motion.img
+                variants={animationValue}
+                initial={{top: " 25%"}}
+                animate="animate"
+                src={st1} alt="background Image mesh gradient" />
+
+            <motion.img
+                variants={animationValue}
+                initial={{left: " 10%"}}
+                animate="animate"
+                src={st2} alt="background Image mesh gradient" />
+
+            <motion.img
+                variants={animationValue}
+                initial={{top: " 5%"}}
+                animate="animate"
+                src={st3} alt="background Image mesh gradient" />
 
         </motion.div>
     );
