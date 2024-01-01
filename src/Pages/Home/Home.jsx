@@ -1,7 +1,7 @@
 import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 import brands from "../../assets/brands/brands.png";
-import banner from "../../assets/banner/banner.png"
+import banner from "../../assets/banner/banner.webp"
 
 import "./Home.css"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
@@ -40,7 +40,7 @@ const Home = () => {
                 <div style={{ height: "275px", borderRadius:"32px", overflow:"hidden" }}>
 
                     <img 
-                        style={{width: "100%", height:"100%"}}
+                        style={{width: "100%", height:"100%", objectFit: "fill"}}
                     src={banner} alt="" />
                 </div>
             </div>

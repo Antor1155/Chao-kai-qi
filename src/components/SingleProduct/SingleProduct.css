@@ -7,11 +7,19 @@
 
     transition:all .5s;
 
-    & img{
+    & .image-container{
         width: 250px;
         height: 225px;
         border-radius: 8px;
         margin-bottom: 16px;
+        overflow: hidden;
+
+        & img{
+            width: 100%;
+            height: 100%;
+
+            transition: .5s;
+        }
     }
 
     & button{
@@ -28,6 +36,10 @@
 .singleProduct:hover{
     transform: translate(0,-15px);
     box-shadow: 4px 9px 4px #00000052;
+
+    & img{
+        scale: 1.05;
+    }
 
     & button{
         background-color: #EDAB00;
