@@ -1,13 +1,14 @@
 import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 import brands from "../../assets/brands/brands.png";
+import banner from "../../assets/banner/carbanner.avif"
 
 import "./Home.css"
 
 const Home = () => {
     return (
         <section className="home">
-            <div >
+            <div className="main-content">
                 <div className="title-container">
                     <h1>Global Wholesale <span className="chinese-red">supplier</span> <br />
                         Of Phone <span className="chinese-red">Case-Cover</span> <br />
@@ -27,7 +28,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div style={{ height: "275px", background: "black", borderRadius:"32px" }}>
+                <div style={{ height: "275px", borderRadius:"32px", overflow:"hidden" }}>
+
+                    <img 
+                        style={{width: "100%", height:"100%"}}
+                    src={banner} alt="" />
                 </div>
             </div>
 
@@ -40,7 +45,6 @@ const Home = () => {
                     <img className="width-48" src={brands} alt="supported phone brands" />
                     <img className="width-48" src={brands} alt="supported phone brands" />
                     <img className="width-48" src={brands} alt="supported phone brands" />
-
                 </div>
             </div>
 

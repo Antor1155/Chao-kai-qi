@@ -1,12 +1,15 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
+import AnimatingBg from './components/AnimatingBg/AnimatingBg'
 
 function App() {
 
 
   return (
     <>
+      <AnimatingBg />
+      
       <Navbar></Navbar>
       <mian>
         <Outlet></Outlet>

@@ -28,9 +28,9 @@
 body{
   background-color: var(--bg-color);
   font-family: var(--body-font);
-  padding: 0 16px;
+  padding: 0 5%;
 
-  max-width: 1080px;
+  /* max-width: 1080px; */
   margin: auto;
 }
 
