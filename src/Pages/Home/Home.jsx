@@ -7,7 +7,8 @@ import "./Home.css"
 
 const Home = () => {
     return (
-        <section className="home">
+        <>
+        <section className="landing-screen">
             <div className="main-content">
                 <div className="title-container">
                     <h1>Global Wholesale <span className="chinese-red">supplier</span> <br />
@@ -47,8 +48,13 @@ const Home = () => {
                     <img className="width-48" src={brands} alt="supported phone brands" />
                 </div>
             </div>
+        </section>
+
+        <section style={{height: "200vh", background: "red"}}>
 
         </section>
+
+        </>
     );
 };
 

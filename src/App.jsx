@@ -9,9 +9,8 @@ function App() {
   return (
     <>
       <AnimatingBg />
-      
       <Navbar></Navbar>
-      <mian>
+      <mian style={{width: "100vw", overflow: "hidden"}}>
         <Outlet></Outlet>
       </mian>
     </>

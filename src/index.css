@@ -29,8 +29,7 @@ body{
   background-color: var(--bg-color);
   font-family: var(--body-font);
   padding: 0 5%;
-
-  /* max-width: 1080px; */
+  overflow-x: hidden;
   margin: auto;
 }
 
