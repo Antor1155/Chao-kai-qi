@@ -10,7 +10,7 @@ nav{
     justify-content: space-between;
 
     margin-bottom: var(--gapping-tape);
-    background-color: rgba(249, 245, 246, .5);
+    background-color: rgba(249, 245, 246, .8);
 
     & div{
         display: flex;
