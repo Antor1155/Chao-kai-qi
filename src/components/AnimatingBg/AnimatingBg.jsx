@@ -17,7 +17,7 @@ const AnimatingBg = () => {
             y: ["0%", "0%", "50%", "50%", "-50%", "0%"],
 
             transition: {
-                duration: 15,
+                duration: 20,
                 ease: "linear",
                 repeat: "loop"
             }
