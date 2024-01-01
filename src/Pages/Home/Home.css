@@ -56,3 +56,40 @@ margin-bottom: calc(2 * var(--gapping-tape));
     justify-content: space-between;
     gap: 25px;
 }
+
+
+/* contact section starts here  */
+.contact-section{
+    border: 1px solid black;
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.form-section{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 16px;
+
+    & h2{
+        margin-top: 32px;
+    }
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.info-point{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--info-blue);
+}

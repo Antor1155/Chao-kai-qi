@@ -103,6 +103,10 @@ a{
   color: var(--chinese-red);
 }
 
+.info-blue{
+  color: var(--info-blue)
+}
+
 .bg-color{
   color: var(--bg-color);
 }
