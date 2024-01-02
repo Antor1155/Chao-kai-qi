@@ -4,6 +4,9 @@ import FacebookIcon from "../../assets/logos/Facebook.svg"
 import InstagramIcon from "../../assets/logos/Instagram.svg"
 import EmailIcon from "../../assets/logos/Email.svg"
 import WechatIcon from "../../assets/logos/WeChat.svg"
+import LinkedinIcon from "../../assets/logos/Linkedin.svg"
+
+
 const FooterSection = () => {
     return (
         <footer>
@@ -23,15 +26,24 @@ const FooterSection = () => {
                         <a href="" target="_blank">
                             <img src={FacebookIcon} alt="Facebook link of chao kai qi" loading="lazy" />
                         </a>
+
                         <a href="" target="_blank">
                             <img src={InstagramIcon} alt="Instagram link of chao kai qi" loading="lazy" />
                         </a>
+
+                        <a href="" target="_blank">
+                            <img src={LinkedinIcon} alt="Linkedin link of chao kai qi" loading="lazy" />
+                        </a>
+
                         <a href="" target="_blank">
                             <img src={EmailIcon} alt="Email link of chao kai qi" loading="lazy" />
                         </a>
+
                         <a href="" target="_blank">
                             <img src={WechatIcon} alt="WeChat link of chao kai qi" loading="lazy" />
                         </a>
+
+                        
                     </div>
                 </div>
 
