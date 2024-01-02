@@ -4,13 +4,15 @@ footer{
     margin-top: calc(2 * var(--gapping-tape));
 
     position: relative;
+
+    /* background-color: rgb(249, 245, 246); */
 }
 
 .double-line{
     border-top: 1px solid var(--chinese-red);
     border-bottom: 1px solid var(--chinese-red);
 
-    height: 8px;
+    height: 6px;
     width: 200vw;
     position: absolute;
     top: 0;
@@ -24,4 +26,33 @@ footer{
         height: 32px;
         margin-right: 8px;
     }
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.policy a{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.best-selling {
+
+    width: 22%;
+
+    & p{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    & a{
+        margin-right: 5px;
+        font-size: 14px;
+    }
+}
+
+.top-phones a{
+    font-size: 10px;
 }

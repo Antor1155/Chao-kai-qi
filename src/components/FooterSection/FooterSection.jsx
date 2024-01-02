@@ -9,7 +9,7 @@ const FooterSection = () => {
         <footer>
             <div className="double-line"></div>
 
-            <div>
+            <div className="footer-info mb-gapping-tape">
                 <div>
                     <p className="font-20 chinese-red mb-16">Contact Us</p>
                     <a className="font-14" href="mailto:Chaokaiqi@outlook.com">Email : Chaokaiqi@outlook.com</a>
@@ -35,14 +35,86 @@ const FooterSection = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className="policy">
                     <a href="" className="chinese-red font-20">About us</a>
                     <a href="" className="chinese-red font-20">Privacy policy</a>
                     <a href="" className="chinese-red font-20">Shipping policy</a>
                     <a href="" className="chinese-red font-20">Return policy</a>
                     <a href="" className="chinese-red font-20">Payment methods</a>
                 </div>
+
+                <div className="best-selling">
+                    <h3 className="chinese-red font-20 font-normal mb-16">
+                        Best selling catagory
+                    </h3>
+
+                    <p>
+                        <a href="">Xiaomi, </a>
+                        <a href="">Iphone, </a>
+                        <a href="">Ipad, </a>
+                        <a href="">Huawei, </a>
+                        <a href="">Samsung, </a>
+                        <a href="">Lenovo, </a>
+                        <a href="">Oppo, </a>
+                        <a href="">Vivo, </a>
+                        <a href="">Oneplus, </a>
+                        <a href="">Nokia, </a>
+                        <a href="">Infinix, </a>
+                    </p>
+                </div>
+
+                <div className="best-selling">
+                    <h3 className="chinese-red font-20 font-normal mb-16">
+                        Top Phone Covers
+                    </h3>
+
+                    <p className="top-phones">
+                        <a href="">Xiaomi a23, </a>
+                        <a href="">Iphone 8, </a>
+                        <a href="">Ipad air 5, </a>
+                        <a href="">Huawei p2, </a>
+                        <a href="">Samsung s22, </a>
+                        <a href="">Lenovo A33, </a>
+                        <a href="">Oppo lx3, </a>
+                        <a href="">Vivo a22, </a>
+                        <a href="">Oneplus 9, </a>
+                        <a href="">Nokia x5, </a>
+                        <a href="">Infinix k9, </a>
+
+                        
+                        <a href="">Xiaomi a23, </a>
+                        <a href="">Iphone 8, </a>
+                        <a href="">Ipad air 5, </a>
+                        <a href="">Huawei p2, </a>
+                        <a href="">Samsung s22, </a>
+                        <a href="">Lenovo A33, </a>
+                        <a href="">Oppo lx3, </a>
+                        <a href="">Vivo a22, </a>
+                        <a href="">Oneplus 9, </a>
+                        <a href="">Nokia x5, </a>
+                        <a href="">Infinix k9, </a>
+
+                        
+                        <a href="">Xiaomi a23, </a>
+                        <a href="">Iphone 8, </a>
+                        <a href="">Ipad air 5, </a>
+                        <a href="">Huawei p2, </a>
+                        <a href="">Samsung s22, </a>
+                        <a href="">Lenovo A33, </a>
+                        <a href="">Oppo lx3, </a>
+                        <a href="">Vivo a22, </a>
+                        <a href="">Oneplus 9, </a>
+                        <a href="">Nokia x5, </a>
+                        <a href="">Infinix k9, </a>
+
+                        
+                    </p>
+                </div>
+
             </div>
+
+            <h4 className="font-14 text-center font-normal mb-16">All rights reserved by @ <span className="chinese-red">Chao Kai Qi</span> Technology co. Ltd</h4>            
+            <h4 className="font-14 text-center font-normal">Designed and developed by @ <a href="https://techvixo.com/">Tech-vixo</a></h4>            
         </footer>
     );
 };
