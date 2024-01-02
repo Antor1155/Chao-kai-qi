@@ -8,6 +8,7 @@ import fakeImg from "../../assets/banner/banner.png";
 import "./Home.css"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { useEffect, useState } from "react";
+import {motion} from "framer-motion"
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -15,6 +16,10 @@ const Home = () => {
     useEffect(() => {
         setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21])
     }, [])
+
+    const handleInfoSubmit = (e) => {
+        e.preventDefault()
+    }
 
     return (
         <>
@@ -82,8 +87,8 @@ const Home = () => {
                         <img src={fakeImg} alt="productImage" />
                     </div>
 
-                    <div className="form-section">
-                        <div>
+                    <div className="form-and-info">
+                        <div className="info">
                             <p className="font-20 info-blue">We will send you with</p>
 
                             <div className="list">
@@ -111,8 +116,39 @@ const Home = () => {
 
                         </div>
 
-                        <div>
+                        <div className="form-container">
+                            <form onSubmit={handleInfoSubmit}>
+                                <div>
+                                    <label htmlFor="name">Name</label>
+                                    <input id="name" name="name" type="text" />
+                                </div>
 
+                                <div>
+                                    <label htmlFor="country">Country</label>
+                                    <input id="country" name="country" type="text" />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="organization">Organization name</label>
+                                    <input id="organization" name="organization" type="text" />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="email">email</label>
+                                    <input id="email" name="email" type="text" />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="note">Special note</label>
+                                    <textarea name="note" id="note" cols="22" rows="4"></textarea>
+                                </div>
+
+                                <motion.button  
+                                    type="submit" 
+                                    className="fw-button"
+                                    whileTap={{scale: 0.95}}
+                                    >SUBMIT</motion.button>
+                            </form>
                         </div>
                     </div>
                 </div>

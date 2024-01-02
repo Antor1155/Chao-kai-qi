@@ -69,11 +69,14 @@ margin-bottom: calc(2 * var(--gapping-tape));
     }
 }
 
-.form-section{
+.form-and-info{
     background-color: white;
     border: 1px solid black;
     border-radius: 16px;
     padding: 16px;
+
+    display: flex;
+    gap: 32px;
 
     & h2{
         margin-top: 32px;
@@ -92,4 +95,36 @@ margin-bottom: calc(2 * var(--gapping-tape));
     height: 16px;
     border-radius: 50%;
     background-color: var(--info-blue);
+}
+
+.form-container{
+    & form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        & label, input, textarea{
+            display: block;
+        }
+
+        & label{
+            margin-bottom: 4px;
+        }
+
+        & input, textarea{
+            border-radius: 8px;
+            border: none;
+            background-color: #D9D9D9;
+            font-size: 16px;
+            padding: 2px 4px;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        & button{
+            margin-top: 12px;
+            display: block;
+        }
+    }
 }

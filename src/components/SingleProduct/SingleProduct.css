@@ -21,16 +21,6 @@
             transition: .5s;
         }
     }
-
-    & button{
-        width: 100%;
-        border-radius: 8px;
-        border: none;
-        padding:7px 0 6px 0;
-        background-color: #ECC35C;
-
-        transition: background-color .5s;
-    }
 }
 
 .singleProduct:hover{

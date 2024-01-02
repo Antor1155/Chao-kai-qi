@@ -25,7 +25,7 @@ const SingleProduct = ({ product }) => {
             <p className="font-14">Minimum Order quantity: {product} units</p>
             <p className="font-14 mb-16">Price / unit : 2.6 USD</p>
 
-            <button className="font-14 text-center">SEE THE COVER</button>
+            <button className="fw-button">SEE THE COVER</button>
 
         </div>
     );
