@@ -60,13 +60,13 @@ margin-bottom: calc(2 * var(--gapping-tape));
 
 /* contact section starts here  */
 .contact-section{
-    border: 1px solid black;
+    margin-bottom: calc(2 * var(--gapping-tape));
+}
 
-    .content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form-and-info{
@@ -125,6 +125,43 @@ margin-bottom: calc(2 * var(--gapping-tape));
         & button{
             margin-top: 12px;
             display: block;
+        }
+    }
+}
+
+
+/* about us section starts here  */
+
+.about-us{
+
+    & .image-container{
+        width: 45%;
+        
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+.content .info{
+    width: 45%;
+}
+
+.company-images{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+
+        transition: .5s;
+
+        &:hover{
+            scale: 1.1;
+            box-shadow: 5px 9px 5px #00000068;
         }
     }
 }

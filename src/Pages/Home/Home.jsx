@@ -4,11 +4,19 @@ import brands from "../../assets/brands/brands.png";
 import banner from "../../assets/banner/banner.webp";
 import fakeImg from "../../assets/banner/banner.png";
 
+import chineseHouse from "../../assets/decoration/chinese-house.png";
+
+import companyImg1 from "../../assets/companyImage/companyImg1.jpg"
+import companyImg2 from "../../assets/companyImage/companyImg2.jpeg"
+import companyImg3 from "../../assets/companyImage/companyImg3.jpg"
+import companyImg4 from "../../assets/companyImage/companyImg4.jpeg"
+import companyImg5 from "../../assets/companyImage/companyImg5.jpeg"
+
 
 import "./Home.css"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { useEffect, useState } from "react";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -143,17 +151,73 @@ const Home = () => {
                                     <textarea name="note" id="note" cols="22" rows="4"></textarea>
                                 </div>
 
-                                <motion.button  
-                                    type="submit" 
+                                <motion.button
+                                    type="submit"
                                     className="fw-button"
-                                    whileTap={{scale: 0.95}}
-                                    >SUBMIT</motion.button>
+                                    whileTap={{ scale: 0.95 }}
+                                >SUBMIT</motion.button>
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section className="about-us mb-gapping-tape">
+                <h2 className="company-font text-center font-bold">
+                    About <br />
+                    ChaoKaiQi
+                </h2>
+
+                <div className="content mb-32">
+                    <div className="image-container">
+                        <img src={chineseHouse} alt="chinese house decoration" />
+                    </div>
+
+                    <div className="info">
+                        <h3 className="font-24 mb-16">
+                            <span className="chinese-red">
+                                Chao Kai Qi
+                            </span> : Globally Trusted Name
+                        </h3>
+                        <p className="mb-16"><span className="chinese-red">Name </span>
+                            : Shenzen Chao kai Qi Technology Co. Ltd
+                        </p>
+
+                        <p className="mb-16">
+                            <span className="chinese-red">Email</span>
+                            : <a href="mailto:Chaokaiqi@outlook.com">Chaokaiqi@outlook.com</a>
+                        </p>
+
+                        <p className="mb-16">
+                            <span className="chinese-red">
+                                Phone
+                            </span>
+                            : <a href="tel:+86 13798587275">+86 13798587275 (WhatsApp)</a>
+                        </p>
+
+                        <p className="mb-16">
+                            <span className="chinese-red">
+                                Address
+                            </span>
+                            : 3rd floor, No 11 Furong road, Xirong industry area, Bao’an district,
+                            Shenzen, China.
+                        </p>
+
+                        <p>
+                            Welcome to Chao Kai Qi Technology Co. Ltd, a trusted global wholesaler for premium phone cases and quality cover. We take pride in delivering innovative, durable, and stylish products to phone case sellers worldwide. Based in Shenzen, China, our mission is to redefine the market with quality, affordability, and unwavering trust. Join us in shaping the future of phone accessories.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div className="company-images">
+                    <img src={companyImg3} alt="Chaokaiqi compnay image" />
+                    <img src={companyImg1} alt="Chaokaiqi compnay image" />
+                    <img src={companyImg2} alt="Chaokaiqi compnay image" />
+                    <img src={companyImg4} alt="Chaokaiqi compnay image" />
+                    <img src={companyImg5} alt="Chaokaiqi compnay image" />
+                </div>
+            </section>
         </>
     );
 };
