@@ -170,7 +170,7 @@ const Home = () => {
 
                 <div className="content mb-32">
                     <div className="image-container">
-                        <img src={chineseHouse} alt="chinese house decoration" />
+                        <img src={chineseHouse} alt="chinese house decoration" loading="lazy"/>
                     </div>
 
                     <div className="info">
@@ -211,11 +211,11 @@ const Home = () => {
                 </div>
 
                 <div className="company-images">
-                    <img src={companyImg3} alt="Chaokaiqi compnay image" />
-                    <img src={companyImg1} alt="Chaokaiqi compnay image" />
-                    <img src={companyImg2} alt="Chaokaiqi compnay image" />
-                    <img src={companyImg4} alt="Chaokaiqi compnay image" />
-                    <img src={companyImg5} alt="Chaokaiqi compnay image" />
+                    <img src={companyImg3} alt="Chaokaiqi compnay image" loading="lazy" />
+                    <img src={companyImg1} alt="Chaokaiqi compnay image" loading="lazy" />
+                    <img src={companyImg2} alt="Chaokaiqi compnay image" loading="lazy" />
+                    <img src={companyImg4} alt="Chaokaiqi compnay image" loading="lazy" />
+                    <img src={companyImg5} alt="Chaokaiqi compnay image" loading="lazy" />
                 </div>
             </section>
         </>

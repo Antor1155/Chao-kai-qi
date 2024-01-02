@@ -34,6 +34,14 @@ const FooterSection = () => {
                         </a>
                     </div>
                 </div>
+
+                <div>
+                    <a href="" className="chinese-red font-20">About us</a>
+                    <a href="" className="chinese-red font-20">Privacy policy</a>
+                    <a href="" className="chinese-red font-20">Shipping policy</a>
+                    <a href="" className="chinese-red font-20">Return policy</a>
+                    <a href="" className="chinese-red font-20">Payment methods</a>
+                </div>
             </div>
         </footer>
     );
