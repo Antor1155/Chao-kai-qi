@@ -127,9 +127,24 @@ a{
 .mb-64{
   margin-bottom: 64px;
 }
-
 .mb-gapping-tape{
   margin-bottom: var(--gapping-tape);
+}
+
+.mt-8{
+  margin-top: 8px;
+}
+.mt-16{
+  margin-top: 16px;
+}
+.mt-32{
+  margin-top: 32px;
+}
+.mt-64{
+  margin-top: 64px;
+}
+.mt-gapping-tape{
+  margin-top: var(--gapping-tape);
 }
 
 .width-64{

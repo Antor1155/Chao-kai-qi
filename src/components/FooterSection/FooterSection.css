@@ -1,0 +1,27 @@
+footer{
+    padding-top: var(--gapping-tape);
+    padding-bottom: var(--gapping-tape);
+    margin-top: calc(2 * var(--gapping-tape));
+
+    position: relative;
+}
+
+.double-line{
+    border-top: 1px solid var(--chinese-red);
+    border-bottom: 1px solid var(--chinese-red);
+
+    height: 8px;
+    width: 200vw;
+    position: absolute;
+    top: 0;
+    left: -50%;
+}
+
+.social-icons{
+
+    & img{
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}
