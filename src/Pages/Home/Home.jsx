@@ -7,6 +7,9 @@ import banner2 from "../../assets/banner/banner2.jpg"
 import banner3 from "../../assets/banner/banner3.jpg"
 
 import fakeImg from "../../assets/banner/banner.png";
+import fakeProductImg1 from "../../assets/ProductImage/fakeProductImg.webp"
+import fakeProductImg2 from "../../assets/ProductImage/fakeProductImg2.png"
+import fakeProductImg3 from "../../assets/ProductImage/fakeProductImg3.webp"
 
 import chineseHouse from "../../assets/decoration/chinese-house.png";
 
@@ -25,14 +28,14 @@ import Slider from "react-slick";
 
 const Home = () => {
     const [products, setProducts] = useState([])
-    
+
     const sliderSetting = {
-        dots:false,
-        infinite:true,
+        dots: false,
+        infinite: true,
         speed: 900,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows:false,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 3000,
         adaptiveHeight: true,
@@ -70,7 +73,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div style={{ height: "275px", borderRadius: "32px", overflow: "hidden"}}>
+                    <div style={{ height: "275px", borderRadius: "32px", overflow: "hidden" }}>
 
                         <Slider className="slider-main" {...sliderSetting}>
                             <img
@@ -120,9 +123,17 @@ const Home = () => {
                 </div>
 
                 <div className="content">
-                    <div>
-                        <img src={fakeImg} alt="productImage" />
+
+                    <div className="photo-slider">
+                        <Slider {...sliderSetting}>
+                            <img src={fakeImg} alt="productImage" loading="lazy" />
+                            <img src={fakeProductImg1} alt="productImage" loading="lazy" />
+                            <img src={fakeProductImg2} alt="productImage" loading="lazy" />
+                            <img src={fakeProductImg3} alt="productImage" loading="lazy" />
+                        </Slider>
                     </div>
+
+
 
                     <div className="form-and-info">
                         <div className="info">
