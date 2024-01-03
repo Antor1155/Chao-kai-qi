@@ -37,7 +37,7 @@ const Home = () => {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         adaptiveHeight: true,
         pauseOnHover: false,
     }
