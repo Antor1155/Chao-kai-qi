@@ -1,7 +1,11 @@
 import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 import brands from "../../assets/brands/brands.png";
+
 import banner from "../../assets/banner/banner.webp";
+import banner2 from "../../assets/banner/banner2.jpg"
+import banner3 from "../../assets/banner/banner3.jpg"
+
 import fakeImg from "../../assets/banner/banner.png";
 
 import chineseHouse from "../../assets/decoration/chinese-house.png";
@@ -16,10 +20,24 @@ import companyImg5 from "../../assets/companyImage/companyImg5.jpeg"
 import "./Home.css"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import Slider from "react-slick";
 
 const Home = () => {
     const [products, setProducts] = useState([])
+    
+    const sliderSetting = {
+        dots:false,
+        infinite:true,
+        speed: 900,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        adaptiveHeight: true,
+        pauseOnHover: false,
+    }
 
     useEffect(() => {
         setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21])
@@ -52,11 +70,22 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div style={{ height: "275px", borderRadius: "32px", overflow: "hidden" }}>
+                    <div style={{ height: "275px", borderRadius: "32px", overflow: "hidden"}}>
 
-                        <img
-                            style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                            src={banner} alt="" />
+                        <Slider className="slider-main" {...sliderSetting}>
+                            <img
+                                style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                                src={banner} alt=""
+                            />
+                            <img
+                                style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                                src={banner2} alt=""
+                            />
+                            <img
+                                style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                                src={banner3} alt=""
+                            />
+                        </Slider>
                     </div>
                 </div>
 
@@ -170,7 +199,7 @@ const Home = () => {
 
                 <div className="content mb-32">
                     <div className="image-container">
-                        <img src={chineseHouse} alt="chinese house decoration" loading="lazy"/>
+                        <img src={chineseHouse} alt="chinese house decoration" loading="lazy" />
                     </div>
 
                     <div className="info">

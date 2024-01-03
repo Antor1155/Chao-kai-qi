@@ -9,6 +9,18 @@
     width: 80%;
 }
 
+.slider-main{
+    height: 100%;
+    
+    & div{
+        height: 100%;
+    }
+
+    & img{
+        height: 100%;
+    }
+}
+
 .title-container{
     display: flex;
     align-items: baseline;
