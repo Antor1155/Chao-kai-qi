@@ -43,7 +43,7 @@ nav{
     nav{
         margin-bottom: 32px;
     }
-    
+
     #nav-menues{
         position: absolute;
         background-color: var(--bg-color);
@@ -70,5 +70,11 @@ nav{
 
     #menu, #cancel{
         display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #nav-menues.visible{
+        left: 0;
     }
 }
