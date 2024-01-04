@@ -1,6 +1,5 @@
 import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
-import brands from "../../assets/brands/brands.png";
 
 import banner from "../../assets/banner/banner.webp";
 import banner2 from "../../assets/banner/banner2.jpg"
