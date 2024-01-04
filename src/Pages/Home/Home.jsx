@@ -175,8 +175,6 @@ const Home = () => {
                         </Slider>
                     </div>
 
-
-
                     <div className="form-and-info">
                         <div className="info">
                             <p className="font-20 info-blue">We will send you with</p>
