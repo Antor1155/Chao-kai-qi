@@ -57,7 +57,7 @@ const Home = () => {
         pauseOnHover: false,
     }
 
-    const branSliderSetting ={
+    const branSliderSetting = {
         dots: false,
         arrows: false,
         infinite: true,
@@ -74,9 +74,12 @@ const Home = () => {
     useEffect(() => {
         setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21])
 
-        if(window.innerWidth <= 550){
+        const mq = window.matchMedia("(max-width: 768px)");
+
+        if(mq.matches){
             setMobileScreen(true)
         }
+
     }, [])
 
     const handleInfoSubmit = (e) => {
@@ -116,11 +119,11 @@ const Home = () => {
                             />
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={ mobileScreen ? mobileBanner2 : banner2} alt=""
+                                src={mobileScreen ? mobileBanner2 : banner2} alt=""
                             />
                             <img
-                                style={{width: "100%", height: "100%", objectFit: "fill" }}
-                                src={ mobileScreen ? mobileBanner1 : banner3} alt=""
+                                style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                                src={mobileScreen ? mobileBanner1 : banner3} alt=""
                             />
                         </Slider>
                     </div>
