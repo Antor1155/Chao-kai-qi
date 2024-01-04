@@ -258,6 +258,11 @@
 
         & .content{
             flex-direction: column-reverse;
+
+            .photo-slider{
+                width: 90vw;
+                height: 90vw;
+            }
         }
         
         & .form-and-info{
