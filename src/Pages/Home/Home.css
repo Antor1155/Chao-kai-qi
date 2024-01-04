@@ -203,3 +203,31 @@ margin-bottom: calc(2 * var(--gapping-tape));
         }
     }
 }
+
+
+@media screen and (max-width: 550px) {
+    #landing-screen{
+        flex-direction: column;
+
+        & h1{
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    }
+    .main-content{
+        width: 100%;
+    }
+
+    .title-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brands-logo{
+
+        .slick-list{
+            width: 100vw;
+
+        }
+    }
+}

@@ -2,8 +2,11 @@ import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 
 import banner from "../../assets/banner/banner.webp";
-import banner2 from "../../assets/banner/banner2.jpg"
-import banner3 from "../../assets/banner/banner3.jpg"
+import banner2 from "../../assets/banner/banner2.jpg";
+import banner3 from "../../assets/banner/banner3.jpg";
+
+import mobileBanner1 from "../../assets/banner/mobileBanner1.avif"
+import mobileBanner2 from "../../assets/banner/mobileBanner2.webp"
 
 import fakeImg from "../../assets/banner/banner.png";
 import fakeProductImg1 from "../../assets/ProductImage/fakeProductImg.webp"
@@ -39,6 +42,7 @@ import Slider from "react-slick";
 
 const Home = () => {
     const [products, setProducts] = useState([])
+    const [mobileScreen, setMobileScreen] = useState(false)
 
     const sliderSetting = {
         dots: false,
@@ -59,7 +63,7 @@ const Home = () => {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
-        vertical: true,
+        vertical: !mobileScreen,
         verticalSwiping: true,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -69,6 +73,10 @@ const Home = () => {
 
     useEffect(() => {
         setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21])
+
+        if(window.innerWidth <= 550){
+            setMobileScreen(true)
+        }
     }, [])
 
     const handleInfoSubmit = (e) => {
@@ -99,20 +107,20 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div style={{ height: "275px", borderRadius: "32px", overflow: "hidden" }}>
+                    <div style={{ height: mobileScreen ? "" : "275px", borderRadius: "32px", overflow: "hidden" }}>
 
                         <Slider className="slider-main" {...sliderSetting}>
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={banner} alt=""
+                                src={mobileScreen ? mobileBanner1 : banner} alt=""
                             />
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={banner2} alt=""
+                                src={ mobileScreen ? mobileBanner2 : banner2} alt=""
                             />
                             <img
-                                style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={banner3} alt=""
+                                style={{width: "100%", height: "100%", objectFit: "fill" }}
+                                src={ mobileScreen ? mobileBanner1 : banner3} alt=""
                             />
                         </Slider>
                     </div>

@@ -172,3 +172,14 @@ a{
   background-color: #EDAB00;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 550px) {
+  body{
+    padding: 0 5px
+  }
+
+  h1, h2{
+    font-size: 25px;
+  }
+}

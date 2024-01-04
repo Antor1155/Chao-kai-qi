@@ -40,6 +40,10 @@ nav{
 }
 
 @media screen and (max-width:850px) {
+    nav{
+        margin-bottom: 32px;
+    }
+    
     #nav-menues{
         position: absolute;
         background-color: var(--bg-color);
