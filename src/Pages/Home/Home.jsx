@@ -163,7 +163,7 @@ const Home = () => {
 
             <section className="contact-section">
                 <div className="d-flex-between">
-                    <h2>Get ot know more about us</h2>
+                    <h2>Get to know more about us</h2>
                     <h2 className="chinese-red">Special Service</h2>
                 </div>
 
