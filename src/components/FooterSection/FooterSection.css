@@ -56,3 +56,15 @@ footer{
 .top-phones a{
     font-size: 10px;
 }
+
+@media screen and (max-width: 550px) {
+    .footer-info{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-left: 20px;
+    }
+    .best-selling{
+        width: 100%;
+    }
+}
