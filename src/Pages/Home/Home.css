@@ -244,6 +244,10 @@
         & h2{
             text-align: center;
         }
+
+        & .d-flex-between{
+            flex-direction: column;
+        }
     }
     .top-product-container{
         justify-content: center;
