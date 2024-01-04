@@ -51,7 +51,8 @@ nav{
         padding: 64px 0;
         width: 100vw;
         height: 100vh;
-        left: 150%;
+
+        right: 150%;
         top: 0;
 
         transition: 1s;
@@ -65,7 +66,7 @@ nav{
 
     #nav-menues.visible{
         top: 0;
-        left: -5%;
+        right: -5%;
     }
 
     #menu, #cancel{
@@ -75,6 +76,6 @@ nav{
 
 @media screen and (max-width: 550px) {
     #nav-menues.visible{
-        left: 0;
+        right: -5px;
     }
 }

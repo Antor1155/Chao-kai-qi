@@ -58,6 +58,10 @@ footer{
 }
 
 @media screen and (max-width: 550px) {
+    .double-line{
+        width: 100%;
+        left: 0;
+    }
     .footer-info{
         display: flex;
         flex-direction: column;
