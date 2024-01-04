@@ -37,7 +37,6 @@
 
 .brands{
     padding-top: 16px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,7 +46,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
+
+    & .slick-list{
+        width: 64px;
+
+        & * {
+            border: none;
+        }
+    }
+
+    & img{
+        border-radius: 8px;
+        width: 64px;
+        height: 64px;
+        padding: 8px;
+        border: 1px solid;
+        
+    }
 }
 
 /* product section starts form here  */

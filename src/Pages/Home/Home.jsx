@@ -19,6 +19,18 @@ import companyImg3 from "../../assets/companyImage/companyImg3.jpg"
 import companyImg4 from "../../assets/companyImage/companyImg4.jpeg"
 import companyImg5 from "../../assets/companyImage/companyImg5.jpeg"
 
+import apple from "../../assets/compnayLogo/apple.svg"
+import asus from "../../assets/compnayLogo/asus.svg"
+import blackberry from "../../assets/compnayLogo/blackberry.svg"
+import htc from "../../assets/compnayLogo/htc.svg"
+import huawei from "../../assets/compnayLogo/huawei.svg"
+import lenovo from "../../assets/compnayLogo/lenovo.svg"
+import lg from "../../assets/compnayLogo/lg.svg"
+import motorola from "../../assets/compnayLogo/motorola.svg"
+import nokia from "../../assets/compnayLogo/nokia.svg"
+import samsung from "../../assets/compnayLogo/samsung.svg"
+import sony from "../../assets/compnayLogo/sony.svg"
+
 
 import "./Home.css"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
@@ -40,6 +52,20 @@ const Home = () => {
         autoplaySpeed: 4000,
         adaptiveHeight: true,
         pauseOnHover: false,
+    }
+
+    const branSliderSetting ={
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        vertical: true,
+        verticalSwiping: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500,
+
     }
 
     useEffect(() => {
@@ -94,14 +120,22 @@ const Home = () => {
                 </div>
 
                 <div className="brands">
-                    <h2 className="font-20 text-center">Brands <br /> We cover</h2>
+                    <h2 className="font-20 text-center mb-32">Brands <br /> We cover</h2>
 
                     <div className="brands-logo">
-                        <img className="width-48" src={brands} alt="supported phone brands" />
-                        <img className="width-48" src={brands} alt="supported phone brands" />
-                        <img className="width-48" src={brands} alt="supported phone brands" />
-                        <img className="width-48" src={brands} alt="supported phone brands" />
-                        <img className="width-48" src={brands} alt="supported phone brands" />
+                        <Slider {...branSliderSetting}>
+                            <img src={apple} alt="apple phone brands" />
+                            <img src={asus} alt="supported phone brands" />
+                            <img src={blackberry} alt="supported phone brands" />
+                            <img src={htc} alt="supported phone brands" />
+                            <img src={huawei} alt="supported phone brands" />
+                            <img src={lenovo} alt="supported phone brands" />
+                            <img src={lg} alt="supported phone brands" />
+                            <img src={motorola} alt="supported phone brands" />
+                            <img src={nokia} alt="supported phone brands" />
+                            <img src={samsung} alt="supported phone brands" />
+                            <img src={sony} alt="supported phone brands" />
+                        </Slider>
                     </div>
                 </div>
             </section>
