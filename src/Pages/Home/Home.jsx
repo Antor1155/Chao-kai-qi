@@ -48,6 +48,7 @@ const Home = () => {
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
+        e.target.reset()
     }
 
     return (
