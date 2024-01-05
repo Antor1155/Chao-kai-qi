@@ -5,6 +5,7 @@ import InstagramIcon from "../../assets/logos/Instagram.svg"
 import EmailIcon from "../../assets/logos/Email.svg"
 import WechatIcon from "../../assets/logos/WeChat.svg"
 import LinkedinIcon from "../../assets/logos/Linkedin.svg"
+import { Link } from "react-router-dom"
 
 
 const FooterSection = () => {
@@ -48,11 +49,11 @@ const FooterSection = () => {
                 </div>
 
                 <div className="policy">
-                    <a href="" className="chinese-red font-20">About us</a>
-                    <a href="" className="chinese-red font-20">Privacy policy</a>
-                    <a href="" className="chinese-red font-20">Shipping policy</a>
-                    <a href="" className="chinese-red font-20">Return policy</a>
-                    <a href="" className="chinese-red font-20">Payment methods</a>
+                    <Link to="" className="chinese-red font-20">About us</Link>
+                    <Link to="privacy-policy" className="chinese-red font-20">Privacy policy</Link>
+                    <Link to="" className="chinese-red font-20">Shipping policy</Link>
+                    <Link to="" className="chinese-red font-20">Return policy</Link>
+                    <Link to="" className="chinese-red font-20">Payment methods</Link>
                 </div>
 
                 <div className="best-selling">

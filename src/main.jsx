@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './Pages/Home/Home';
+import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home></Home>,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy></PrivacyPolicy>
       }
     ]
   }

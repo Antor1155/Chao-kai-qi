@@ -64,7 +64,7 @@ const Home = () => {
         slidesToShow: 5,
         slidesToScroll: 1,
         vertical: !mobileScreen,
-        verticalSwiping: true,
+        verticalSwiping: !mobileScreen,
         autoplay: true,
         autoplaySpeed: 3000,
         speed: 500,
