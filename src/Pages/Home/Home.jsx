@@ -87,8 +87,16 @@ const Home = () => {
         e.target.reset()
     }
 
+    const handleContactNow = () =>{
+        document.getElementById("contact-section").scrollIntoView({behavior: "smooth"})
+    }
+
     return (
         <>
+            <motion.button whileHover={{scale: "1.05"}} whileTap={{scale: .95}} id="contact-now" onClick={handleContactNow}>
+               Contact Now !
+            </motion.button>
+
             <section id="landing-screen">
                 <div className="main-content">
                     <div className="title-container">
@@ -161,7 +169,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="contact-section">
+            <section className="contact-section" id="contact-section">
                 <div className="d-flex-between">
                     <h2>Get to know more about us</h2>
                     <h2 className="chinese-red">Special Service</h2>

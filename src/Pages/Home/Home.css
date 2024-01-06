@@ -1,3 +1,20 @@
+#contact-now{
+    border: 1px solid;
+    padding: 5px;
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    background-color: var(--bg-color);
+
+    position: fixed;
+    right: 0;
+    top: 50%;
+    
+    writing-mode: vertical-rl;
+
+}
+
 #landing-screen {
     display: flex;
     justify-content: space-between;
