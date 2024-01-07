@@ -238,6 +238,11 @@ const Home = () => {
                                 </div>
 
                                 <div>
+                                    <label htmlFor="mobile">Phone number</label>
+                                    <input id="mobile" name="mobile" type="text" />
+                                </div>
+
+                                <div>
                                     <label htmlFor="note">Special note</label>
                                     <textarea name="note" id="note" cols="22" rows="4"></textarea>
                                 </div>
