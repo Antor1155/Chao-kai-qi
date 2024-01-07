@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
         <div>
           <h2>Contact Information</h2>
 
-          <p>If you have any questions or concerns about our Privacy Policy, please contact us at [Your Contact Information].</p>
+          <p>If you have any questions or concerns about our Privacy Policy, please contact us at Chaokaiqi@outlook.com.</p>
         </div>
       </div>
 
