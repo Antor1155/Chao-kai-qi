@@ -12,7 +12,7 @@
     top: 50%;
     
     writing-mode: vertical-rl;
-
+    
 }
 
 #landing-screen {
@@ -226,6 +226,10 @@
 
 
 @media screen and (max-width: 550px) {
+    #contact-now{
+        display: none;
+    }
+
     #landing-screen {
         flex-direction: column;
 
