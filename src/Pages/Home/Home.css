@@ -136,6 +136,12 @@
     & h2 {
         margin-top: 32px;
     }
+
+    & .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 .list {
