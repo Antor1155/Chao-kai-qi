@@ -11,8 +11,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
-
         <div>
           <h2>Information We Collect</h2>
           <ul>We collect personal information provided by users when they use our website, including but not limited to:
@@ -28,7 +26,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>How We Use Your Information</h2>
@@ -41,7 +38,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>Information Sharing</h2>
@@ -51,7 +47,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>Data Security</h2>
@@ -61,7 +56,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>Retention of Information</h2>
@@ -71,7 +65,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>Third-Party Links</h2>
@@ -81,7 +74,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>Changes to the Privacy Policy</h2>
@@ -91,7 +83,6 @@ const PrivacyPolicy = () => {
       </div>
 
       <div>
-        <img src="" alt="" />
 
         <div>
           <h2>Contact Information</h2>

@@ -5,6 +5,7 @@ const AboutUs = () => {
             <h1 className="company-font text-center mb-gapping-tape">About <br />ChaoKaiQi</h1>
 
             <section>
+                
                 <div>
                     <h2 className="mb-16">
                         <span className="chinese-red">Chao Kai Qi :</span> <br />
