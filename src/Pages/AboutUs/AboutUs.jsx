@@ -12,13 +12,16 @@ import WeChat from "../../assets/logos/WeChat.svg"
 
 import "./AboutUs.css"
 import Slider from "react-slick";
+import { useEffect, useState } from "react"
 
 const AboutUs = () => {
+    const [mobileScreen, setMobileScreen] = useState(false)
+
     const sliderSetting = {
         dots: false,
         infinite: true,
         speed: 900,
-        slidesToShow: 5,
+        slidesToShow: mobileScreen ? 2 : 5,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
@@ -27,6 +30,15 @@ const AboutUs = () => {
         pauseOnHover: false,
         rtl: true,
     }
+
+    useEffect(()=>{
+        const mq = window.matchMedia("(max-width: 768px)");
+
+        if(mq.matches){
+            setMobileScreen(true)
+        }
+
+    }, [])
 
 
     return (

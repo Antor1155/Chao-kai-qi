@@ -100,3 +100,54 @@
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    .about-first{
+        display: flex;
+        flex-direction: column;
+    }
+    .mission-cards{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .about-first{
+        & h2{
+            text-align: center;
+        }
+
+        & p{
+            padding: 10px;
+            text-align: justify;
+        }
+    }
+
+    .contact-and-info{
+        flex-wrap: wrap;
+
+        & p{
+            padding-left: 10px;
+        }
+
+        & div{
+            width: 100%;
+        }
+
+        & .contact-icons{
+            align-items: center;
+            justify-items: center;
+
+            & img{
+                float: none;
+            }
+        }
+    }
+
+    .our-story{
+        & p{
+            text-align: justify;
+            padding: 10px;
+        };
+    }
+}

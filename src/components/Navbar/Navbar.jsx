@@ -43,9 +43,9 @@ const Navbar = () => {
                     id="nav-menues"
                     onClick={handleNavMenues}
                 >
-                    <button id="cancel">
+                    <motion.button whileTap={{scale: .7}} id="cancel">
                         <img src={cancel} alt="hide nav bar" />
-                    </button>
+                    </motion.button>
 
                     <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">HOME</Link></motion.span>
                     <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">CATAGORY</Link></motion.span>
