@@ -131,6 +131,10 @@ a{
   margin-bottom: var(--gapping-tape);
 }
 
+.mb-double-gapping-tape{
+  margin-bottom: calc(2* var(--gapping-tape));
+}
+
 .mt-8{
   margin-top: 8px;
 }
@@ -145,6 +149,9 @@ a{
 }
 .mt-gapping-tape{
   margin-top: var(--gapping-tape);
+}
+.mt-double-gapping-tape{
+  margin-top: calc(2* var(--gapping-tape));
 }
 
 .width-64{
