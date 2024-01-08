@@ -1,6 +1,7 @@
 import exImg from "../../assets/companyImage/companyImg1.jpg"
 
-import "./AboutUs.css"
+
+
 
 import Facebook from "../../assets/logos/Facebook.svg"
 import Instagram from "../../assets/logos/Instagram.svg"
@@ -9,7 +10,25 @@ import Email from "../../assets/logos/Email.svg"
 import Phone from "../../assets/logos/Phone.svg"
 import WeChat from "../../assets/logos/WeChat.svg"
 
+import "./AboutUs.css"
+import Slider from "react-slick";
+
 const AboutUs = () => {
+    const sliderSetting = {
+        dots: false,
+        infinite: true,
+        speed: 900,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        adaptiveHeight: true,
+        pauseOnHover: false,
+        rtl: true,
+    }
+
+
     return (
         <>
             <h1 className="company-font text-center mb-gapping-tape">About <br />ChaoKaiQi</h1>
@@ -94,7 +113,7 @@ const AboutUs = () => {
                 <p className="text-center">Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.</p>
             </section>
 
-            <section className="mb-32">
+            <section className="mb-double-gapping-tape">
                 <h2 className="company-font text-center mb-gapping-tape">What Set Us Apart</h2>
 
                 <p className="text-center mb-32">At <span className="chinese-red">Chao Kai Qi </span>, we take pride in our commitment to excellence. Here&#39;s what sets us apart</p>
@@ -122,8 +141,24 @@ const AboutUs = () => {
                 <p className="text-center">Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.</p>
             </section>
 
-            <section>
+            <section className="image-sliders">
+                <Slider {...sliderSetting}>
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                </Slider>
 
+                <Slider {...{...sliderSetting, rtl: false}}>
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" />
+                </Slider>
             </section>
         </>
     );

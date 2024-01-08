@@ -89,3 +89,14 @@
         scale: 1.05;
     }
 }
+
+.image-sliders{
+    & .slick-list{
+        & div{
+            & img{
+                padding: 10px;
+                border-radius: 16px;
+            }
+        }
+    }
+}
