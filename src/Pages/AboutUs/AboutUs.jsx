@@ -150,7 +150,7 @@ const AboutUs = () => {
                     </div>
                 </div>
 
-                <p className="text-center">Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.</p>
+                <p className="text-center mobile-text-justify">Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.</p>
             </section>
 
             <section className="image-sliders mb-double-gapping-tape">

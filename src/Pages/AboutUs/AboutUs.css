@@ -150,4 +150,8 @@
             padding: 10px;
         };
     }
+
+    .mobile-text-justify{
+        padding: 10px;
+    }
 }

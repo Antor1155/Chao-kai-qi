@@ -189,4 +189,8 @@ a{
   h1, h2{
     font-size: 25px;
   }
+
+  .mobile-text-justify{
+    text-align: justify;
+  }
 }
