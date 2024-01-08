@@ -141,7 +141,7 @@ const AboutUs = () => {
                 <p className="text-center">Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.</p>
             </section>
 
-            <section className="image-sliders">
+            <section className="image-sliders mb-double-gapping-tape">
                 <Slider {...sliderSetting}>
                     <img src={exImg} alt="Chao kai qi compnay image" />
                     <img src={exImg} alt="Chao kai qi compnay image" />
@@ -151,7 +151,7 @@ const AboutUs = () => {
                     <img src={exImg} alt="Chao kai qi compnay image" />
                 </Slider>
 
-                <Slider {...{...sliderSetting, rtl: false}}>
+                <Slider {...{ ...sliderSetting, rtl: false }}>
                     <img src={exImg} alt="Chao kai qi compnay image" />
                     <img src={exImg} alt="Chao kai qi compnay image" />
                     <img src={exImg} alt="Chao kai qi compnay image" />
@@ -160,6 +160,10 @@ const AboutUs = () => {
                     <img src={exImg} alt="Chao kai qi compnay image" />
                 </Slider>
             </section>
+
+            <p className="text-center company-font font-24 font-bold">
+                Thank you for  choosing  <span className="chinese-red">Chao Kai Qi</span> – where style meets functionality!
+            </p>
         </>
     );
 };
