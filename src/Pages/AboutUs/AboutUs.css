@@ -54,8 +54,8 @@
 
 .mission-cards{
     display: flex;
-    gap: 16px;
-    justify-content: space-between;
+    gap: 32px;
+    justify-content: center;
     align-items: stretch;
 
     & .mission-card{

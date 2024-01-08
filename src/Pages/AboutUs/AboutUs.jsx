@@ -94,12 +94,12 @@ const AboutUs = () => {
                 <p className="text-center">Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.</p>
             </section>
 
-            <section>
+            <section className="mb-32">
                 <h2 className="company-font text-center mb-gapping-tape">What Set Us Apart</h2>
 
                 <p className="text-center mb-32">At <span className="chinese-red">Chao Kai Qi </span>, we take pride in our commitment to excellence. Here&#39;s what sets us apart</p>
 
-                <div className="mission-cards">
+                <div className="mission-cards mb-32">
                     <div className="mission-card">
                         <img src={exImg} alt="chao kai qi compnay image" />
                         <h2 className="font-20 chinese-red">Quality Assurance</h2>
@@ -118,6 +118,12 @@ const AboutUs = () => {
                         <p>We understand the importance of affordability for businesses. Our pricing is competitive without compromising on quality, making us a cost-effective choice for your wholesale needs.</p>
                     </div>
                 </div>
+
+                <p className="text-center">Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.</p>
+            </section>
+
+            <section>
+
             </section>
         </>
     );
