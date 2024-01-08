@@ -65,27 +65,27 @@ const AboutUs = () => {
 
                 <div className="contact-icons">
                     <a href="">
-                        <img src={Facebook} alt="ChaokaiQi Facebook link" />
+                        <img src={Facebook} alt="ChaokaiQi Facebook link" loading="lazy" />
                     </a>
 
                     <a href="">
-                        <img src={Instagram} alt="ChaokaiQi Instagram link" />
+                        <img src={Instagram} alt="ChaokaiQi Instagram link"  loading="lazy"/>
                     </a>
 
                     <a href="">
-                        <img src={LinkedIn} alt="ChaokaiQi LinkedIn link" />
+                        <img src={LinkedIn} alt="ChaokaiQi LinkedIn link" loading="lazy" />
                     </a>
 
                     <a href="">
-                        <img src={WeChat} alt="ChaokaiQi Wechat link" />
+                        <img src={WeChat} alt="ChaokaiQi Wechat link" loading="lazy"/>
                     </a>
 
                     <a href="">
-                        <img src={Email} alt="ChaokaiQi Email link" />
+                        <img src={Email} alt="ChaokaiQi Email link" loading="lazy"/>
                     </a>
 
                     <a href="">
-                        <img src={Phone} alt="ChaokaiQi Phone link" />
+                        <img src={Phone} alt="ChaokaiQi Phone link" loading="lazy"/>
                     </a>
                 </div>
 
@@ -120,7 +120,7 @@ const AboutUs = () => {
             <section className="our-story mb-double-gapping-tape">
                 <h2 className="company-font text-center mb-gapping-tape">Our Story</h2>
 
-                <img className="mb-32" src={exImg} alt="Chao Kai Qi compnay story image" />
+                <img className="mb-32" src={exImg} alt="Chao Kai Qi compnay story image" loading="lazy"/>
 
                 <p className="text-center">Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.</p>
             </section>
@@ -132,19 +132,19 @@ const AboutUs = () => {
 
                 <div className="mission-cards mb-32">
                     <div className="mission-card">
-                        <img src={exImg} alt="chao kai qi compnay image" />
+                        <img src={exImg} alt="chao kai qi compnay image" loading="lazy"/>
                         <h2 className="font-20 chinese-red">Quality Assurance</h2>
                         <p>We believe in delivering products that stand the test of time. Each phone case cover undergoes rigorous quality checks to ensure durability and style.</p>
                     </div>
 
                     <div className="mission-card">
-                        <img src={exImg} alt="chao kai qi compnay image" />
+                        <img src={exImg} alt="chao kai qi compnay image" loading="lazy"/>
                         <h2 className="font-20 chinese-red">Wide Selection:</h2>
                         <p>Explore our extensive catalog featuring the latest trends and timeless classics. We strive to offer a diverse range of phone case covers to meet the unique preferences of our customers.</p>
                     </div>
 
                     <div className="mission-card">
-                        <img src={exImg} alt="chao kai qi compnay image" />
+                        <img src={exImg} alt="chao kai qi compnay image" loading="lazy"/>
                         <h2 className="font-20 chinese-red">Competitive Pricing:</h2>
                         <p>We understand the importance of affordability for businesses. Our pricing is competitive without compromising on quality, making us a cost-effective choice for your wholesale needs.</p>
                     </div>
@@ -155,21 +155,21 @@ const AboutUs = () => {
 
             <section className="image-sliders mb-double-gapping-tape">
                 <Slider {...sliderSetting}>
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
                 </Slider>
 
                 <Slider {...{ ...sliderSetting, rtl: false }}>
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
-                    <img src={exImg} alt="Chao kai qi compnay image" />
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
                 </Slider>
             </section>
 
