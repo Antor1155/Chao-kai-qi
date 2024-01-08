@@ -49,9 +49,9 @@ const Navbar = () => {
 
                     <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">HOME</Link></motion.span>
                     <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">CATAGORY</Link></motion.span>
-                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">ALL PRODUCTS</Link></motion.span>
-                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">ABOUT US</Link></motion.span>
-                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/">CONTACT US</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/all-tablets">ALL PRODUCTS</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/about-us">ABOUT US</Link></motion.span>
+                    <motion.span variants={item} whileTap={{scale: .7}}><Link to="/contact-us">CONTACT US</Link></motion.span>
 
                     <motion.span variants={item} whileTap={{scale: .7}}>
                         <Link to="/">
