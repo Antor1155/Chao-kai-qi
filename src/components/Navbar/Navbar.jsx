@@ -60,7 +60,7 @@ const Navbar = () => {
                     </motion.span>
 
                     <motion.span variants={item} whileTap={{scale: .7}}>
-                        <Link to="/">
+                        <Link to="/cart">
                             <img src={cart} alt="cart page of products" className="logo" />
                         </Link>
                     </motion.span>

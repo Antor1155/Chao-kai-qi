@@ -14,6 +14,8 @@ import ShippingPolicy from './Pages/ShippingPolicy/ShippingPolicy';
 import ReturnPolicy from './Pages/ReturnPolicy/ReturnPolicy';
 import PaymentMethods from './Pages/PaymentMethods/PaymentMethods';
 import AllTabsCover from './Pages/AllTabsCover/AllTabsCover';
+import Cart from './Pages/Cart/Cart';
+import ContactUs from './Pages/ContactUs/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
         element: <AboutUs></AboutUs>
       },
       {
+        path:"contact-us",
+        element: <ContactUs></ContactUs>
+      },
+      {
         path: "privacy-policy",
         element: <PrivacyPolicy></PrivacyPolicy>
       },
@@ -47,6 +53,10 @@ const router = createBrowserRouter([
       {
         path:"payment-methods",
         element:<PaymentMethods></PaymentMethods>
+      },
+      {
+        path:"cart",
+        element:<Cart></Cart>
       }
     ]
   }
