@@ -13,6 +13,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import ShippingPolicy from './Pages/ShippingPolicy/ShippingPolicy';
 import ReturnPolicy from './Pages/ReturnPolicy/ReturnPolicy';
 import PaymentMethods from './Pages/PaymentMethods/PaymentMethods';
+import AllTabsCover from './Pages/AllTabsCover/AllTabsCover';
 
 const router = createBrowserRouter([
   {
@@ -24,12 +25,16 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "privacy-policy",
-        element: <PrivacyPolicy></PrivacyPolicy>
+        path:"all-tabs-covers",
+        element: <AllTabsCover></AllTabsCover>
       },
       {
         path:"about-us",
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy></PrivacyPolicy>
       },
       {
         path:"shipping-policy",
