@@ -10,6 +10,9 @@ import {createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy';
 import AboutUs from './Pages/AboutUs/AboutUs';
+import ShippingPolicy from './Pages/ShippingPolicy/ShippingPolicy';
+import ReturnPolicy from './Pages/ReturnPolicy/ReturnPolicy';
+import PaymentMethods from './Pages/PaymentMethods/PaymentMethods';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
       {
         path:"about-us",
         element: <AboutUs></AboutUs>
+      },
+      {
+        path:"shipping-policy",
+        element: <ShippingPolicy></ShippingPolicy>
+      },
+      {
+        path:"return-policy",
+        element:<ReturnPolicy></ReturnPolicy>
+      },
+      {
+        path:"payment-methods",
+        element:<PaymentMethods></PaymentMethods>
       }
     ]
   }

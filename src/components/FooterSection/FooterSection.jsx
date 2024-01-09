@@ -49,11 +49,11 @@ const FooterSection = () => {
                 </div>
 
                 <div className="policy">
-                    <Link to="" className="chinese-red font-20">About us</Link>
+                    <Link to="about-us" className="chinese-red font-20">About us</Link>
                     <Link to="privacy-policy" className="chinese-red font-20">Privacy policy</Link>
-                    <Link to="" className="chinese-red font-20">Shipping policy</Link>
-                    <Link to="" className="chinese-red font-20">Return policy</Link>
-                    <Link to="" className="chinese-red font-20">Payment methods</Link>
+                    <Link to="shipping-policy" className="chinese-red font-20">Shipping policy</Link>
+                    <Link to="return-policy" className="chinese-red font-20">Return policy</Link>
+                    <Link to="payment-methods" className="chinese-red font-20">Payment methods</Link>
                 </div>
 
                 <div className="best-selling">
