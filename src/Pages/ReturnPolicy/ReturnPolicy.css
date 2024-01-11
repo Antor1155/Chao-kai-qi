@@ -1,0 +1,44 @@
+.return-policy {
+    min-height: 100vh;
+
+    & h1 {
+        text-align: center;
+        margin-bottom: 32px;
+        color: var(--chinese-red);
+    }
+
+    & img.main-img {
+        width: 100%;
+        border-radius: 32px;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 32px;
+    }
+
+
+    & h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        font-family: var(--company-name-font);
+        font-weight: bold;
+
+    }
+
+    & p {
+        margin-bottom: 64px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .return-policy {
+        p{
+            width: 100%;
+            
+            &:nth-of-type(2) {
+                margin-left: 0;
+            }
+        }
+    }
+}
