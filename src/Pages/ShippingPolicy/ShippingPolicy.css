@@ -48,3 +48,11 @@
         }
     }
 }
+
+@media screen and (max-width:550px) {
+    .shipping-info {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
