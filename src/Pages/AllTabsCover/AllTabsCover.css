@@ -1,0 +1,41 @@
+.all-products-section{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 32px;
+}
+
+.result-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
+}
+
+.filter-catagories{
+    border: 1px solid;
+    background-color: rgba(249, 245, 246, 0.5);
+    padding:16px;
+    border-radius: 16px;
+}
+
+.single-filter{
+    margin-bottom: 32px;
+
+    & h2{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    & p{
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    & input[type="checkbox"]{
+        width: 16px;
+        height: 16px;
+    }
+}
