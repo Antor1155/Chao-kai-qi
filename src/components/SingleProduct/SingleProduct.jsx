@@ -4,12 +4,15 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 // eslint-disable-next-line react/prop-types
 const SingleProduct = ({ product }) => {
     const navigate = useNavigate()
 
+
+
     const handleNavigate = () =>{
-        navigate(`/tablet-cover/product-name/${product}`)
+        navigate(`/wholesale-tablet-cover/${"iphone mini 6".replace(/ /g,"-")}/${product}`)
     }
 
     return (

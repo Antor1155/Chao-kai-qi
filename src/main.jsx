@@ -28,11 +28,11 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path:"all-tabs-covers",
+        path:"all-wholesale-tablet-covers",
         element: <AllTabsCover></AllTabsCover>
       },
       {
-        path:"tablet-cover/:product/:id",
+        path:"wholesale-tablet-cover/:product/:id",
         element: <SingleProductPage></SingleProductPage>
       },
       {
