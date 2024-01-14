@@ -1,12 +1,19 @@
 import "./SingleProduct.css"
 import exampleCover from "../../assets/ProductImage/example-cover.jpeg"
+import { useNavigate } from "react-router-dom";
+
+
 
 // eslint-disable-next-line react/prop-types
 const SingleProduct = ({ product }) => {
+    const navigate = useNavigate()
 
+    const handleNavigate = () =>{
+        navigate(`/tablet-cover/product-name/${product}`)
+    }
 
     return (
-        <div className="singleProduct">
+        <div className="singleProduct" onClick={handleNavigate}>
             <div className="image-container">
                 <img src={exampleCover} alt="phone case and cover of wholesale supplier" loading="lazy" />
             </div>

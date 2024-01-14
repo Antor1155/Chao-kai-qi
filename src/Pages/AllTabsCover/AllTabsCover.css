@@ -13,8 +13,8 @@
 .result-products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 32px;
+    justify-content: center;
+    gap: 32px;
 }
 
 .filter-catagories {

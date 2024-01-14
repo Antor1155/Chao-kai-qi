@@ -16,6 +16,7 @@ import PaymentMethods from './Pages/PaymentMethods/PaymentMethods';
 import AllTabsCover from './Pages/AllTabsCover/AllTabsCover';
 import Cart from './Pages/Cart/Cart';
 import ContactUs from './Pages/ContactUs/ContactUs';
+import SingleProductPage from './Pages/SingleProductPage/SingleProductPage';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path:"all-tabs-covers",
         element: <AllTabsCover></AllTabsCover>
+      },
+      {
+        path:"tablet-cover/:product/:id",
+        element: <SingleProductPage></SingleProductPage>
       },
       {
         path:"about-us",
