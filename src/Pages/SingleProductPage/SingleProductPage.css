@@ -1,0 +1,45 @@
+#singleProductPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.image-section {
+    border: 2px solid;
+    background-color: rgba(249, 245, 246, 0.5);
+    border-radius: 16px;
+
+    & #cover-main-image {
+        width: 30vw;
+        height: 30vw;
+        display: block;
+        margin: auto;
+        margin-bottom: 16px;
+        border-radius: 16px;
+    }
+}
+
+.slick-slider-div {
+    width: 300px;
+    margin: auto;
+
+    & button{
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    & .slick-list {
+        & div {
+            & img {
+                padding: 4px;
+                /* margin-right: 8px; */
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.content-section{
+    border: 2px solid;
+}
+
