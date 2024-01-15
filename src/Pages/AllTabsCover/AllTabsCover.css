@@ -68,7 +68,7 @@
 
 
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:825px) {
 
     .all-products-page {
         position: relative;
@@ -77,11 +77,11 @@
     .all-products-page {
         & h1 {
             margin-bottom: 32px;
-            position: sticky;
+            /* position: sticky;
             top: 64px;
             z-index: 2;
             background-color: rgba(249, 245, 246, 0.8);
-            border-radius: 8px;
+            border-radius: 8px; */
         }
     }
 
