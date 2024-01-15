@@ -30,7 +30,7 @@ const schemaData = {
     pricePerUnit: 2.6,
     productSize: "200 * 150 * 13 cm",
     productGrossWeight: "198 g",
-    imageArray: ["/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg", "/ProductImages/example-type/IPAD1.jpg"],
+    imageArray: ["/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg", "/ProductImages/example-type/IPAD1.jpg","/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg"],
 
     mainImage: "/ProductImages/example-type/IPAD1.jpg",
     colors: {
@@ -82,8 +82,8 @@ const SingleProductPage = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToShow: 5,
+        slidesToScroll: 2,
     }
 
     const handleSelectedColor = (val) => {
@@ -164,9 +164,9 @@ const SingleProductPage = () => {
 
                     <h2 className="font-24 mb-32"> <span className="title">Minimum order quantity</span> : {product?.minimOrderQuantity} units</h2>
 
-                    <h2 className="company-font font-bold font-32 mb-8">Colors</h2>
+                    <h2 className="company-font font-bold font-32 mb-8 colors-label">Colors</h2>
 
-                    <div className="color-buttons mb-32">
+                    <div className="color-buttons mb-32 colors-label">
                         {
                             product?.colors ?
 
@@ -250,7 +250,7 @@ const SingleProductPage = () => {
                 </div>
             </section>
 
-            <h2 className="mb-gapping-tape">Our Top suggestions</h2>
+            <h2 className="mb-gapping-tape mobile-text-center">Our Top suggestions</h2>
 
             <section className="suggested-products">
                 {randomProducts.map((prod, ind) => <SingleProduct key={ind} product={prod} />
