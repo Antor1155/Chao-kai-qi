@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import "./AllTabsCover.css"
 
 import filter from "../../assets/logos/Filter.svg"
+import cancel from "../../assets/logos/Cancel.svg"
 
 const AllTabsCover = () => {
     const [products, setProducts] = useState([])
@@ -29,6 +30,14 @@ const AllTabsCover = () => {
             <section className="all-products-section">
 
                 <div className={`filter-catagories  ${mobileFilterVisible ? "visible" : ""} `} id="filter-catagories">
+
+                    <motion.button
+                        className="mobile-visible"
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => setMobileFilterVisible(false)}
+                    >
+                        <img src={cancel} alt="" />
+                    </motion.button>
 
                     <div className="single-filter">
                         <h2 >Iphone</h2>

@@ -66,6 +66,10 @@
     display: none;
 }
 
+.mobile-visible{
+    display: none;
+}
+
 
 
 @media screen and (max-width:825px) {
@@ -155,4 +159,22 @@
             padding: 8px;
         }
     }
+
+    .mobile-visible{
+        
+        display: block;
+        float: right;
+        position: sticky;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+
+        & img{
+            width: 32px;
+            padding: 4px;
+            box-sizing: content-box;
+        }
+    }
+    
 }
