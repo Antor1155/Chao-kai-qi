@@ -112,17 +112,21 @@ const SingleProductPage = () => {
             <section id="singleProductPage">
 
                 <div className="image-section">
-                    <img id="cover-main-image" src={mainImage} alt={product?.ProductName} />
+                    <div className="image-div">
 
+                        <img id="cover-main-image" src={mainImage} alt={product?.ProductName} />
 
-                    <div className="slick-slider-div">
-                        <Slider {...slickSettings}>
+                        <div className="slick-slider-div">
+                            <Slider {...slickSettings}>
 
-                            {product?.imageArray?.map((img, ind) =>
-                                <img key={ind} src={img} alt={product?.ProductName} onClick={() => setMainImage(img)} />
-                            )}
-                        </Slider>
+                                {product?.imageArray?.map((img, ind) =>
+                                    <img key={ind} src={img} alt={product?.ProductName} onClick={() => setMainImage(img)} />
+                                )}
+                            </Slider>
+                        </div>
+
                     </div>
+
                 </div>
 
                 <div className="content-section">
@@ -200,9 +204,9 @@ const SingleProductPage = () => {
 
                     <motion.p
                         className="font-14 mb-gapping-tape"
-                        initial={{opacity: 0}}
-                        whileInView={{opacity:1}}
-                        transition={{delay:.5, duration:1}}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: .5, duration: 1 }}
                     >
                         We accept all major bank cards accepted by Chinese banks along with AliPay and WeChat Pay
                     </motion.p>
@@ -218,9 +222,9 @@ const SingleProductPage = () => {
 
                     <motion.p
                         className="font-14 mb-gapping-tape"
-                        initial={{opacity: 0}}
-                        whileInView={{opacity:1}}
-                        transition={{delay:.5, duration:1}}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: .5, duration: 1 }}
                     >
                         We ship product globally with proper care and make arrangements accordingly
                     </motion.p>
