@@ -19,6 +19,7 @@ import box from "../../assets/logos/Box.svg"
 
 import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.svg"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
+import { toast } from "react-toastify";
 
 
 
@@ -57,7 +58,6 @@ const SingleProductPage = () => {
     const [mainImage, setMainImage] = useState("")
 
     const [randomProducts, setRandomProducts] = useState([])
-
 
     // this section for order when add to curt 
     const [orderAmount, setOrderAmount] = useState()
@@ -102,13 +102,21 @@ const SingleProductPage = () => {
 
     const handleAddToCard = (e) => {
         e.preventDefault()
-        const orderQuantity = e.target.orderQuantity.value
+        let orderQuantity = e.target.orderQuantity.value
 
         if (orderQuantity) {
             setOrderAmount(parseInt(orderQuantity))
+        } else {
+            orderQuantity = product?.minimOrderQuantity
         }
 
         e.target.reset()
+
+        toast(`Added to cart: ${product?.ProductName} cover | ${orderQuantity} units | color: ${selectedColor?.name}`,
+            {
+                position: "top-center",
+                autoClose: 4000,
+            })
     }
 
     console.log(orderAmount, typeof (orderAmount))
@@ -201,11 +209,11 @@ const SingleProductPage = () => {
                     </form>
 
                     <div className="card-img mb-16">
-                        <img src={Visa} alt="Visa pay" loading="lazy"/>
-                        <img src={MasterCard} alt="MasterCard pay" loading="lazy"/>
-                        <img src={AmericanExpress} alt="AmericanExpress pay" loading="lazy"/>
-                        <img src={Alipay} alt="Alipay pay" loading="lazy"/>
-                        <img src={WeChat} alt="wechat pay" loading="lazy"/>
+                        <img src={Visa} alt="Visa pay" loading="lazy" />
+                        <img src={MasterCard} alt="MasterCard pay" loading="lazy" />
+                        <img src={AmericanExpress} alt="AmericanExpress pay" loading="lazy" />
+                        <img src={Alipay} alt="Alipay pay" loading="lazy" />
+                        <img src={WeChat} alt="wechat pay" loading="lazy" />
                     </div>
 
                     <motion.p
@@ -216,11 +224,11 @@ const SingleProductPage = () => {
 
 
                     <div className="card-img mb-16">
-                        <img src={globeBlack} alt="Global shipment" loading="lazy"/>
-                        <img src={box} alt="shipping box" loading="lazy"/>
-                        <img src={truck} alt="shipment by truck" loading="lazy"/>
-                        <img src={ship} alt="shipment by ship" loading="lazy"/>
-                        <img src={plane} alt="shipment by plane" loading="lazy"/>
+                        <img src={globeBlack} alt="Global shipment" loading="lazy" />
+                        <img src={box} alt="shipping box" loading="lazy" />
+                        <img src={truck} alt="shipment by truck" loading="lazy" />
+                        <img src={ship} alt="shipment by ship" loading="lazy" />
+                        <img src={plane} alt="shipment by plane" loading="lazy" />
                     </div>
 
                     <motion.p
@@ -245,8 +253,8 @@ const SingleProductPage = () => {
             <h2 className="mb-gapping-tape">Our Top suggestions</h2>
 
             <section className="suggested-products">
-                {randomProducts.map((prod, ind)=><SingleProduct key={ind} product={prod}/>
-                
+                {randomProducts.map((prod, ind) => <SingleProduct key={ind} product={prod} />
+
                 )}
             </section>
         </>

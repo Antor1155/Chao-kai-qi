@@ -6,6 +6,9 @@ import FooterSection from './components/FooterSection/FooterSection'
 
 import { ScrollRestoration } from "react-router-dom";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 
 
@@ -17,6 +20,7 @@ function App() {
       <mian style={{ width: "100vw", overflow: "hidden" }}>
         <Outlet></Outlet>
       </mian>
+      <ToastContainer />
       <FooterSection></FooterSection>
     </>
   )
