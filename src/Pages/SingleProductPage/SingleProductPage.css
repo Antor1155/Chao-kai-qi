@@ -130,3 +130,10 @@ span.title{
         width: 60%;
     }
 }
+
+.suggested-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}

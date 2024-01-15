@@ -18,6 +18,7 @@ import globeBlack from "../../assets/logos/globeBlack.svg"
 import box from "../../assets/logos/Box.svg"
 
 import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.svg"
+import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 
 
@@ -55,6 +56,8 @@ const SingleProductPage = () => {
     const [product, setProduct] = useState({})
     const [mainImage, setMainImage] = useState("")
 
+    const [randomProducts, setRandomProducts] = useState([])
+
 
     // this section for order when add to curt 
     const [orderAmount, setOrderAmount] = useState()
@@ -69,6 +72,9 @@ const SingleProductPage = () => {
         setProduct(schemaData)
         setMainImage(schemaData.mainImage)
         setOrderAmount(schemaData.minimOrderQuantity)
+
+
+        setRandomProducts([22, 33, 55, 3])
 
     }, [])
 
@@ -109,7 +115,7 @@ const SingleProductPage = () => {
 
     return (
         <>
-            <section id="singleProductPage">
+            <section id="singleProductPage" className="mb-double-gapping-tape">
 
                 <div className="image-section">
                     <div className="image-div">
@@ -195,36 +201,30 @@ const SingleProductPage = () => {
                     </form>
 
                     <div className="card-img mb-16">
-                        <img src={Visa} alt="Visa pay" />
-                        <img src={MasterCard} alt="MasterCard pay" />
-                        <img src={AmericanExpress} alt="AmericanExpress pay" />
-                        <img src={Alipay} alt="Alipay pay" />
-                        <img src={WeChat} alt="wechat pay" />
+                        <img src={Visa} alt="Visa pay" loading="lazy"/>
+                        <img src={MasterCard} alt="MasterCard pay" loading="lazy"/>
+                        <img src={AmericanExpress} alt="AmericanExpress pay" loading="lazy"/>
+                        <img src={Alipay} alt="Alipay pay" loading="lazy"/>
+                        <img src={WeChat} alt="wechat pay" loading="lazy"/>
                     </div>
 
                     <motion.p
                         className="font-14 mb-gapping-tape"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: .5, duration: 1 }}
                     >
                         We accept all major bank cards accepted by Chinese banks along with AliPay and WeChat Pay
                     </motion.p>
 
 
                     <div className="card-img mb-16">
-                        <img src={globeBlack} alt="Global shipment" />
-                        <img src={box} alt="shipping box" />
-                        <img src={truck} alt="shipment by truck" />
-                        <img src={ship} alt="shipment by ship" />
-                        <img src={plane} alt="shipment by plane" />
+                        <img src={globeBlack} alt="Global shipment" loading="lazy"/>
+                        <img src={box} alt="shipping box" loading="lazy"/>
+                        <img src={truck} alt="shipment by truck" loading="lazy"/>
+                        <img src={ship} alt="shipment by ship" loading="lazy"/>
+                        <img src={plane} alt="shipment by plane" loading="lazy"/>
                     </div>
 
                     <motion.p
                         className="font-14 mb-gapping-tape"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: .5, duration: 1 }}
                     >
                         We ship product globally with proper care and make arrangements accordingly
                     </motion.p>
@@ -240,6 +240,14 @@ const SingleProductPage = () => {
 
 
                 </div>
+            </section>
+
+            <h2 className="mb-gapping-tape">Our Top suggestions</h2>
+
+            <section className="suggested-products">
+                {randomProducts.map((prod, ind)=><SingleProduct key={ind} product={prod}/>
+                
+                )}
             </section>
         </>
     );
