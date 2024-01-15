@@ -17,6 +17,8 @@ import ship from "../../assets/logos/ship.svg"
 import globeBlack from "../../assets/logos/globeBlack.svg"
 import box from "../../assets/logos/Box.svg"
 
+import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.svg"
+
 
 
 const schemaData = {
@@ -170,7 +172,7 @@ const SingleProductPage = () => {
                         }
                     </div>
 
-                    <form onSubmit={handleAddToCard} className="order-amount-form mb-gapping-tape">
+                    <form onSubmit={handleAddToCard} className="order-amount-form mb-double-gapping-tape">
                         <label className="font-24" htmlFor="orderQuantity">
                             <span className="title">
                                 Order amount
@@ -212,12 +214,10 @@ const SingleProductPage = () => {
                         <img src={truck} alt="shipment by truck" />
                         <img src={ship} alt="shipment by ship" />
                         <img src={plane} alt="shipment by plane" />
-
                     </div>
 
-
                     <motion.p
-                        className="font-14"
+                        className="font-14 mb-gapping-tape"
                         initial={{opacity: 0}}
                         whileInView={{opacity:1}}
                         transition={{delay:.5, duration:1}}
@@ -225,7 +225,16 @@ const SingleProductPage = () => {
                         We ship product globally with proper care and make arrangements accordingly
                     </motion.p>
 
-                    
+
+                    <div className="company-info">
+                        <img src={chaoKaiQi} alt="chaokaiQi | ChaoKaiQi company logo" />
+
+                        <h2 className="font-24"> <span className="company-font">ChaoKaiQi</span> <br />
+                            Globally trusted name
+                        </h2>
+                    </div>
+
+
                 </div>
             </section>
         </>
