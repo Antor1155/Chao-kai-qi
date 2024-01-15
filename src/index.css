@@ -12,6 +12,8 @@
   --bg-color : #f9f5f6;
   --chinese-red : #C90A1E;
   --info-blue : #25CBE1;
+  --btn-color: #ECC35C;
+  --btn-hover-color: #EDAB00;
 
   --body-font: "Inder", cursive;
   --company-name-font: "imperial script", cursive;
@@ -115,6 +117,9 @@ a{
   text-align: center;
 }
 
+.mb-4{
+  margin-bottom: 4px;
+}
 .mb-8{
   margin-bottom: 8px;
 }
@@ -161,6 +166,8 @@ a{
 .width-48{
   width: 48px
 }
+
+
 
 .fw-button{
   font-family: var(--body-font);
