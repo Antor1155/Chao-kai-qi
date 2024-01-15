@@ -50,7 +50,9 @@
 .content-section{
     border: 1px solid;
     border-radius: 16px;
+
     padding: 16px;
+    padding-left: 10%;
 
 }
 
@@ -79,7 +81,7 @@ span.title{
     }
 }
 
-#order-amount-form{
+.order-amount-form{
     & input{
         font-size: 16px;
         padding: 4px;
@@ -92,5 +94,20 @@ span.title{
 
     & button{
         font-size: 16px;
+    }
+}
+
+.card-img{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+
+    & img{
+        width: 100%;
+    }
+
+    & img:last-child{
+        width: 85%;
+        align-self: center;
     }
 }

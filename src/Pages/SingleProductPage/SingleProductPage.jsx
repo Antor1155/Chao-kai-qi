@@ -5,6 +5,20 @@ import { motion } from "framer-motion"
 
 import star from "../../assets/logos/Star.svg"
 
+import Alipay from "../../assets/logos/Alipay.svg"
+import WeChat from "../../assets/logos/WeChat.svg"
+import Visa from "../../assets/logos/Visa.svg"
+import MasterCard from "../../assets/logos/MasterCard.svg"
+import AmericanExpress from "../../assets/logos/AmericanExpress.svg"
+
+import truck from "../../assets/logos/truck.svg"
+import plane from "../../assets/logos/plane.svg"
+import ship from "../../assets/logos/ship.svg"
+import globeBlack from "../../assets/logos/globeBlack.svg"
+import box from "../../assets/logos/Box.svg"
+
+
+
 const schemaData = {
     ProductName: "ipad mini 6",
     coverName: "Snap Rotate style",
@@ -39,8 +53,9 @@ const SingleProductPage = () => {
     const [product, setProduct] = useState({})
     const [mainImage, setMainImage] = useState("")
 
-    const [orderAmount, setOrderAmount] = useState()
 
+    // this section for order when add to curt 
+    const [orderAmount, setOrderAmount] = useState()
     const [selectedColor, setSelectedColor] = useState({
         name: "all",
         colorValue: "",
@@ -52,6 +67,7 @@ const SingleProductPage = () => {
         setProduct(schemaData)
         setMainImage(schemaData.mainImage)
         setOrderAmount(schemaData.minimOrderQuantity)
+
     }, [])
 
     const slickSettings = {
@@ -78,16 +94,16 @@ const SingleProductPage = () => {
 
     const handleAddToCard = (e) => {
         e.preventDefault()
-        const orderQuantity = e.target.orderQuantity.value 
+        const orderQuantity = e.target.orderQuantity.value
 
-        if(orderQuantity){
+        if (orderQuantity) {
             setOrderAmount(parseInt(orderQuantity))
         }
-        
+
         e.target.reset()
     }
 
-    console.log(orderAmount, typeof(orderAmount))
+    console.log(orderAmount, typeof (orderAmount))
 
     return (
         <>
@@ -154,26 +170,62 @@ const SingleProductPage = () => {
                         }
                     </div>
 
-                    <form onSubmit={handleAddToCard} id="order-amount-form">
+                    <form onSubmit={handleAddToCard} className="order-amount-form mb-gapping-tape">
                         <label className="font-24" htmlFor="orderQuantity">
                             <span className="title">
                                 Order amount
                             </span>
                         </label>
 
-                        <input type="number" name="orderQuantity" id="orderQuantity" min={product?.minimOrderQuantity} placeholder={"min amount : " + product?.minimOrderQuantity}  />
+                        <input type="number" name="orderQuantity" id="orderQuantity" min={product?.minimOrderQuantity} placeholder={"min amount : " + product?.minimOrderQuantity} />
 
                         <motion.button
                             className="fw-button"
                             type="submit"
-                            whileTap={{scale:0.95}}
+                            whileTap={{ scale: 0.95 }}
                         >
                             ADD TO CART
                         </motion.button>
                     </form>
 
+                    <div className="card-img mb-16">
+                        <img src={Visa} alt="Visa pay" />
+                        <img src={MasterCard} alt="MasterCard pay" />
+                        <img src={AmericanExpress} alt="AmericanExpress pay" />
+                        <img src={Alipay} alt="Alipay pay" />
+                        <img src={WeChat} alt="wechat pay" />
+                    </div>
+
+                    <motion.p
+                        className="font-14 mb-gapping-tape"
+                        initial={{opacity: 0}}
+                        whileInView={{opacity:1}}
+                        transition={{delay:.5, duration:1}}
+                    >
+                        We accept all major bank cards accepted by Chinese banks along with AliPay and WeChat Pay
+                    </motion.p>
 
 
+                    <div className="card-img mb-16">
+                        <img src={globeBlack} alt="Global shipment" />
+                        <img src={box} alt="shipping box" />
+                        <img src={truck} alt="shipment by truck" />
+                        <img src={ship} alt="shipment by ship" />
+                        <img src={plane} alt="shipment by plane" />
+
+                    </div>
+
+
+                    <motion.p
+                        className="font-14"
+                        initial={{opacity: 0}}
+                        whileInView={{opacity:1}}
+                        transition={{delay:.5, duration:1}}
+                    >
+                        We ship product globally with proper care and make arrangements accordingly
+                    </motion.p>
+
+                    
                 </div>
             </section>
         </>
