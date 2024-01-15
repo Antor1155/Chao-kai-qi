@@ -39,6 +39,7 @@ import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import { toast } from "react-toastify";
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -85,6 +86,8 @@ const Home = () => {
     const handleInfoSubmit = (e) => {
         e.preventDefault()
         e.target.reset()
+
+        toast("Thanks for your input. We will get back to you soon ! Hope you have a good day.")
     }
 
     const handleContactNow = () =>{
@@ -219,27 +222,27 @@ const Home = () => {
                             <form onSubmit={handleInfoSubmit}>
                                 <div>
                                     <label htmlFor="name">Name</label>
-                                    <input id="name" name="name" type="text" />
+                                    <input id="name" name="name" type="text" required />
                                 </div>
 
                                 <div>
                                     <label htmlFor="country">Country</label>
-                                    <input id="country" name="country" type="text" />
+                                    <input id="country" name="country" type="text" required/>
                                 </div>
 
                                 <div>
                                     <label htmlFor="organization">Organization name</label>
-                                    <input id="organization" name="organization" type="text" />
+                                    <input id="organization" name="organization" type="text" required/>
                                 </div>
 
                                 <div>
                                     <label htmlFor="email">email</label>
-                                    <input id="email" name="email" type="text" />
+                                    <input id="email" name="email" type="text" required/>
                                 </div>
 
                                 <div>
                                     <label htmlFor="mobile">Phone number</label>
-                                    <input id="mobile" name="mobile" type="text" />
+                                    <input id="mobile" name="mobile" type="text" required/>
                                 </div>
 
                                 <div>
