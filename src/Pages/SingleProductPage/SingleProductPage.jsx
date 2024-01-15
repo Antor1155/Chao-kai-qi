@@ -172,7 +172,7 @@ const SingleProductPage = () => {
                         }
                     </div>
 
-                    <form onSubmit={handleAddToCard} className="order-amount-form mb-double-gapping-tape">
+                    <form onSubmit={handleAddToCard} className="order-amount-form mb-gapping-tape">
                         <label className="font-24" htmlFor="orderQuantity">
                             <span className="title">
                                 Order amount
