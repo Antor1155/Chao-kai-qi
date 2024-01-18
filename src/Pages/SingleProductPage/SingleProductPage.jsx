@@ -26,6 +26,7 @@ import { toast } from "react-toastify";
 const schemaData = {
     productName: "ipad mini 6",
     coverName: "Snap Rotate style",
+    brand: "",
     description:"",
     minimOrderQuantity: 10,
     pricePerUnit: 2.6,
