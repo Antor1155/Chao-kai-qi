@@ -26,10 +26,11 @@ import { toast } from "react-toastify";
 const schemaData = {
     ProductName: "ipad mini 6",
     coverName: "Snap Rotate style",
+    description:"",
     minimOrderQuantity: 10,
     pricePerUnit: 2.6,
-    productSize: "200 * 150 * 13 cm",
-    productGrossWeight: "198 g",
+    productSize: "200 * 150 * 13",
+    productGrossWeight: "198",
     imageArray: ["/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg", "/ProductImages/example-type/IPAD1.jpg","/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg"],
 
     mainImage: "/ProductImages/example-type/IPAD1.jpg",
