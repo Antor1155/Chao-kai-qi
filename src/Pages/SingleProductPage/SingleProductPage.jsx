@@ -24,7 +24,7 @@ import { toast } from "react-toastify";
 
 
 const schemaData = {
-    ProductName: "ipad mini 6",
+    productName: "ipad mini 6",
     coverName: "Snap Rotate style",
     description:"",
     minimOrderQuantity: 10,
@@ -113,7 +113,7 @@ const SingleProductPage = () => {
 
         e.target.reset()
 
-        toast(`Added to cart: ${product?.ProductName} cover | ${orderQuantity} units | color: ${selectedColor?.name}`,
+        toast(`Added to cart: ${product?.productName} cover | ${orderQuantity} units | color: ${selectedColor?.name}`,
             {
                 position: "top-center",
                 autoClose: 4000,
@@ -129,13 +129,13 @@ const SingleProductPage = () => {
                 <div className="image-section">
                     <div className="image-div">
 
-                        <img id="cover-main-image" src={mainImage} alt={product?.ProductName} />
+                        <img id="cover-main-image" src={mainImage} alt={product?.productName} />
 
                         <div className="slick-slider-div">
                             <Slider {...slickSettings}>
 
                                 {product?.imageArray?.map((img, ind) =>
-                                    <img key={ind} src={img} alt={product?.ProductName} onClick={() => setMainImage(img)} />
+                                    <img key={ind} src={img} alt={product?.productName} onClick={() => setMainImage(img)} />
                                 )}
                             </Slider>
                         </div>
@@ -145,7 +145,7 @@ const SingleProductPage = () => {
                 </div>
 
                 <div className="content-section">
-                    <h1 className="mb-16"><span className="chinese-red">{product?.ProductName}</span> cover</h1>
+                    <h1 className="mb-16"><span className="chinese-red">{product?.productName}</span> cover</h1>
 
                     <h2 className="font-24 mb-4">$ {product?.pricePerUnit} USD <span className="title">per unit</span></h2>
 
