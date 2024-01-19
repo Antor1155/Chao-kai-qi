@@ -20,6 +20,8 @@ import box from "../../assets/logos/Box.svg"
 import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.svg"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { toast } from "react-toastify";
+import instance from "../../axiosInstance";
+import { useParams } from "react-router-dom";
 
 
 
@@ -27,12 +29,12 @@ const schemaData = {
     productName: "ipad mini 6",
     coverName: "Snap Rotate style",
     brand: "",
-    description:"",
+    description: "",
     minimOrderQuantity: 10,
     pricePerUnit: 2.6,
     productSize: "200 * 150 * 13",
     productGrossWeight: "198",
-    imageArray: ["/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg", "/ProductImages/example-type/IPAD1.jpg","/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg"],
+    imageArray: ["/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg", "/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg"],
 
     mainImage: "/ProductImages/example-type/IPAD1.jpg",
     colors: {
@@ -69,16 +71,28 @@ const SingleProductPage = () => {
         imgLink: ""
     })
 
+    const { id } = useParams()
 
+    // collect 4 random products to show 
     useEffect(() => {
-        setProduct(schemaData)
-        setMainImage(schemaData.mainImage)
-        setOrderAmount(schemaData.minimOrderQuantity)
+        instance.get(`/product/${id}`).then(data => {
+            const p = data.data
 
+            setProduct(p)
+            setMainImage(p.mainImage)
+            setOrderAmount(p.minimOrderQuantity)
+        }).catch(error => {
+            console.log(error)
+        })
 
-        setRandomProducts([22, 33, 55, 3])
+        instance.get("/random-products/3").then(data => {
+            setRandomProducts(data.data)
+        }).catch(error => {
+            console.log(error)
+        })
 
-    }, [])
+    }, [id])
+
 
     const slickSettings = {
         dots: false,
@@ -112,6 +126,9 @@ const SingleProductPage = () => {
             orderQuantity = product?.minimOrderQuantity
         }
 
+        const cartItems = localStorage.getItem("chaoKaiQi-cart")
+        console.log(cartItems)
+
         e.target.reset()
 
         toast(`Added to cart: ${product?.productName} cover | ${orderQuantity} units | color: ${selectedColor?.name}`,
@@ -121,8 +138,6 @@ const SingleProductPage = () => {
             })
     }
 
-    console.log(orderAmount, typeof (orderAmount))
-
     return (
         <>
             <section id="singleProductPage" className="mb-double-gapping-tape">
@@ -130,13 +145,13 @@ const SingleProductPage = () => {
                 <div className="image-section">
                     <div className="image-div">
 
-                        <img id="cover-main-image" src={mainImage} alt={product?.productName} />
+                        <img id="cover-main-image" src={mainImage + ".jpg"} alt={product?.productName} />
 
                         <div className="slick-slider-div">
                             <Slider {...slickSettings}>
 
                                 {product?.imageArray?.map((img, ind) =>
-                                    <img key={ind} src={img} alt={product?.productName} onClick={() => setMainImage(img)} />
+                                    <img key={ind} src={img + ".jpg"} alt={product?.productName} onClick={() => setMainImage(img)} />
                                 )}
                             </Slider>
                         </div>

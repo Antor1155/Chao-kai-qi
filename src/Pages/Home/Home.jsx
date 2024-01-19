@@ -74,7 +74,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        instance.get("/all-products/0/12").then(data =>{
+        instance.get("/random-products/12").then(data =>{
             setProducts(data.data)
         }).catch(error=>{
             console.log(error)

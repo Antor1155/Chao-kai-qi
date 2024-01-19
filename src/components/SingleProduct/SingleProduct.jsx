@@ -8,10 +8,8 @@ const SingleProduct = ({ product }) => {
     // eslint-disable-next-line react/prop-types
     const { _id, productName, coverName, minimOrderQuantity, pricePerUnit, mainImage, colors } = product
 
-    console.log(product)
-
     // eslint-disable-next-line react/prop-types
-    const link = `/wholesale-tablet-cover/${productName.replace(/ /g, "-")}/${_id}`
+    const link = `/wholesale-tablet-cover/${productName?.replace(/ /g, "-")}/${_id}`
 
     return (
         <Link to={link}>
