@@ -24,39 +24,6 @@ import instance from "../../axiosInstance";
 import { useParams } from "react-router-dom";
 
 
-
-const schemaData = {
-    productName: "ipad mini 6",
-    coverName: "Snap Rotate style",
-    brand: "",
-    description: "",
-    minimOrderQuantity: 10,
-    pricePerUnit: 2.6,
-    productSize: "200 * 150 * 13",
-    productGrossWeight: "198",
-    imageArray: ["/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg", "/ProductImages/example-type/IPAD1.jpg", "/ProductImages/example-type/IPAD2.jpg", "/ProductImages/example-type/IPAD3.jpg"],
-
-    mainImage: "/ProductImages/example-type/IPAD1.jpg",
-    colors: {
-        roseGold: {
-            name: "rose gold",
-            colorValue: "#B78E89",
-            imgLink: "/ProductImages/example-type/IPAD1.jpg"
-        },
-        navy: {
-            name: "navy",
-            colorValue: "#3B3B5F",
-            imgLink: "/ProductImages/example-type/IPAD2.jpg"
-        },
-        black: {
-            name: "black",
-            colorValue: "#303030",
-            imgLink: "/ProductImages/example-type/IPAD3.jpg"
-        }
-    },
-
-}
-
 const SingleProductPage = () => {
     const [product, setProduct] = useState({})
     const [mainImage, setMainImage] = useState("")
@@ -64,7 +31,7 @@ const SingleProductPage = () => {
     const [randomProducts, setRandomProducts] = useState([])
 
     // this section for order when add to curt 
-    const [orderAmount, setOrderAmount] = useState()
+
     const [selectedColor, setSelectedColor] = useState({
         name: "all",
         colorValue: "",
@@ -80,7 +47,6 @@ const SingleProductPage = () => {
 
             setProduct(p)
             setMainImage(p.mainImage)
-            setOrderAmount(p.minimOrderQuantity)
         }).catch(error => {
             console.log(error)
         })
@@ -118,16 +84,29 @@ const SingleProductPage = () => {
 
     const handleAddToCard = (e) => {
         e.preventDefault()
-        let orderQuantity = e.target.orderQuantity.value
+        let orderQuantity = e.target.orderQuantity.value ? e.target.orderQuantity.value : product.minimOrderQuantity
 
-        if (orderQuantity) {
-            setOrderAmount(parseInt(orderQuantity))
-        } else {
-            orderQuantity = product?.minimOrderQuantity
+        
+
+        // saving order items to local storage 
+        const cartItems = JSON.parse(localStorage.getItem("chaoKaiQi-cart")) ?? []
+
+        const orderedProduct = {
+            productName : product.productName,
+            coverName: product.coverName,
+            brand: product.brand,
+            priceperUnit: product.pricePerUnit,
+            totalPrice: (product.pricePerUnit * orderQuantity).toFixed(2),
+            mainImage : mainImage,
+            orderAmount : orderQuantity,
+            color: selectedColor,
+            productGrossWeight: product.productGrossWeight,
+            productSize: product.productSize,
         }
 
-        const cartItems = localStorage.getItem("chaoKaiQi-cart")
-        console.log(cartItems)
+        cartItems.push(orderedProduct)
+        
+        localStorage.setItem("chaoKaiQi-cart", JSON.stringify(cartItems))
 
         e.target.reset()
 
@@ -175,9 +154,9 @@ const SingleProductPage = () => {
 
                     <h2 className="font-24 mb-16"> <span className="title">Cover name</span> : {product?.coverName}</h2>
 
-                    <h2 className="font-24 mb-16"> <span className="title">Product size</span> : {product?.productSize}</h2>
+                    <h2 className="font-24 mb-16"> <span className="title">Product size</span> : {product?.productSize} cm</h2>
 
-                    <h2 className="font-24 mb-16"> <span className="title">Gross weight</span> : {product?.productGrossWeight}</h2>
+                    <h2 className="font-24 mb-16"> <span className="title">Gross weight</span> : {product?.productGrossWeight} g</h2>
 
                     <h2 className="font-24 mb-32"> <span className="title">Minimum order quantity</span> : {product?.minimOrderQuantity} units</h2>
 
