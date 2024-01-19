@@ -51,7 +51,7 @@ const SingleProductPage = () => {
             console.log(error)
         })
 
-        instance.get("/random-products/3").then(data => {
+        instance.get("/random-products/4").then(data => {
             setRandomProducts(data.data)
         }).catch(error => {
             console.log(error)
