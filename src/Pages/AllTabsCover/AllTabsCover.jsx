@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { motion } from "framer-motion"
 
@@ -6,183 +6,222 @@ import "./AllTabsCover.css"
 
 import filter from "../../assets/logos/Filter.svg"
 import cancel from "../../assets/logos/Cancel.svg"
+import instance from "../../axiosInstance";
 
 const AllTabsCover = () => {
     const [products, setProducts] = useState([])
     const [mobileFilterVisible, setMobileFilterVisible] = useState(false)
 
+    const [disableLoadMore, setDisableLoadMore] = useState(false)
+
+    const starts = useRef(0)
+    const ends = useRef(12)
+
     useEffect(() => {
-        setProducts([5, 2, 5, 33, 22, 55, 22, 11, 44])
+        instance.get(`/all-products/${starts.current}/${ends.current}`).then(data => {
+            setProducts(data.data)
+        }).catch(error => {
+            console.log(error)
+        })
     }, [])
 
-    return (
-        <section className="all-products-page">
-            <h1 className="align-center"> <span className="chinese-red">Ipad air 2020</span> tablet covers</h1>
+    const handleLoadMore = () => {
+        starts.current += ends.current
 
-            <motion.button
-                className="filter-button"
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setMobileFilterVisible(true)}
-            >
-                <img src={filter} alt="filter button" />
-            </motion.button>
+        instance.get(`/all-products/${starts.current}/${ends.current}`)
+            .then(data => {
+                const p = data.data
+                console.log(p)
 
-            <section className="all-products-section">
-
-                <div className={`filter-catagories  ${mobileFilterVisible ? "visible" : ""} `} id="filter-catagories">
-
-                    <motion.button
-                        className="mobile-visible"
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => setMobileFilterVisible(false)}
-                    >
-                        <img src={cancel} alt="" />
-                    </motion.button>
-
-                    <div className="single-filter">
-                        <h2 >Iphone</h2>
-
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                    </div>
-
-                    <div className="single-filter">
-                        <h2 >Samsung</h2>
-
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> S8 ultra</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> S6 ultra</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022">Tab A8</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> S9 plus</label>
-                        </p>
-                    </div>
-
-                    <div className="single-filter">
-                        <h2 >Samsung</h2>
-
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> S8 ultra</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> S6 ultra</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022">Tab A8</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> S9 plus</label>
-                        </p>
-                    </div>
+                if (p.length) {
+                    setProducts(prev => [...prev, ...p])
+                } else {
+                    setDisableLoadMore(true)
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+    }
 
 
-                    <div className="single-filter">
-                        <h2 className="company-font font-bold">Cover style</h2>
+        return (
+            <section className="all-products-page">
+                <h1 className="align-center">All tablet covers by <span className="chinese-red">Chao Kai Qi</span></h1>
 
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Magnetic</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Striped</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Special</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Glass special</label>
-                        </p>
-                    </div>
+                <motion.button
+                    className="filter-button"
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => setMobileFilterVisible(true)}
+                >
+                    <img src={filter} alt="filter button" />
+                </motion.button>
 
-                    <div className="single-filter">
-                        <h2 className="company-font font-bold">Colors</h2>
+                <section className="all-products-section">
 
-                        <div className="color-buttons">
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "red" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "green" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "yellow" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "black" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "cyan" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "white" }}
-                            ></motion.button>
+                    <div className={`filter-catagories  ${mobileFilterVisible ? "visible" : ""} `} id="filter-catagories">
 
-
-
-                        </div>
-                    </div>
-
-                    <div id="mobile-filter-apply">
                         <motion.button
+                            className="mobile-visible"
                             whileTap={{ scale: 0.9 }}
                             onClick={() => setMobileFilterVisible(false)}
                         >
-                            APPLY
+                            <img src={cancel} alt="" />
                         </motion.button>
+
+                        <div className="single-filter">
+                            <h2 >Iphone</h2>
+
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Ipad 2022</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Ipad 2022</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Ipad 2022</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Ipad 2022</label>
+                            </p>
+                        </div>
+
+                        <div className="single-filter">
+                            <h2 >Samsung</h2>
+
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> S8 ultra</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> S6 ultra</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022">Tab A8</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> S9 plus</label>
+                            </p>
+                        </div>
+
+                        <div className="single-filter">
+                            <h2 >Samsung</h2>
+
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> S8 ultra</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> S6 ultra</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022">Tab A8</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> S9 plus</label>
+                            </p>
+                        </div>
+
+
+                        <div className="single-filter">
+                            <h2 className="company-font font-bold">Cover style</h2>
+
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Magnetic</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Striped</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Special</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="ipad 2022" id="ipad 2020" />
+                                <label htmlFor="ipad 2022"> Glass special</label>
+                            </p>
+                        </div>
+
+                        <div className="single-filter">
+                            <h2 className="company-font font-bold">Colors</h2>
+
+                            <div className="color-buttons">
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    style={{ background: "red" }}
+                                ></motion.button>
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    style={{ background: "green" }}
+                                ></motion.button>
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    style={{ background: "yellow" }}
+                                ></motion.button>
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    style={{ background: "black" }}
+                                ></motion.button>
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    style={{ background: "cyan" }}
+                                ></motion.button>
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    style={{ background: "white" }}
+                                ></motion.button>
+
+
+
+                            </div>
+                        </div>
+
+                        <div id="mobile-filter-apply">
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => setMobileFilterVisible(false)}
+                            >
+                                APPLY
+                            </motion.button>
+                        </div>
+
                     </div>
 
-                </div>
+                    <div className="result-products">
+                        {products.map((product, ind) => <SingleProduct key={ind} product={product}></SingleProduct>)}
 
-                <div className="result-products">
-                    {products.map((product, ind) => <SingleProduct key={ind} product={product}></SingleProduct>)}
+                    </div>
+                </section>
 
-                </div>
+                <motion.button
+                    whileTap={{ scale: disableLoadMore ? 1 : 0.9 }}
+                    className="load-more-btn"
+                    whileHover={{ scale: disableLoadMore ? 1 : 1.02 }}
+                    onClick={handleLoadMore}
+                    disabled={disableLoadMore}
+                >
+                    LOAD MORE COVER
+                </motion.button>
+
             </section>
+        );
+    };
 
-        </section>
-    );
-};
-
-export default AllTabsCover;
+    export default AllTabsCover;

@@ -70,6 +70,18 @@
     display: none;
 }
 
+.load-more-btn{
+    background-color: #ECC35C;
+    width: 20vw;
+    display: block;
+    margin: auto;
+    margin-top: var(--gapping-tape);
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
 
 
 @media screen and (max-width:825px) {
