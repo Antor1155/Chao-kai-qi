@@ -40,6 +40,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { toast } from "react-toastify";
+import instance from "../../axiosInstance";
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -73,8 +74,14 @@ const Home = () => {
     }
 
     useEffect(() => {
-        setProducts([10, 11, 12, 13, 14, 19, 15, 16, 17, 18, 20, 21])
+        instance.get("/all-products/0/12").then(data =>{
+            setProducts(data.data)
+        }).catch(error=>{
+            console.log(error)
+        })
 
+
+        // checking the device is phone or desktop 
         const mq = window.matchMedia("(max-width: 768px)");
 
         if(mq.matches){
@@ -168,7 +175,7 @@ const Home = () => {
                 </div>
 
                 <div className="top-product-container">
-                    {products.map((product, index) => <SingleProduct key={index} product={product}></SingleProduct>)}
+                    {products.map((product) => <SingleProduct key={product._id} product={product}></SingleProduct>)}
                 </div>
             </section>
 
