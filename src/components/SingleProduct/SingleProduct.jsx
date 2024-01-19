@@ -2,8 +2,6 @@ import "./SingleProduct.css"
 import { Link } from "react-router-dom";
 
 
-
-
 // eslint-disable-next-line react/prop-types
 const SingleProduct = ({ product }) => {
 
@@ -14,7 +12,6 @@ const SingleProduct = ({ product }) => {
 
     // eslint-disable-next-line react/prop-types
     const link = `/wholesale-tablet-cover/${productName.replace(/ /g, "-")}/${_id}`
-
 
     return (
         <Link to={link}>
