@@ -102,6 +102,7 @@ const SingleProductPage = () => {
             color: selectedColor,
             productGrossWeight: product.productGrossWeight,
             productSize: product.productSize,
+            productId: product._id,
         }
 
         cartItems.push(orderedProduct)
