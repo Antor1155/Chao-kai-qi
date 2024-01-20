@@ -1,0 +1,51 @@
+#contact-us{
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 64px;
+}
+
+.info-container{
+    padding: 0 16px;
+    border-radius: 16px;
+    background-color: rgba(249, 245, 246, 0.5);
+    border: 1px solid black;
+}
+
+.contact-form-container{
+
+}
+
+.contact-form{
+    
+    & label, input, textarea{
+        display: block;
+        width: 100%;
+    }
+
+    & label{
+        position: relative;
+        left: 8px;
+
+    }
+
+    & input, textarea{
+        padding:16px 8px;
+        font-size: 16px;
+        border-radius: 16px;
+        border: 1px solid rgb(119, 119, 119);
+        background-color: transparent;
+
+        margin-bottom: 16px;
+    }
+
+    & .fw-button{
+        width: 300px;
+        display: block;
+        margin: auto;
+        margin-top: 32px;
+    }
+
+
+}
