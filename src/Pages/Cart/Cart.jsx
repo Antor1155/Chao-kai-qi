@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion} from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";
 
 import "./Cart.css"
@@ -20,56 +20,63 @@ const Cart = () => {
 
     const handleCancel = (e, item) => {
         e.stopPropagation();
-        setCart(prev => prev.filter(p => p !== item))
+        setCart(prev => {
+            const newCart = prev.filter(p => p !== item)
+            localStorage.setItem("chaoKaiQi-cart", JSON.stringify(newCart))
+
+            return newCart
+        })
     }
 
     return (
         <section id="cart-section">
             <motion.div>
-
-                {cart.map((item, ind) => {
-                    return (
-                        <motion.div
-                            key={ind}
-                            className="cart-item"
-                            onClick={() => navigate(`/wholesale-tablet-cover/${item?.productName}/${item.productId}`)}
-                        >
-
-                            <motion.button
-                                whileTap={{ scale: 0.9, boxShadow: "0" }}
-                                whileHover={{ scale: 1.1, boxShadow: "0px 1px black" }}
-                                onClick={(e) => handleCancel(e, item)}
-                                className="cancel-btn"
+                <AnimatePresence>
+                    {cart.map((item, ind) => {
+                        return (
+                            <motion.div
+                                key={ind}
+                                exit={{height: 0, opacity: 0}}
+                                
+                                className="cart-item"
+                                onClick={() => navigate(`/wholesale-tablet-cover/${item?.productName}/${item.productId}`)}
                             >
-                                <img src={cancel} alt="cancel button" />
-                            </motion.button>
 
-                            <img src={item?.mainImage + ".jpg"} alt={item?.productName + " cover"} />
+                                <motion.button
+                                    whileTap={{ scale: 0.9, boxShadow: "0" }}
+                                    whileHover={{ scale: 1.1, boxShadow: "0px 1px black" }}
+                                    onClick={(e) => handleCancel(e, item)}
+                                    className="cancel-btn"
+                                >
+                                    <img src={cancel} alt="cancel button" />
+                                </motion.button>
 
-                            <div>
-                                <h2 className="chinese-red">{item?.productName} cover</h2>
-                                <p><span className="label">Cover name: </span>{item?.coverName}</p>
+                                <img src={item?.mainImage + ".jpg"} alt={item?.productName + " cover"} />
 
-                                <div className="inline-p">
-                                    <p><span className="label">Color: </span>{item?.color?.name}</p>
-                                    <p><span className="label">Brand: </span>{item?.brand}</p>
+                                <div>
+                                    <h2 className="chinese-red">{item?.productName} cover</h2>
+                                    <p><span className="label">Cover name: </span>{item?.coverName}</p>
+
+                                    <div className="inline-p">
+                                        <p><span className="label">Color: </span>{item?.color?.name}</p>
+                                        <p><span className="label">Brand: </span>{item?.brand}</p>
+                                    </div>
+
+                                    <div className="inline-p small-font">
+                                        <p><span className="label">Price / unit : </span>{item?.priceperUnit} USD</p>
+                                        <p><span className="label">Weight / unit : </span>{item?.productGrossWeight} g</p>
+                                        <p><span className="label">Size / unit : </span>{item?.productSize} cm</p>
+                                    </div>
+
+                                    <div className="inline-p">
+                                        <p className="font-bold"><span >Total order: </span>{item?.orderAmount} units</p>
+                                        <p className="font-bold"><span >Total price: </span>$ {item?.totalPrice} USD</p>
+                                    </div>
                                 </div>
-
-                                <div className="inline-p small-font">
-                                    <p><span className="label">Price / unit : </span>{item?.priceperUnit} USD</p>
-                                    <p><span className="label">Weight / unit : </span>{item?.productGrossWeight} g</p>
-                                    <p><span className="label">Size / unit : </span>{item?.productSize} cm</p>
-                                </div>
-
-                                <div className="inline-p">
-                                    <p className="font-bold"><span >Total order: </span>{item?.orderAmount} units</p>
-                                    <p className="font-bold"><span >Total price: </span>$ {item?.totalPrice} USD</p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    )
-                })}
-
+                            </motion.div>
+                        )
+                    })}
+                </AnimatePresence>
             </motion.div>
 
             <div>
