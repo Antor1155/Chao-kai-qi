@@ -103,6 +103,7 @@ const SingleProductPage = () => {
             productGrossWeight: product.productGrossWeight,
             productSize: product.productSize,
             productId: product._id,
+            minimOrderQuantity : product?.minimOrderQuantity,
         }
 
         cartItems.push(orderedProduct)
