@@ -7,6 +7,7 @@ import "./AllTabsCover.css"
 import filter from "../../assets/logos/Filter.svg"
 import cancel from "../../assets/logos/Cancel.svg"
 import instance from "../../axiosInstance";
+import { useParams } from "react-router-dom";
 
 const AllTabsCover = () => {
     const [products, setProducts] = useState([])
@@ -16,22 +17,38 @@ const AllTabsCover = () => {
 
     const [disableLoadMore, setDisableLoadMore] = useState(false)
 
+    const { productName } = useParams()
+
+
     const starts = useRef(0)
     const ends = useRef(12)
 
     useEffect(() => {
-        instance.get(`/all-products/${starts.current}/${ends.current}`).then(data => {
-            setProducts(data.data)
-        }).catch(error => {
-            console.log(error)
-        })
+        if (productName === "all") {
+            instance.get(`/all-products/${starts.current}/${ends.current}`)
+                .then(data => {
+                    setProducts(data.data)
+                }).catch(error => {
+                    console.log(error)
+                })
+        }else{
+            instance.post("/selected-products", { updatedSelection:[productName] })
+                .then(data => {
+                    setProducts(data.data)
+                })
+                .catch(error => [
+                    console.log(error)
+                ])
+
+            setDisableLoadMore(true)
+        }
 
         instance.get("brands")
             .then(data => {
                 setBrands(data.data)
             })
             .catch(error => { console.log(error) })
-    }, [])
+    }, [productName])
 
 
     const handleLoadMore = () => {

@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path:"all-wholesale-tablet-covers",
+        path:"all-wholesale-tablet-covers/:productName",
         element: <AllTabsCover></AllTabsCover>
       },
       {
