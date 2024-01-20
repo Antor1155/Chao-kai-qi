@@ -10,7 +10,7 @@ const ContactUs = () => {
         e.target.reset()
     }
 
-    
+
     return (
         <section id="contact-us">
             <div className="info-container">
@@ -62,7 +62,7 @@ const ContactUs = () => {
                     </div>
 
                     <div>
-                        <label htmlFor="email">email *</label>
+                        <label htmlFor="email">Email *</label>
                         <input id="email" name="email" type="text" required />
                     </div>
 

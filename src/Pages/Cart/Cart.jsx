@@ -92,27 +92,27 @@ const Cart = () => {
                 <div className="form-container">
                     <form onSubmit={handleInfoSubmit}>
                         <div>
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name *</label>
                             <input id="name" name="name" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="country">Country</label>
+                            <label htmlFor="country">Country *</label>
                             <input id="country" name="country" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="organization">Organization name</label>
+                            <label htmlFor="organization">Organization name *</label>
                             <input id="organization" name="organization" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="email">email</label>
+                            <label htmlFor="email">Email *</label>
                             <input id="email" name="email" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="mobile">Phone number</label>
+                            <label htmlFor="mobile">Phone number *</label>
                             <input id="mobile" name="mobile" type="text" required />
                         </div>
 
