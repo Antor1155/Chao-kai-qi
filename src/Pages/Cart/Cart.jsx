@@ -31,6 +31,7 @@ const Cart = () => {
     return (
         <section id="cart-section">
             <motion.div>
+                {cart.length ? 
                 <AnimatePresence>
                     {cart.map((item, ind) => {
                         return (
@@ -77,8 +78,16 @@ const Cart = () => {
                         )
                     })}
                 </AnimatePresence>
+                :
+                <h2 className="chinese-red">No Product in Cart <br />
+                    Please continue shopping <br />
+                    or <br />
+                    Send us an empty order to contact us. <br />
+                    We will still contact you back !!
+                </h2>
+                }
             </motion.div>
-
+                
             <div>
                 <div className="form-container">
                     <form onSubmit={handleInfoSubmit}>
