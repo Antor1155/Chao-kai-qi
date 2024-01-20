@@ -9,6 +9,8 @@ import cancel from "../../assets/logos/Cancel.svg"
 import instance from "../../axiosInstance";
 import { useParams } from "react-router-dom";
 
+import chaoKaiQiLogo from "../../assets/compnayLogo/chaoKaiQi.svg"
+
 const AllTabsCover = () => {
     const [products, setProducts] = useState([])
     const [brands, setBrands] = useState([])
@@ -31,8 +33,8 @@ const AllTabsCover = () => {
                 }).catch(error => {
                     console.log(error)
                 })
-        }else{
-            instance.post("/selected-products", { updatedSelection:[productName] })
+        } else {
+            instance.post("/selected-products", { updatedSelection: [productName] })
                 .then(data => {
                     setProducts(data.data)
                 })
@@ -107,7 +109,7 @@ const AllTabsCover = () => {
 
     return (
         <section className="all-products-page">
-            <h1 className="align-center">All tablet covers by <span className="chinese-red">Chao Kai Qi</span></h1>
+            <h1 className="align-center">Tablet covers by <span className="chinese-red">Chao Kai Qi</span></h1>
 
             <motion.button
                 className="filter-button"
@@ -164,7 +166,7 @@ const AllTabsCover = () => {
                     </div>
 
 
-                    <div className="single-filter">
+                    {/* <div className="single-filter">
                         <h2 className="company-font font-bold">Colors</h2>
 
                         <div className="color-buttons">
@@ -202,6 +204,22 @@ const AllTabsCover = () => {
 
 
                         </div>
+                    </div> */}
+
+                    <div className="mobile-hide ">
+                        <h2 className="company-font text-center">ChaoKaiQi</h2>
+                        <img src={chaoKaiQiLogo} alt="chaoKaiQi company logo" />
+
+                        <ul>
+                            <li>Globally trusted name</li>
+                            <li>All major transport facility</li>
+                            <li>Fast global delivery</li>
+                            <li>Secure payment methods</li>
+                            <li>Major bank-cards payment accepted</li>
+
+                        </ul>
+
+
                     </div>
 
                     <div id="mobile-filter-apply">

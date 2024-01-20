@@ -83,6 +83,27 @@
 }
 
 
+.mobile-hide {
+    position: sticky;
+    top: 80px;
+
+    & img{
+        max-width: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    & ul{
+        width: 90%;
+        margin: auto;
+        margin-top: 32px;
+    }
+
+    & li{
+        margin-bottom: 8px;
+    }
+}
+
 
 @media screen and (max-width:825px) {
 
@@ -107,6 +128,10 @@
 
     .result-products {
         justify-content: center;
+    }
+
+    .mobile-hide {
+        display: none;
     }
 
     .filter-button {
@@ -189,6 +214,10 @@
             padding: 4px;
             box-sizing: content-box;
         }
+    }
+
+    .load-more-btn{
+        width: 250px;
     }
     
 }
