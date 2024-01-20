@@ -40,7 +40,6 @@ const AllTabsCover = () => {
         instance.get(`/all-products/${starts.current}/${ends.current}`)
             .then(data => {
                 const p = data.data
-                console.log(p)
 
                 if (p.length) {
                     setProducts(prev => [...prev, ...p])
