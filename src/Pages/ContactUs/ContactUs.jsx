@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import "./ContactUs.css"
 import { motion } from "framer-motion"
 
@@ -5,43 +6,39 @@ const ContactUs = () => {
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
+        toast("Thank you for contacting us. We wil get back to you shortly")
+        e.target.reset()
     }
+
+    
     return (
         <section id="contact-us">
             <div className="info-container">
                 <h2 className="company-font mb-16">Query about</h2>
-                <p>Get to know us better.</p>
-                <p>Do query about any specific product.</p>
-                <p>Want to know about offers.</p>
-                <p>Our transport facility.</p>
-                <p>Book a visit to our company.</p>
-                <p>Any personal query you have.</p>
+
+                <p className="point">Get to know us better.</p>
+                <p className="point">Do query about any specific product.</p>
+                <p className="point">Want to know about offers.</p>
+                <p className="point">Our transport facility.</p>
+                <p className="point">Book a visit to our company.</p>
+                <p className="point">Any personal query you have.</p>
 
                 <div className="info">
-                    <p className="font-20 info-blue">We will send you with</p>
+                    <p className="font-24 info-blue mb-32 mt-gapping-tape">We will reply you with :</p>
 
-                    <div className="list">
-                        <div className="info-point"></div>
-                        <p>Product List</p>
-                    </div>
-                    <div className="list">
-                        <div className="info-point"></div>
-                        <p>Special price</p>
-                    </div>
-                    <div className="list">
-                        <div className="info-point"></div>
-                        <p>Transport query</p>
-                    </div>
-                    <div className="list">
-                        <div className="info-point"></div>
-                        <p>Any specific query</p>
-                    </div>
-                    <div className="list">
-                        <div className="info-point"></div>
-                        <p>Terms and conditions</p>
-                    </div>
 
-                    <h2 className="company-font">ChaoKaiQi</h2>
+                    <p className="point">Product List</p>
+
+                    <p className="point">Special price</p>
+
+                    <p className="point">Transport query</p>
+
+                    <p className="point">Any specific query</p>
+
+                    <p className="point">Terms and conditions</p>
+
+
+                    <h2 className="company-font text-center mt-32">ChaoKaiQi</h2>
 
                 </div>
             </div>

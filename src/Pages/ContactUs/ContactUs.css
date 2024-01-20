@@ -1,4 +1,4 @@
-#contact-us{
+#contact-us {
     max-width: 1080px;
     margin: auto;
     display: grid;
@@ -6,32 +6,54 @@
     gap: 64px;
 }
 
-.info-container{
+.info-container {
     padding: 0 16px;
     border-radius: 16px;
     background-color: rgba(249, 245, 246, 0.5);
     border: 1px solid black;
 }
 
-.contact-form-container{
-
+.info-container p.point {
+    font-size: 18px;
+    margin-bottom: 24px;
 }
 
-.contact-form{
-    
-    & label, input, textarea{
+.info-container p.point::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    margin-right: 6px;
+    background-color: #EBC35B;
+}
+
+.info p.info-blue{
+    text-shadow: 1px 1px black;
+}
+
+.info p.point::before{
+    background-color: var(--info-blue);
+}
+
+.contact-form {
+
+    & label,
+    input,
+    textarea {
         display: block;
         width: 100%;
     }
 
-    & label{
+    & label {
         position: relative;
         left: 8px;
 
     }
 
-    & input, textarea{
-        padding:16px 8px;
+    & input,
+    textarea {
+        padding: 16px 8px;
         font-size: 16px;
         border-radius: 16px;
         border: 1px solid rgb(119, 119, 119);
@@ -40,12 +62,17 @@
         margin-bottom: 16px;
     }
 
-    & .fw-button{
+    & .fw-button {
         width: 300px;
         display: block;
         margin: auto;
         margin-top: 32px;
     }
+}
 
-
+@media screen and (max-width:550px) {
+    #contact-us{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
