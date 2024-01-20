@@ -11,15 +11,32 @@
     align-items: center;
     padding:8px;
     gap: 32px;
+    position: relative;
+    margin-bottom: 16px;
+
+    cursor: pointer;
 
     & img{
-        width: 15vw;
-        height: 15vw;
+        width: 175px;
+        height: 150px;
         border-radius: 8px;
     }
 
     & .label{
         opacity: .7;
+    }
+
+    .cancel-btn{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+        & img{
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 
@@ -41,6 +58,9 @@
 
 
 .form-container {
+    position: sticky;
+    top: 80px;
+
     & form {
         display: flex;
         flex-direction: column;

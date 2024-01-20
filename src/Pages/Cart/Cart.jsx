@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./Cart.css"
 import { toast } from "react-toastify";
 
+import cancel from "../../assets/logos/Cancel.svg"
+
 const Cart = () => {
-    const [cart] = useState(JSON.parse(localStorage.getItem("chaoKaiQi-cart")) ?? [])
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem("chaoKaiQi-cart")) ?? [])
     console.log(cart)
+
+    const navigate = useNavigate()
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
@@ -16,39 +20,54 @@ const Cart = () => {
         toast("Thanks for placing the quota. Our team will contact you very fast to talk about processing the order ")
     }
 
+    const handleCancel = (e, item) => {
+        e.stopPropagation();
+        setCart(prev => prev.filter(p => p !== item))
+    }
+
     return (
         <section id="cart-section">
             <motion.div>
-
                 {cart.map((item, ind) => (
-                    <Link to={`/wholesale-tablet-cover/${item?.productName}/${item.productId}`} key={ind}>
+                    <motion.div
+                        key={ind}
+                        className="cart-item"
+                        onClick={() => navigate(`/wholesale-tablet-cover/${item?.productName}/${item.productId}`)}
 
-                        <motion.div className="cart-item">
-                            <img src={item?.mainImage + ".jpg"} alt={item?.productName + " cover"} />
+                    >
 
-                            <div>
-                                <h2 className="chinese-red">{item?.productName} cover</h2>
-                                <p><span className="label">Cover name: </span>{item?.coverName}</p>
+                        <motion.button
+                            whileTap={{ scale: 0.9, boxShadow: "0" }}
+                            whileHover={{ scale: 1.1, boxShadow: "0px 1px black" }}
+                            onClick={(e) => handleCancel(e, item)}
+                            className="cancel-btn"
+                        >
+                            <img src={cancel} alt="cancel button" />
+                        </motion.button>
 
-                                <div className="inline-p">
-                                    <p><span className="label">Color: </span>{item?.color?.name}</p>
-                                    <p><span className="label">Brand: </span>{item?.brand}</p>
-                                </div>
+                        <img src={item?.mainImage + ".jpg"} alt={item?.productName + " cover"} />
 
-                                <div className="inline-p small-font">
-                                    <p><span className="label">Price / unit : </span>{item?.priceperUnit} USD</p>
-                                    <p><span className="label">Weight / unit : </span>{item?.productGrossWeight} g</p>
-                                    <p><span className="label">Size / unit : </span>{item?.productSize} cm</p>
-                                </div>
+                        <div>
+                            <h2 className="chinese-red">{item?.productName} cover</h2>
+                            <p><span className="label">Cover name: </span>{item?.coverName}</p>
 
-                                <div className="inline-p">
-                                    <p className="font-bold"><span >Total order: </span>{item?.orderAmount} units</p>
-                                    <p className="font-bold"><span >Total price: </span>$ {item?.totalPrice} USD</p>
-                                </div>
+                            <div className="inline-p">
+                                <p><span className="label">Color: </span>{item?.color?.name}</p>
+                                <p><span className="label">Brand: </span>{item?.brand}</p>
                             </div>
-                        </motion.div>
 
-                    </Link>
+                            <div className="inline-p small-font">
+                                <p><span className="label">Price / unit : </span>{item?.priceperUnit} USD</p>
+                                <p><span className="label">Weight / unit : </span>{item?.productGrossWeight} g</p>
+                                <p><span className="label">Size / unit : </span>{item?.productSize} cm</p>
+                            </div>
+
+                            <div className="inline-p">
+                                <p className="font-bold"><span >Total order: </span>{item?.orderAmount} units</p>
+                                <p className="font-bold"><span >Total price: </span>$ {item?.totalPrice} USD</p>
+                            </div>
+                        </div>
+                    </motion.div>
                 ))}
 
             </motion.div>
