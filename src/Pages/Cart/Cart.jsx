@@ -79,7 +79,7 @@ const Cart = () => {
                     })}
                 </AnimatePresence>
                 :
-                <h2 className="chinese-red">No Product in Cart <br />
+                <h2 className="chinese-red font-24">No Product in Cart <br />
                     Please continue shopping <br />
                     or <br />
                     Send us an empty order to contact us. <br />
