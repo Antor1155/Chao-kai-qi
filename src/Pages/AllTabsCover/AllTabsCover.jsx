@@ -142,7 +142,7 @@ const AllTabsCover = () => {
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setMobileFilterVisible(false)}
                     >
-                        <img src={cancel} alt="" />
+                        <img src={cancel} alt="cancle button" />
                     </motion.button>
 
                     {brands.map(brand => (

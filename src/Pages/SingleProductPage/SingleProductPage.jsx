@@ -237,7 +237,7 @@ const SingleProductPage = () => {
 
 
                     <div className="company-info">
-                        <img src={chaoKaiQi} alt="chaokaiQi | ChaoKaiQi company logo" />
+                        <img src={chaoKaiQi} alt="chaokaiQi | ChaoKaiQi company logo" loading="lazy"/>
 
                         <h2 className="font-24"> <span className="company-font">ChaoKaiQi</span> <br />
                             Globally trusted name
