@@ -9,9 +9,9 @@ import mobileBanner1 from "../../assets/banner/mobileBanner1.avif"
 import mobileBanner2 from "../../assets/banner/mobileBanner2.webp"
 
 import fakeImg from "../../assets/banner/banner.png";
-import fakeProductImg1 from "../../assets/ProductImage/fakeProductImg.webp"
-import fakeProductImg2 from "../../assets/ProductImage/fakeProductImg2.png"
-import fakeProductImg3 from "../../assets/ProductImage/fakeProductImg3.webp"
+import fakeProductImg1 from "../../assets/ProductImage/exampleProductImg.webp"
+import fakeProductImg2 from "../../assets/ProductImage/exampleProductImg2.png"
+import fakeProductImg3 from "../../assets/ProductImage/exampleProductImg3.webp"
 
 import chineseHouse from "../../assets/decoration/chinese-house.png";
 
