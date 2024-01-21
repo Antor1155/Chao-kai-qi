@@ -1,6 +1,16 @@
-import exImg from "../../assets/companyImage/companyImg1.jpg"
-
-
+import companyImg1 from "../../assets/companyImage/companyImg1.jpg"
+import companyImg2 from "../../assets/companyImage/companyImg2.jpg"
+import companyImg4 from "../../assets/companyImage/companyImg4.jpg"
+import companyImg5 from "../../assets/companyImage/companyImg5.jpg"
+import companyImg6 from "../../assets/companyImage/companyImg6.jpg"
+import companyImg7 from "../../assets/companyImage/companyImg7.jpg"
+import companyImg8 from "../../assets/companyImage/companyImg8.jpg"
+import companyImg9 from "../../assets/companyImage/companyImg9.jpg"
+import companyImg10 from "../../assets/companyImage/companyImg10.jpg"
+import companyImg11 from "../../assets/companyImage/companyImg11.jpg"
+import companyImg12 from "../../assets/companyImage/companyImg12.jpg"
+import companyImg13 from "../../assets/companyImage/companyImg13.jpg"
+import companyImg14 from "../../assets/companyImage/companyImg14.jpg"
 
 
 import Facebook from "../../assets/logos/Facebook.svg"
@@ -46,7 +56,7 @@ const AboutUs = () => {
             <h1 className="company-font text-center mb-gapping-tape">About <br />ChaoKaiQi</h1>
 
             <section className="about-first mb-gapping-tape">
-                <img src={exImg} alt="Chao Kai Qi company Image" />
+                <img src={companyImg4} alt="Chao Kai Qi company Image" />
 
                 <div>
                     <h2 className="mb-16">
@@ -120,7 +130,7 @@ const AboutUs = () => {
             <section className="our-story mb-double-gapping-tape">
                 <h2 className="company-font text-center mb-gapping-tape">Our Story</h2>
 
-                <img className="mb-32" src={exImg} alt="Chao Kai Qi compnay story image" loading="lazy"/>
+                <img className="mb-32" src={companyImg1} alt="Chao Kai Qi compnay story image" loading="lazy"/>
 
                 <p className="text-center">Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.</p>
             </section>
@@ -132,19 +142,19 @@ const AboutUs = () => {
 
                 <div className="mission-cards mb-32">
                     <div className="mission-card">
-                        <img src={exImg} alt="chao kai qi compnay image" loading="lazy"/>
+                        <img src={companyImg8} alt="chao kai qi compnay image" loading="lazy"/>
                         <h2 className="font-20 chinese-red">Quality Assurance</h2>
                         <p>We believe in delivering products that stand the test of time. Each phone case cover undergoes rigorous quality checks to ensure durability and style.</p>
                     </div>
 
                     <div className="mission-card">
-                        <img src={exImg} alt="chao kai qi compnay image" loading="lazy"/>
+                        <img src={companyImg1} alt="chao kai qi compnay image" loading="lazy"/>
                         <h2 className="font-20 chinese-red">Wide Selection:</h2>
                         <p>Explore our extensive catalog featuring the latest trends and timeless classics. We strive to offer a diverse range of phone case covers to meet the unique preferences of our customers.</p>
                     </div>
 
                     <div className="mission-card">
-                        <img src={exImg} alt="chao kai qi compnay image" loading="lazy"/>
+                        <img src={companyImg6} alt="chao kai qi compnay image" loading="lazy"/>
                         <h2 className="font-20 chinese-red">Competitive Pricing:</h2>
                         <p>We understand the importance of affordability for businesses. Our pricing is competitive without compromising on quality, making us a cost-effective choice for your wholesale needs.</p>
                     </div>
@@ -155,21 +165,21 @@ const AboutUs = () => {
 
             <section className="image-sliders mb-double-gapping-tape">
                 <Slider {...sliderSetting}>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg1} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg2} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg13} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg4} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg5} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg6} alt="Chao kai qi compnay image" loading="lazy"/>
                 </Slider>
 
                 <Slider {...{ ...sliderSetting, rtl: false }}>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={exImg} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg7} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg14} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg9} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg10} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg11} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy"/>
                 </Slider>
             </section>
 
