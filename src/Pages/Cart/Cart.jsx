@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";
-
-import "./Cart.css"
 import { toast } from "react-toastify";
 
+
+import "./Cart.css"
+
 import cancel from "../../assets/logos/Cancel.svg"
+import { Ccontext } from "../../CartContext";
 
 const Cart = () => {
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("chaoKaiQi-cart")) ?? [])
+    const {setCartData} = useContext(Ccontext)
     const navigate = useNavigate()
 
     const handleInfoSubmit = (e) => {
@@ -23,6 +26,7 @@ const Cart = () => {
         setCart(prev => {
             const newCart = prev.filter(p => p !== item)
             localStorage.setItem("chaoKaiQi-cart", JSON.stringify(newCart))
+            setCartData(newCart)
 
             return newCart
         })
