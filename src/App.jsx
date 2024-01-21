@@ -10,21 +10,24 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react'
 import CatagoryBrands from './components/CatagoryBrands/CatagoryBrands'
+import CartContext from './CartContext'
 
 function App() {
   const [isCatagoryOpen, setCatagoryOpen] = useState(false)
 
   return (
     <>
-      <ScrollRestoration />
-      <AnimatingBg />
-      <Navbar setCatagoryOpen={setCatagoryOpen}></Navbar>
-      <CatagoryBrands isCatagoryOpen={isCatagoryOpen} setCatagoryOpen={setCatagoryOpen}></CatagoryBrands>
-      <mian style={{ width: "100vw", overflow: "hidden" }}>
-        <Outlet></Outlet>
-      </mian>
-      <ToastContainer />
-      <FooterSection></FooterSection>
+      <CartContext>
+        <ScrollRestoration />
+        <AnimatingBg />
+        <Navbar setCatagoryOpen={setCatagoryOpen}></Navbar>
+        <CatagoryBrands isCatagoryOpen={isCatagoryOpen} setCatagoryOpen={setCatagoryOpen}></CatagoryBrands>
+        <mian style={{ width: "100vw", overflow: "hidden" }}>
+          <Outlet></Outlet>
+        </mian>
+        <ToastContainer />
+        <FooterSection></FooterSection>
+      </CartContext>
     </>
   )
 }

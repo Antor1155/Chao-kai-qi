@@ -39,6 +39,23 @@ nav{
     }
 }
 
+#cart-btn{
+    position: relative;
+}
+
+#cart-amount{
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    background-color: var(--info-blue);
+    border-radius: 50%;
+
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
 
 @media screen and (max-width:850px) {
     nav{

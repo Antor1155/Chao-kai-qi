@@ -6,8 +6,13 @@ import menu from "../../assets/logos/Menu.svg"
 import cancel from "../../assets/logos/Cancel.svg"
 import "./Navbar.css"
 
+import { Ccontext } from "../../CartContext";
+import { useContext } from "react";
+
 // eslint-disable-next-line react/prop-types
 const Navbar = ({setCatagoryOpen}) => {
+    const {cartData} = useContext(Ccontext)
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -69,7 +74,14 @@ const Navbar = ({setCatagoryOpen}) => {
                         <img src={languageButton} alt="language changing button" className="logo" />
                     </motion.span>
 
-                    <motion.span variants={item} whileTap={{ scale: .7 }}>
+                    <motion.span id="cart-btn" variants={item} whileTap={{ scale: .7 }}>
+                        {cartData?.length ?
+                            <div id="cart-amount">
+                            </div>
+                            :
+                            ""
+                        }
+
                         <Link to="/cart">
                             <img src={cart} alt="cart page of products" className="logo" />
                         </Link>
