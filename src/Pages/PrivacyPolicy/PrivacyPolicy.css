@@ -19,3 +19,11 @@
 #privacy-policy>div{
     margin-bottom: 16px;
 }
+
+@media screen and (max-width: 550px) {
+    #privacy-policy{
+        & li{
+            margin-left: 32px;
+        }
+    }
+}
