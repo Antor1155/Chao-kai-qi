@@ -1,0 +1,21 @@
+#catagories{
+    position: absolute;
+    z-index: 11;
+    background-color: var(--bg-color);
+    width: 90vw;
+    /* height: calc(100vh - 100px); */
+    height: auto;
+    padding: 16px;
+
+    border: 1px solid;
+    border-radius:8px 8px 16px 16px;
+    left: 5vw;
+
+    transform: translateY(-47px);
+}
+
+.single-brans{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}

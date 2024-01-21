@@ -1,20 +1,13 @@
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import languageButton from "../../assets/logos/language-options.svg";
 import cart from "../../assets/logos/cart.svg"
 import menu from "../../assets/logos/Menu.svg"
 import cancel from "../../assets/logos/Cancel.svg"
 import "./Navbar.css"
-import { useEffect, useState } from "react";
 
-const Navbar = () => {
-    const [isCatagoryOpen, setCatagoryOpen] = useState(true)
-
-    useEffect(()=>{
-
-    }, [])
-
-
+// eslint-disable-next-line react/prop-types
+const Navbar = ({setCatagoryOpen}) => {
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -85,33 +78,6 @@ const Navbar = () => {
                 </motion.div>
 
             </nav>
-
-            <AnimatePresence>
-                {
-                    isCatagoryOpen &&
-                    <motion.div
-                        onMouseEnter={()=>setCatagoryOpen(true)}
-                        onMouseLeave={()=>setCatagoryOpen(false)}
-
-                        id="catagories"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{delay:0.1}}
-                    >
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                        <p>hello world</p>
-                    </motion.div>
-                }
-            </AnimatePresence>
         </header>
 
     );

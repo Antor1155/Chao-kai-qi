@@ -39,22 +39,6 @@ nav{
     }
 }
 
-#catagories{
-    position: absolute;
-    z-index: 11;
-    background-color: var(--bg-color);
-    width: 100%;
-    height: calc(100vh - 100px);
-    padding: 16px;
-
-    border: 1px solid;
-    border-radius:8px 8px 16px 16px;
-    left: 0;
-
-    transform: translateY(-47px);
-    
-
-}
 
 @media screen and (max-width:850px) {
     nav{
