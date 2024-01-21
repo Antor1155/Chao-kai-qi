@@ -81,6 +81,9 @@ const AllTabsCover = () => {
     const handleCheckboxChange = (model) => {
         setLoading(true)
 
+        document.documentElement.scrollTop = 0; // For modern browsers
+        document.body.scrollTop = 0; // For older browsers
+
         const updatedSelection = [...selectedModels]
         const index = updatedSelection.indexOf(model)
 
