@@ -15,7 +15,7 @@ import fakeProductImg3 from "../../assets/ProductImage/fakeProductImg3.webp"
 
 import chineseHouse from "../../assets/decoration/chinese-house.png";
 
-import companyImg1 from "../../assets/companyImage/companyImg1.jpg"
+import companyImg1 from "../../assets/companyImage/companyImg2.jpg"
 import companyImg2 from "../../assets/companyImage/companyImg6.jpg"
 import companyImg3 from "../../assets/companyImage/companyImg3.jpg"
 import companyImg4 from "../../assets/companyImage/companyImg4.jpg"

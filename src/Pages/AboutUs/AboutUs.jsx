@@ -177,7 +177,7 @@ const AboutUs = () => {
                     <img src={companyImg7} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg14} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg9} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg10} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg1} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg11} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy"/>
                 </Slider>
