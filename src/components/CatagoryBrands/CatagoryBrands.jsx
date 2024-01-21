@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 
 import "./CatagoryBrands.css"
 
+import cancel from "../../assets/logos/cancel.svg"
+
 
 // eslint-disable-next-line react/prop-types
-const CatagoryBrands = ({isCatagoryOpen, setCatagoryOpen}) => {
+const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
 
     const [brands, setBrands] = useState([])
 
@@ -22,10 +24,9 @@ const CatagoryBrands = ({isCatagoryOpen, setCatagoryOpen}) => {
 
     return (
         <>
-
             <AnimatePresence>
                 {
-                    // isCatagoryOpen &&
+                    isCatagoryOpen &&
                     <motion.div
                         onMouseEnter={() => setCatagoryOpen(true)}
                         onMouseLeave={() => setCatagoryOpen(false)}
@@ -36,13 +37,26 @@ const CatagoryBrands = ({isCatagoryOpen, setCatagoryOpen}) => {
                         exit={{ opacity: 0 }}
                         transition={{ delay: 0.1 }}
                     >
+
+                        <motion.button className="mobile-view"
+                            onClick={()=>setCatagoryOpen(false)}
+                            whileTap={{scale:0.9}}
+                        >
+                            <img src={cancel} alt="cancle button" />
+                        </motion.button>
+
                         {brands.map(brand => (
                             <div key={brand._id} className="single-brans">
-                                <h2 className="mb-16">{brand._id}</h2>
+                                <h2 className="mb-16 chinese-red">{brand._id}</h2>
 
                                 {brand?.products.map(model => (
                                     <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
-                                        {model}
+                                        <motion.span
+                                            whileHover={{color:"#25CBE1"}}
+                                            onClick={()=>setCatagoryOpen(false)}
+                                        >
+                                            {model}
+                                        </motion.span>
                                     </Link>
                                 ))}
                             </div>
@@ -51,7 +65,6 @@ const CatagoryBrands = ({isCatagoryOpen, setCatagoryOpen}) => {
                     </motion.div>
                 }
             </AnimatePresence>
-
         </>
     );
 };

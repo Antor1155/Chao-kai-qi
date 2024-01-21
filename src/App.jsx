@@ -12,7 +12,7 @@ import { useState } from 'react'
 import CatagoryBrands from './components/CatagoryBrands/CatagoryBrands'
 
 function App() {
-  const [isCatagoryOpen, setCatagoryOpen] = useState(true)
+  const [isCatagoryOpen, setCatagoryOpen] = useState(false)
 
   return (
     <>
