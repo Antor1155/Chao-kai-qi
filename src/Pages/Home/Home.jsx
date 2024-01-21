@@ -16,10 +16,10 @@ import fakeProductImg3 from "../../assets/ProductImage/fakeProductImg3.webp"
 import chineseHouse from "../../assets/decoration/chinese-house.png";
 
 import companyImg1 from "../../assets/companyImage/companyImg1.jpg"
-import companyImg2 from "../../assets/companyImage/companyImg2.jpeg"
+import companyImg2 from "../../assets/companyImage/companyImg6.jpg"
 import companyImg3 from "../../assets/companyImage/companyImg3.jpg"
-import companyImg4 from "../../assets/companyImage/companyImg4.jpeg"
-import companyImg5 from "../../assets/companyImage/companyImg5.jpeg"
+import companyImg4 from "../../assets/companyImage/companyImg4.jpg"
+import companyImg5 from "../../assets/companyImage/companyImg7.jpg"
 
 import apple from "../../assets/compnayLogo/apple.svg"
 import asus from "../../assets/compnayLogo/asus.svg"
@@ -318,9 +318,9 @@ const Home = () => {
 
                 <div className="company-images">
                     <img src={companyImg3} alt="Chaokaiqi compnay image" loading="lazy" />
-                    <img src={companyImg1} alt="Chaokaiqi compnay image" loading="lazy" />
-                    <img src={companyImg2} alt="Chaokaiqi compnay image" loading="lazy" />
                     <img src={companyImg4} alt="Chaokaiqi compnay image" loading="lazy" />
+                    <img src={companyImg2} alt="Chaokaiqi compnay image" loading="lazy" />
+                    <img src={companyImg1} alt="Chaokaiqi compnay image" loading="lazy" />
                     <img src={companyImg5} alt="Chaokaiqi compnay image" loading="lazy" />
                 </div>
             </section>
