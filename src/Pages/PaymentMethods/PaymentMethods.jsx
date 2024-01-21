@@ -1,4 +1,4 @@
-import exImg from "../../assets/companyImage/companyImg1.jpg"
+import exImg from "../../assets/companyImage/companyImg15.jpg"
 
 import "../ReturnPolicy/ReturnPolicy.css"
 

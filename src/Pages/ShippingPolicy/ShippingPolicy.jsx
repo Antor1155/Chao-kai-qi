@@ -1,4 +1,4 @@
-import exImg from "../../assets/companyImage/companyImg1.jpg"
+import exImg from "../../assets/companyImage/companyImg15.jpg"
 import usaIcon from "../../assets/logos/Usa.svg"
 import globeIcon from "../../assets/logos/Globe.svg"
 
@@ -8,7 +8,7 @@ const ShippingPolicy = () => {
     return (
         <section className="shipping-policy">
             <h1>Shipping Policy of ChaoKaiQi</h1>
-            <img className="main-img" src={exImg} alt="Shipping image of ChaoKaiQi" />
+            <img className="main-img" src={exImg} alt="Shipping policy image of ChaoKaiQi" />
 
             <div className="shipping-info">
                 <div>
