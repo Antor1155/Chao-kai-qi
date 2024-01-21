@@ -130,6 +130,7 @@ const AllTabsCover = () => {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setMobileFilterVisible(true)}
             >
+                {selectedModels.length ? <div id="filter-selected"></div> : ""}
                 <img src={filter} alt="filter button" />
             </motion.button>
 
