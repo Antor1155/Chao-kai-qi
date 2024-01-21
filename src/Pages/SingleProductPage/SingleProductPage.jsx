@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./SingleProductPage.css"
 import Slider from "react-slick";
 import { motion } from "framer-motion"
@@ -22,6 +22,7 @@ import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { toast } from "react-toastify";
 import instance from "../../axiosInstance";
 import { useParams } from "react-router-dom";
+import { Ccontext } from "../../CartContext";
 
 
 const SingleProductPage = () => {
@@ -30,7 +31,9 @@ const SingleProductPage = () => {
 
     const [randomProducts, setRandomProducts] = useState([])
 
-    // this section for order when add to curt 
+    // this section for order when add to cart 
+
+    const {setCartData} = useContext(Ccontext)
 
     const [selectedColor, setSelectedColor] = useState({
         name: "all",
@@ -109,6 +112,8 @@ const SingleProductPage = () => {
         cartItems.push(orderedProduct)
         
         localStorage.setItem("chaoKaiQi-cart", JSON.stringify(cartItems))
+
+        setCartData(cartItems)
 
         e.target.reset()
 
