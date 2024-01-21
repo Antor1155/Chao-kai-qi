@@ -90,6 +90,19 @@ nav{
     #menu, #cancel{
         display: block;
     }
+
+    #cart-amount{
+        display: block;
+        width: 10px;
+        height: 10px;
+    
+        background-color: var(--info-blue);
+        border-radius: 50%;
+    
+        position: absolute;
+        top: -8px;
+        left: calc(50% + 16px);
+    }
 }
 
 @media screen and (max-width: 550px) {
