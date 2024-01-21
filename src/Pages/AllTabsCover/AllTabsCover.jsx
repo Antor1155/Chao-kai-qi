@@ -19,6 +19,8 @@ const AllTabsCover = () => {
 
     const [disableLoadMore, setDisableLoadMore] = useState(false)
 
+    const [loading, setLoading] = useState(false)
+
     const { productName } = useParams()
 
 
@@ -26,21 +28,27 @@ const AllTabsCover = () => {
     const ends = useRef(12)
 
     useEffect(() => {
+        setLoading(true)
+
         if (productName === "all") {
             instance.get(`/all-products/${starts.current}/${ends.current}`)
                 .then(data => {
                     setProducts(data.data)
+                    setLoading(false)
                 }).catch(error => {
                     console.log(error)
+                    setLoading(false)
                 })
         } else {
             instance.post("/selected-products", { updatedSelection: [productName] })
                 .then(data => {
                     setProducts(data.data)
+                    setLoading(false)
                 })
-                .catch(error => [
+                .catch(error => {
                     console.log(error)
-                ])
+                    setLoading(false)
+                })
 
             setDisableLoadMore(true)
         }
@@ -71,6 +79,8 @@ const AllTabsCover = () => {
     }
 
     const handleCheckboxChange = (model) => {
+        setLoading(true)
+
         const updatedSelection = [...selectedModels]
         const index = updatedSelection.indexOf(model)
 
@@ -86,10 +96,12 @@ const AllTabsCover = () => {
             instance.post("/selected-products", { updatedSelection })
                 .then(data => {
                     setProducts(data.data)
+                    setLoading(false)
                 })
-                .catch(error => [
+                .catch(error => {
                     console.log(error)
-                ])
+                    setLoading(false)
+                })
 
             setDisableLoadMore(true)
             starts.current = 0
@@ -97,8 +109,10 @@ const AllTabsCover = () => {
         } else {
             instance.get(`/all-products/${starts.current}/${ends.current}`).then(data => {
                 setProducts(data.data)
+                setLoading(false)
             }).catch(error => {
                 console.log(error)
+                setLoading(false)
             })
 
             setDisableLoadMore(false)
@@ -233,10 +247,20 @@ const AllTabsCover = () => {
 
                 </div>
 
-                <div className="result-products">
-                    {products.map((product, ind) => <SingleProduct key={ind} product={product}></SingleProduct>)}
+                {loading ?
+                    <div>
+                        <p className="text-center">Loading ...</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 20 400 300"><circle fill="#ECC35C" stroke="%23FFC820" strokeWidth="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="%23FFC820" stroke="%23FFC820" strokeWidth="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#ECC35C" stroke="%23FFC820" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+                    </div>
 
-                </div>
+                    :
+                    <div className="result-products">
+                        {products.map((product, ind) => <SingleProduct key={ind} product={product}></SingleProduct>)}
+
+                    </div>
+                }
+
+
             </section>
 
             <motion.button
