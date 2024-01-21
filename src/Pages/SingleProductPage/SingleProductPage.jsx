@@ -17,7 +17,7 @@ import ship from "../../assets/logos/ship.svg"
 import globeBlack from "../../assets/logos/globeBlack.svg"
 import box from "../../assets/logos/Box.svg"
 
-import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.svg"
+import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.png"
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { toast } from "react-toastify";
 import instance from "../../axiosInstance";

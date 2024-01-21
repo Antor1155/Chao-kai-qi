@@ -9,7 +9,7 @@ import cancel from "../../assets/logos/Cancel.svg"
 import instance from "../../axiosInstance";
 import { useParams } from "react-router-dom";
 
-import chaoKaiQiLogo from "../../assets/compnayLogo/chaoKaiQi.svg"
+import chaoKaiQiLogo from "../../assets/compnayLogo/chaoKaiQi.png"
 
 const AllTabsCover = () => {
     const [products, setProducts] = useState([])
