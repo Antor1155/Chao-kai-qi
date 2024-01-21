@@ -172,7 +172,7 @@ const Home = () => {
             <section className="products-section">
                 <div className="d-flex-between">
                     <h2>Our <span className="chinese-red">Top</span> Products</h2>
-                    <h2>At best price</h2>
+                    <h2>At Best Price</h2>
                 </div>
 
                 <div className="top-product-container">
