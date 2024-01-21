@@ -164,7 +164,7 @@ const AboutUs = () => {
 
             <section className="image-sliders mb-double-gapping-tape">
                 <Slider {...sliderSetting}>
-                    <img src={companyImg1} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg2} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg13} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg4} alt="Chao kai qi compnay image" loading="lazy"/>
@@ -176,7 +176,7 @@ const AboutUs = () => {
                     <img src={companyImg7} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg14} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg9} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg1} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg6} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg11} alt="Chao kai qi compnay image" loading="lazy"/>
                     <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy"/>
                 </Slider>
