@@ -86,7 +86,7 @@
 /* product section starts form here  */
 
 .products-section {
-    margin-bottom: calc(2 * var(--gapping-tape));
+    margin-bottom: var(--gapping-tape);
 }
 
 .d-flex-between {
@@ -103,8 +103,30 @@
 }
 
 
+#show-all-products-btn{
+    display: block;
+    width: 270px;
+    text-align: center;
+    background-color: var(--btn-color);
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin: auto;
+    margin-bottom: calc(2* var(--gapping-tape));
+
+    transition: .5s;
+
+    &:hover{
+        transform: scale(1.05);
+        background-color: var(--btn-hover-color);
+    }
+}
+
+
 /* contact section starts here  */
 .contact-section {
+    max-width: 1200px;
+    margin: auto;
     margin-bottom: calc(2 * var(--gapping-tape));
 }
 

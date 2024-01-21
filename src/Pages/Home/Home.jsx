@@ -41,6 +41,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { toast } from "react-toastify";
 import instance from "../../axiosInstance";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -178,6 +179,10 @@ const Home = () => {
                     {products.map((product) => <SingleProduct key={product._id} product={product}></SingleProduct>)}
                 </div>
             </section>
+
+            <Link id="show-all-products-btn" to="/all-wholesale-tablet-covers/all">
+                SHOW ALL PRODUCTS
+            </Link>
 
             <section className="contact-section" id="contact-section">
                 <div className="d-flex-between">
