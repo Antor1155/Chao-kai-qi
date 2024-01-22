@@ -147,11 +147,11 @@ const SingleProductPage = () => {
                 </div>
 
                 <div className="content-section">
-                    <h1 className="mb-16"><span className="chinese-red">{product?.productName}</span> cover</h1>
-
+                    <h1 className="mb-4"><span className="chinese-red">{product?.productName}</span> cover</h1>
+                    <h2 className="font-16 mb-4"> <span className="title">Cover name</span> : {product?.coverName}</h2>
                     <h2 className="font-24 mb-4">$ {product?.pricePerUnit} USD <span className="title">per unit</span></h2>
 
-                    <p className="review-stars mb-16">
+                    <p className="review-stars mb-8">
                         <img src={star} alt="client review star" />
                         <img src={star} alt="client review star" />
                         <img src={star} alt="client review star" />
@@ -159,13 +159,13 @@ const SingleProductPage = () => {
                         <img src={star} alt="client review star" />
                     </p>
 
-                    <h2 className="font-24 mb-16"> <span className="title">Cover name</span> : {product?.coverName}</h2>
+                   <p className="mb-16">Description about the tablet case cover. Good quality material, both side protection and ruggid body.</p>
 
-                    <h2 className="font-24 mb-16"> <span className="title">Product size</span> : {product?.productSize} cm</h2>
+                    <h2 className="font-14 mb-4"> <span className="title">Product size</span> : {product?.productSize} cm</h2>
 
-                    <h2 className="font-24 mb-16"> <span className="title">Gross weight</span> : {product?.productGrossWeight} g</h2>
+                    <h2 className="font-14 mb-4"> <span className="title">Gross weight</span> : {product?.productGrossWeight} g</h2>
 
-                    <h2 className="font-24 mb-32"> <span className="title">Minimum order quantity</span> : {product?.minimOrderQuantity} units</h2>
+                    <h2 className="font-14 mb-16"> <span className="title">Minimum order quantity</span> : {product?.minimOrderQuantity} units</h2>
 
                     <h2 className="company-font font-bold font-32 mb-8 colors-label">Colors</h2>
 
