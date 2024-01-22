@@ -162,28 +162,6 @@ const AllTabsCover = () => {
                         </div>
                     ))}
 
-                    <div className="single-filter">
-                        <h2 >Iphone</h2>
-
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="ipad 2022" id="ipad 2020" />
-                            <label htmlFor="ipad 2022"> Ipad 2022</label>
-                        </p>
-                    </div>
-
-
                     {/* <div className="single-filter">
                         <h2 className="company-font font-bold">Colors</h2>
 
