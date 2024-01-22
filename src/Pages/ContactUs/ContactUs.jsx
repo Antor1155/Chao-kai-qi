@@ -1,11 +1,28 @@
 import { toast } from "react-toastify";
 import "./ContactUs.css"
 import { motion } from "framer-motion"
+import instance from "../../axiosInstance";
 
 const ContactUs = () => {
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
+
+        const customerData ={
+            name: e.target.name.value,
+            country: e.target.country.name,
+            organization: e.target.organization.value,
+            email: e.target.email.value,
+            phone: e.target.mobile.value,
+            note: e.target.note.value,
+        }
+
+        instance.post("/mail-and-orders/mail", {customerData})
+        .then()
+        .catch(error =>{
+            console.log(error)
+        })
+
         toast("Thank you for contacting us. We wil get back to you shortly")
         e.target.reset()
     }
@@ -63,7 +80,7 @@ const ContactUs = () => {
 
                     <div>
                         <label htmlFor="email">Email *</label>
-                        <input id="email" name="email" type="text" required />
+                        <input id="email" name="email" type="email" required />
                     </div>
 
                     <div>

@@ -93,6 +93,23 @@ const Home = () => {
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
+
+        const customerData ={
+            name: e.target.name.value,
+            country: e.target.country.name,
+            organization: e.target.organization.value,
+            email: e.target.email.value,
+            phone: e.target.mobile.value,
+            note: e.target.note.value,
+        }
+
+        instance.post("/mail-and-orders/mail", {customerData})
+        .then()
+        .catch(error =>{
+            console.log(error)
+        })
+
+
         e.target.reset()
 
         toast("Thanks for your input. We will get back to you soon ! Hope you have a good day.")
@@ -249,7 +266,7 @@ const Home = () => {
 
                                 <div>
                                     <label htmlFor="email">Email *</label>
-                                    <input id="email" name="email" type="text" required/>
+                                    <input id="email" name="email" type="email" required/>
                                 </div>
 
                                 <div>

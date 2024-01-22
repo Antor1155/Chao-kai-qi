@@ -112,7 +112,7 @@ const Cart = () => {
 
                         <div>
                             <label htmlFor="email">Email *</label>
-                            <input id="email" name="email" type="text" required />
+                            <input id="email" name="email" type="email" required />
                         </div>
 
                         <div>
