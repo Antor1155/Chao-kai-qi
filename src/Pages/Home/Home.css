@@ -1,4 +1,4 @@
-#contact-now{
+#contact-now {
     border: 1px solid;
     padding: 5px;
 
@@ -10,9 +10,9 @@
     position: fixed;
     right: 0;
     top: 50%;
-    
+
     writing-mode: vertical-rl;
-    
+
 }
 
 #landing-screen {
@@ -103,7 +103,7 @@
 }
 
 
-#show-all-products-btn{
+#show-all-products-btn {
     display: block;
     width: 270px;
     text-align: center;
@@ -116,7 +116,7 @@
 
     transition: .5s;
 
-    &:hover{
+    &:hover {
         transform: scale(1.05);
         background-color: var(--btn-hover-color);
     }
@@ -159,7 +159,7 @@
         margin-top: 32px;
     }
 
-    & .info{
+    & .info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -180,7 +180,7 @@
     background-color: var(--info-blue);
 }
 
-.form-container {
+.form-container.home-form {
     & form {
         display: flex;
         flex-direction: column;
@@ -254,7 +254,7 @@
 
 
 @media screen and (max-width: 550px) {
-    #contact-now{
+    #contact-now {
         display: none;
     }
 
@@ -283,80 +283,94 @@
         }
     }
 
-    .brands{
+    .brands {
         margin-top: 32px;
     }
 
     /* product section starts here  */
 
-    .products-section{
-        & h2{
+    .products-section {
+        & h2 {
             text-align: center;
         }
 
-        & .d-flex-between{
+        & .d-flex-between {
             flex-direction: column;
         }
     }
-    .top-product-container{
+
+    .top-product-container {
         justify-content: center;
     }
 
     /* contact section starts here  */
-    .contact-section{
-        & .d-flex-between{
+    .contact-section {
+        & .d-flex-between {
             flex-direction: column;
             text-align: center;
         }
 
-        & .content{
+        & .content {
             flex-direction: column-reverse;
 
-            .photo-slider{
+            .photo-slider {
                 width: 90vw;
                 height: 90vw;
             }
         }
-        
-        & .form-and-info{
+
+        & .form-and-info {
             flex-direction: column;
             width: 100%;
             margin-bottom: 32px;
 
-            & .info{
+            & .info {
                 width: 100%;
 
-                & h2{
+                & h2 {
                     text-align: center;
                 }
             }
         }
     }
 
+    .form-container.home-form {
+        width: 100%;
+
+        & form {
+            & input {
+                padding: 8px 0;
+
+            }
+        }
+
+    }
+
     /* about us section starts here  */
 
-    .about-us{
-        & .image-container{
+    .about-us {
+        & .image-container {
             width: 100%;
         }
-        & .content{
+
+        & .content {
             flex-direction: column;
             gap: 32px;
 
-            & .info{
+            & .info {
                 width: 90%;
                 margin: auto;
             }
         }
 
-        & .company-images{
+        & .company-images {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
             justify-content: center;
             align-items: center;
 
-            & img{
+            & img {
                 width: 45%;
                 height: 100px;
             }

@@ -247,7 +247,7 @@ const Home = () => {
 
                         </div>
 
-                        <div className="form-container">
+                        <div className="form-container home-form">
                             <form onSubmit={handleInfoSubmit}>
                                 <div>
                                     <label htmlFor="name">Name *</label>
