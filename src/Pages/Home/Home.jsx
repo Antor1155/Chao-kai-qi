@@ -1,7 +1,7 @@
 import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 
-import banner from "../../assets/banner/banner.webp";
+import banner1 from "../../assets/banner/banner.webp";
 import banner2 from "../../assets/banner/banner2.webp";
 import banner3 from "../../assets/banner/banner3.webp";
 
@@ -152,15 +152,31 @@ const Home = () => {
                         <Slider className="slider-main" {...sliderSetting}>
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={mobileScreen ? mobileBanner1 : banner} alt="ChaokaiQi company banner"
+
+                                // src={mobileScreen ? mobileBanner1 : banner} 
+                                srcSet={`${mobileBanner1} 480w, ${banner1} 800w`}
+                                sizes="(max-width: 550px) 10vw, 800px"
+                                src={banner1}
+
+                                alt="ChaokaiQi company banner"
                             />
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={mobileScreen ? mobileBanner2 : banner2} alt="chaoKaiQi company banner"
+                                // src={mobileScreen ? mobileBanner2 : banner2} 
+                                srcSet={`${mobileBanner2} 480w, ${banner2} 800w`}
+                                sizes="(max-width: 550px) 10vw, 800px"
+                                src={banner2}
+                                
+                                alt="chaoKaiQi company banner"
                             />
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={mobileScreen ? mobileBanner3 : banner3} alt="ChaoKaiQi company banner"
+                                // src={mobileScreen ? mobileBanner3 : banner3} 
+                                srcSet={`${mobileBanner3} 480w, ${banner3} 800w`}
+                                sizes="(max-width: 550px) 10vw, 800px"
+                                src={banner3}
+                                
+                                alt="ChaoKaiQi company banner"
                             />
                         </Slider>
                     </div>
