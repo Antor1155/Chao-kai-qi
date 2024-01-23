@@ -67,6 +67,14 @@ footer{
     }
 }
 
+@media screen and (max-width: 850px){
+    .footer-last{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .double-line{
         width: 100%;
@@ -80,5 +88,12 @@ footer{
     }
     .best-selling{
         width: 100%;
+    }
+
+    .footer-last{
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 32px;
     }
 }
