@@ -2,16 +2,17 @@ import trusted from "../../assets/logos/Shield.svg";
 import globalSupplier from "../../assets/logos/GlobalSupplier.svg";
 
 import banner from "../../assets/banner/banner.webp";
-import banner2 from "../../assets/banner/banner2.jpg";
-import banner3 from "../../assets/banner/banner3.jpg";
+import banner2 from "../../assets/banner/banner2.webp";
+import banner3 from "../../assets/banner/banner3.webp";
 
-import mobileBanner1 from "../../assets/banner/mobileBanner1.avif"
+import mobileBanner1 from "../../assets/banner/mobileBanner.webp"
 import mobileBanner2 from "../../assets/banner/mobileBanner2.webp"
+import mobileBanner3 from "../../assets/banner/mobileBanner3.webp"
 
-import fakeImg from "../../assets/banner/banner.png";
-import fakeProductImg1 from "../../assets/ProductImage/exampleProductImg.webp"
-import fakeProductImg2 from "../../assets/ProductImage/exampleProductImg2.png"
-import fakeProductImg3 from "../../assets/ProductImage/exampleProductImg3.webp"
+import productImage1 from "../../assets/ProductImage/product1.webp"
+import productImage2 from "../../assets/ProductImage/product2.webp"
+import productImage3 from "../../assets/ProductImage/product3.webp"
+import productImage4 from "../../assets/ProductImage/product4.webp";
 
 import chineseHouse from "../../assets/decoration/chinese-house.png";
 
@@ -151,15 +152,15 @@ const Home = () => {
                         <Slider className="slider-main" {...sliderSetting}>
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={mobileScreen ? mobileBanner1 : banner} alt=""
+                                src={mobileScreen ? mobileBanner1 : banner} alt="ChaokaiQi company banner"
                             />
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={mobileScreen ? mobileBanner2 : banner2} alt=""
+                                src={mobileScreen ? mobileBanner2 : banner2} alt="chaoKaiQi company banner"
                             />
                             <img
                                 style={{ width: "100%", height: "100%", objectFit: "fill" }}
-                                src={mobileScreen ? mobileBanner1 : banner3} alt=""
+                                src={mobileScreen ? mobileBanner3 : banner3} alt="ChaoKaiQi company banner"
                             />
                         </Slider>
                     </div>
@@ -211,10 +212,10 @@ const Home = () => {
 
                     <div className="photo-slider">
                         <Slider {...sliderSetting}>
-                            <img src={fakeImg} alt="productImage" loading="lazy" />
-                            <img src={fakeProductImg1} alt="productImage" loading="lazy" />
-                            <img src={fakeProductImg2} alt="productImage" loading="lazy" />
-                            <img src={fakeProductImg3} alt="productImage" loading="lazy" />
+                            <img src={productImage1} alt="cover Image by chaokaiqi" loading="lazy" />
+                            <img src={productImage2} alt="cover Image by chaokaiqi" loading="lazy" />
+                            <img src={productImage3} alt="cover Image by chaokaiqi" loading="lazy" />
+                            <img src={productImage4} alt="cover Image by chaokaiqi" loading="lazy" />
                         </Slider>
                     </div>
 
