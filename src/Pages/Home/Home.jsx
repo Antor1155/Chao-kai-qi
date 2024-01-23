@@ -129,8 +129,8 @@ const Home = () => {
             <section id="landing-screen">
                 <div className="main-content">
                     <div className="title-container">
-                        <h1>Global Wholesale <span className="chinese-red">supplier</span> <br />
-                            Of Phone <span className="chinese-red">Case-Cover</span> <br />
+                        <h1>Global Wholesale <span className="chinese-red">supplier Of </span> <br />
+                            Tablet / Phone <span className="chinese-red">Case-Cover</span> <br />
                             From <span className="chinese-red">China</span>
                         </h1>
 
