@@ -74,8 +74,8 @@ const AboutUs = () => {
 
                 <div className="contact-icons">
                     <div className="qr-code">
-                        <img src={wechatContact1} alt="chaikaiqi wechat contact qr code" />
-                        <img src={wechatContact2} alt="chaikaiqi wechat contact qr code" />
+                        <img src={wechatContact1} alt="chaikaiqi wechat contact qr code" loading="lazy"/>
+                        <img src={wechatContact2} alt="chaikaiqi wechat contact qr code" loading="lazy"/>
                     </div>
 
                     <div className="flex-column">
