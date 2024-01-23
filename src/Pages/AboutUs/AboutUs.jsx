@@ -16,6 +16,8 @@ import Facebook from "../../assets/logos/Facebook.svg"
 import LinkedIn from "../../assets/logos/LinkedIn.svg"
 import Email from "../../assets/logos/Email.svg"
 import Phone from "../../assets/logos/Phone.svg"
+import wechatContact1 from "../../assets/logos/wechatContact1.webp"
+import wechatContact2 from "../../assets/logos/wechatContact2.webp"
 
 import "./AboutUs.css"
 import Slider from "react-slick";
@@ -38,10 +40,10 @@ const AboutUs = () => {
         rtl: true,
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         const mq = window.matchMedia("(max-width: 768px)");
 
-        if(mq.matches){
+        if (mq.matches) {
             setMobileScreen(true)
         }
 
@@ -71,22 +73,30 @@ const AboutUs = () => {
             <section className="contact-and-info mb-double-gapping-tape">
 
                 <div className="contact-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61555580120146" rel="noreferrer" target="_blank">
-                        <img src={Facebook} alt="ChaokaiQi Facebook link" loading="lazy" />
-                    </a>
+                    <div className="qr-code">
+                        <img src={wechatContact1} alt="chaikaiqi wechat contact qr code" />
+                        <img src={wechatContact2} alt="chaikaiqi wechat contact qr code" />
+                    </div>
 
-                    <a href="https://www.linkedin.com/company/99058679" rel="noreferrer" target="_blank">
-                        <img src={LinkedIn} alt="ChaokaiQi LinkedIn link" loading="lazy" />
-                    </a>
+                    <div className="flex-column">
+                        <a href="https://www.facebook.com/profile.php?id=61555580120146" rel="noreferrer" target="_blank">
+                            <img src={Facebook} alt="ChaokaiQi Facebook link" loading="lazy" />
+                        </a>
 
+                        <a href="https://www.linkedin.com/company/99058679" rel="noreferrer" target="_blank">
+                            <img src={LinkedIn} alt="ChaokaiQi LinkedIn link" loading="lazy" />
+                        </a>
+                    </div>
 
-                    <a href="mailto:Chaokaiqi@outlook.com">
-                        <img src={Email} alt="ChaokaiQi Email link" loading="lazy"/>
-                    </a>
+                    <div className="flex-column">
+                        <a href="mailto:Chaokaiqi@outlook.com">
+                            <img src={Email} alt="ChaokaiQi Email link" loading="lazy" />
+                        </a>
 
-                    <a href="tel:+8613028899446">
-                        <img src={Phone} alt="ChaokaiQi Phone link" loading="lazy"/>
-                    </a>
+                        <a href="tel:+8613028899446">
+                            <img src={Phone} alt="ChaokaiQi Phone link" loading="lazy" />
+                        </a>
+                    </div>
                 </div>
 
                 <div>
@@ -120,7 +130,7 @@ const AboutUs = () => {
             <section className="our-story mb-double-gapping-tape">
                 <h2 className="company-font text-center mb-gapping-tape">Our Story</h2>
 
-                <img className="mb-32" src={companyImg1} alt="Chao Kai Qi compnay story image" loading="lazy"/>
+                <img className="mb-32" src={companyImg1} alt="Chao Kai Qi compnay story image" loading="lazy" />
 
                 <p className="text-center">Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.</p>
             </section>
@@ -132,19 +142,19 @@ const AboutUs = () => {
 
                 <div className="mission-cards mb-32">
                     <div className="mission-card">
-                        <img src={companyImg8} alt="chao kai qi compnay image" loading="lazy"/>
+                        <img src={companyImg8} alt="chao kai qi compnay image" loading="lazy" />
                         <h2 className="font-20 chinese-red">Quality Assurance</h2>
                         <p>We believe in delivering products that stand the test of time. Each phone case cover undergoes rigorous quality checks to ensure durability and style.</p>
                     </div>
 
                     <div className="mission-card">
-                        <img src={companyImg1} alt="chao kai qi compnay image" loading="lazy"/>
+                        <img src={companyImg1} alt="chao kai qi compnay image" loading="lazy" />
                         <h2 className="font-20 chinese-red">Wide Selection:</h2>
                         <p>Explore our extensive catalog featuring the latest trends and timeless classics. We strive to offer a diverse range of phone case covers to meet the unique preferences of our customers.</p>
                     </div>
 
                     <div className="mission-card">
-                        <img src={companyImg6} alt="chao kai qi compnay image" loading="lazy"/>
+                        <img src={companyImg6} alt="chao kai qi compnay image" loading="lazy" />
                         <h2 className="font-20 chinese-red">Competitive Pricing:</h2>
                         <p>We understand the importance of affordability for businesses. Our pricing is competitive without compromising on quality, making us a cost-effective choice for your wholesale needs.</p>
                     </div>
@@ -155,21 +165,21 @@ const AboutUs = () => {
 
             <section className="image-sliders mb-double-gapping-tape">
                 <Slider {...sliderSetting}>
-                    <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg2} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg13} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg4} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg5} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg6} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg2} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg13} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg4} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg5} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg6} alt="Chao kai qi compnay image" loading="lazy" />
                 </Slider>
 
                 <Slider {...{ ...sliderSetting, rtl: false }}>
-                    <img src={companyImg7} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg14} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg9} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg6} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg11} alt="Chao kai qi compnay image" loading="lazy"/>
-                    <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy"/>
+                    <img src={companyImg7} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg14} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg9} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg6} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg11} alt="Chao kai qi compnay image" loading="lazy" />
+                    <img src={companyImg12} alt="Chao kai qi compnay image" loading="lazy" />
                 </Slider>
             </section>
 

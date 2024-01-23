@@ -15,30 +15,50 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+}
 
-    & div{
-        width: 500px;
+.contact-and-info>div{
+    width: 500px;
+}
 
+.contact-icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+    & .qr-code{
+        display: flex;
+        align-items: center;
     }
 
-    & .contact-icons{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
+    & .qr-code img{
+        width: 85px;
+        margin-right: 16px;
+        object-fit: contain;
 
-        & img{
-            width: 48px;
-            float: right;
+        transition: .8s;
 
-            border: 1px solid white;
-            border-radius: 8px;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 5px 5px 5px black;
+        }
+    }
 
-            transition: .8s;
+    & .flex-column{
+        display: flex;
+        flex-direction: column;
+    }
 
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.602);
-                scale: 1.09;
-            }
+    & .flex-column img{
+        width: 48px;
+        border: 1px solid white;
+        border-radius: 8px;
+
+        transition: .8s;
+
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.602);
+            scale: 1.09;
         }
     }
 }
@@ -128,10 +148,6 @@
 
         & p{
             padding-left: 10px;
-        }
-
-        & div{
-            width: 100%;
         }
 
         & .contact-icons{
