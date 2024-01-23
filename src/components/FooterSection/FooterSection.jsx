@@ -123,8 +123,8 @@ const FooterSection = () => {
 
             <div className="footer-last">
                 <div>
-                    <img src={wechatContact1} alt="wechat contact qr code of chaokaiqi" />
-                    <img src={wechatContact2} alt="wechat contact qr code of chaokaiqi" />
+                    <img src={wechatContact1} alt="wechat contact qr code of chaokaiqi" loading="lazy" />
+                    <img src={wechatContact2} alt="wechat contact qr code of chaokaiqi" loading="lazy" />
                 </div>
 
                 <div>

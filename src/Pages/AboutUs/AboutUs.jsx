@@ -13,11 +13,9 @@ import companyImg14 from "../../assets/companyImage/companyImg14.jpg"
 
 
 import Facebook from "../../assets/logos/Facebook.svg"
-import Instagram from "../../assets/logos/Instagram.svg"
 import LinkedIn from "../../assets/logos/LinkedIn.svg"
 import Email from "../../assets/logos/Email.svg"
 import Phone from "../../assets/logos/Phone.svg"
-import WeChat from "../../assets/logos/WeChat.svg"
 
 import "./AboutUs.css"
 import Slider from "react-slick";
@@ -73,27 +71,20 @@ const AboutUs = () => {
             <section className="contact-and-info mb-double-gapping-tape">
 
                 <div className="contact-icons">
-                    <a href="">
+                    <a href="https://www.facebook.com/profile.php?id=61555580120146" rel="noreferrer" target="_blank">
                         <img src={Facebook} alt="ChaokaiQi Facebook link" loading="lazy" />
                     </a>
 
-                    <a href="">
-                        <img src={Instagram} alt="ChaokaiQi Instagram link"  loading="lazy"/>
-                    </a>
-
-                    <a href="">
+                    <a href="https://www.linkedin.com/company/99058679" rel="noreferrer" target="_blank">
                         <img src={LinkedIn} alt="ChaokaiQi LinkedIn link" loading="lazy" />
                     </a>
 
-                    <a href="">
-                        <img src={WeChat} alt="ChaokaiQi Wechat link" loading="lazy"/>
-                    </a>
 
-                    <a href="">
+                    <a href="mailto:Chaokaiqi@outlook.com">
                         <img src={Email} alt="ChaokaiQi Email link" loading="lazy"/>
                     </a>
 
-                    <a href="">
+                    <a href="tel:+8613028899446">
                         <img src={Phone} alt="ChaokaiQi Phone link" loading="lazy"/>
                     </a>
                 </div>
