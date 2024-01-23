@@ -1,10 +1,11 @@
 import "./FooterSection.css"
 
 import FacebookIcon from "../../assets/logos/Facebook.svg"
-import InstagramIcon from "../../assets/logos/Instagram.svg"
 import EmailIcon from "../../assets/logos/Email.svg"
-import WechatIcon from "../../assets/logos/WeChat.svg"
+import Phone from "../../assets/logos/Phone.svg"
 import LinkedinIcon from "../../assets/logos/Linkedin.svg"
+import wechatContact1 from "../../assets/logos/wechatContact1.webp"
+import wechatContact2 from "../../assets/logos/wechatContact2.webp"
 import { Link } from "react-router-dom"
 
 
@@ -13,7 +14,7 @@ const FooterSection = () => {
         <footer>
             <div className="double-line"></div>
 
-            <div className="footer-info mb-gapping-tape">
+            <div className="footer-info mb-16">
                 <div>
                     <p className="font-20 chinese-red mb-16">Contact Us</p>
                     <a className="font-14" href="mailto:Chaokaiqi@outlook.com">Email : Chaokaiqi@outlook.com</a>
@@ -24,27 +25,22 @@ const FooterSection = () => {
 
                     <p className="font-20 chinese-red mt-16 mb-16"> Follow us : </p>
                     <div className="social-icons">
-                        <a href="" target="_blank">
+                        <a href="https://www.facebook.com/profile.php?id=61555580120146" rel="noreferrer" target="_blank">
                             <img src={FacebookIcon} alt="Facebook link of chao kai qi" loading="lazy" />
                         </a>
 
-                        <a href="" target="_blank">
-                            <img src={InstagramIcon} alt="Instagram link of chao kai qi" loading="lazy" />
-                        </a>
-
-                        <a href="" target="_blank">
+                        <a href="https://www.linkedin.com/company/99058679" rel="noreferrer" target="_blank">
                             <img src={LinkedinIcon} alt="Linkedin link of chao kai qi" loading="lazy" />
                         </a>
 
-                        <a href="" target="_blank">
+                        <a href="mailto:Chaokaiqi@outlook.com">
                             <img src={EmailIcon} alt="Email link of chao kai qi" loading="lazy" />
                         </a>
 
-                        <a href="" target="_blank">
-                            <img src={WechatIcon} alt="WeChat link of chao kai qi" loading="lazy" />
+                        <a href="tel:+8613028899446">
+                            <img src={Phone} alt="phone call link of chao kai qi" loading="lazy" />
                         </a>
 
-                        
                     </div>
                 </div>
 
@@ -94,7 +90,7 @@ const FooterSection = () => {
                         <a href="">Nokia x5, </a>
                         <a href="">Infinix k9, </a>
 
-                        
+
                         <a href="">Xiaomi a23, </a>
                         <a href="">Iphone 8, </a>
                         <a href="">Ipad air 5, </a>
@@ -107,7 +103,7 @@ const FooterSection = () => {
                         <a href="">Nokia x5, </a>
                         <a href="">Infinix k9, </a>
 
-                        
+
                         <a href="">Xiaomi a23, </a>
                         <a href="">Iphone 8, </a>
                         <a href="">Ipad air 5, </a>
@@ -120,18 +116,26 @@ const FooterSection = () => {
                         <a href="">Nokia x5, </a>
                         <a href="">Infinix k9, </a>
 
-                        
+
                     </p>
                 </div>
-
             </div>
 
-            <h4 className="font-14 text-center font-normal mb-16">All rights reserved by @ <span className="chinese-red">Chao Kai Qi</span> Technology co. Ltd</h4>      
+            <div className="footer-last">
+                <div>
+                    <img src={wechatContact1} alt="wechat contact qr code of chaokaiqi" />
+                    <img src={wechatContact2} alt="wechat contact qr code of chaokaiqi" />
+                </div>
 
-            <h4 className="font-14 text-center font-normal">Designed and developed by @ 
-            
-            <a href="https://techvixo.com/">Tech-vixo</a></h4>            
-        </footer>
+                <div>
+                    <h4 className="font-14 text-center font-normal mb-16">All rights reserved by @ <span className="chinese-red">Chao Kai Qi</span> Technology co. Ltd</h4>
+
+                    <h4 className="font-14 text-center font-normal">Designed and developed by @
+                        <a href="https://techvixo.com/">Tech-vixo</a></h4>
+                </div>
+            </div>
+
+        </footer >
     );
 };
 

@@ -57,6 +57,16 @@ footer{
     font-size: 10px;
 }
 
+.footer-last{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    & img{
+        width: 85px;
+        margin-right: 16px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .double-line{
         width: 100%;
