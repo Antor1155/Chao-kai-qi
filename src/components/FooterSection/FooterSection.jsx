@@ -131,7 +131,7 @@ const FooterSection = () => {
                     <h4 className="font-14 text-center font-normal mb-16">All rights reserved by @ <span className="chinese-red">Chao Kai Qi</span> Technology co. Ltd</h4>
 
                     <h4 className="font-14 text-center font-normal">Designed and developed by @
-                        <a href="https://techvixo.com/">Tech-vixo</a></h4>
+                        <a href="https://techvixo.com/"> Tech-vixo</a></h4>
                 </div>
             </div>
 
