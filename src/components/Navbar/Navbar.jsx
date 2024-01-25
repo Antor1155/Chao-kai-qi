@@ -38,8 +38,8 @@ const Navbar = ({ setCatagoryOpen }) => {
     const handleSearch = (e) => {
         e.preventDefault()
         const searchQuery = e.target.searchQuery.value
-        // console.log(searchQuery)
-        // e.target.reset()
+        e.target.reset()
+        setSerchBarOpen(false)
 
         navigate(`all-wholesale-tablet-covers/search?q=${searchQuery}`)
         

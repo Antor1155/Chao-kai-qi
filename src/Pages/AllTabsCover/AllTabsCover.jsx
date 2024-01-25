@@ -268,11 +268,8 @@ const AllTabsCover = () => {
                                     <span className="chinese-red font-32"> {searchQuery.current}</span>                                    
                                 </p>
                         }
-
-
                     </div>
                 }
-
 
             </section>
 
