@@ -7,7 +7,7 @@ import "./AllTabsCover.css"
 import filter from "../../assets/logos/Filter.svg"
 import cancel from "../../assets/logos/Cancel.svg"
 import instance from "../../axiosInstance";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 import chaoKaiQiLogo from "../../assets/compnayLogo/chaoKaiQi.png"
 
@@ -22,7 +22,9 @@ const AllTabsCover = () => {
     const [loading, setLoading] = useState(false)
 
     const { productName } = useParams()
+    const [searchParams] = useSearchParams()
 
+    const searchQuery = useRef("")
 
     const starts = useRef(0)
     const ends = useRef(12)
@@ -39,6 +41,24 @@ const AllTabsCover = () => {
                     console.log(error)
                     setLoading(false)
                 })
+
+        } else if (productName === "search") {
+            const query = searchParams.get("q")
+            searchQuery.current = query
+
+            instance.get(`/search?q=${query}`)
+                .then(data => {
+
+                    setProducts(data.data)
+                    setLoading(false)
+
+                }).catch(error => {
+                    console.log(error)
+                    setLoading(false)
+                })
+
+
+            setDisableLoadMore(true)
         } else {
             instance.post("/selected-products", { updatedSelection: [productName] })
                 .then(data => {
@@ -58,7 +78,7 @@ const AllTabsCover = () => {
                 setBrands(data.data)
             })
             .catch(error => { console.log(error) })
-    }, [productName])
+    }, [productName, searchParams])
 
 
     const handleLoadMore = () => {
@@ -237,7 +257,18 @@ const AllTabsCover = () => {
 
                     :
                     <div className="result-products">
-                        {products.map((product, ind) => <SingleProduct key={ind} product={product}></SingleProduct>)}
+                        {
+                            products?.length ?
+                                <>
+                                    {products.map((product, ind) => <SingleProduct key={ind} product={product}></SingleProduct>)}
+                                </>
+                                :
+                                <p className="text-center font-24">
+                                    No product found with search Term <br />
+                                    <span className="chinese-red font-32"> {searchQuery.current}</span>                                    
+                                </p>
+                        }
+
 
                     </div>
                 }
