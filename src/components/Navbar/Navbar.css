@@ -85,6 +85,10 @@ nav{
         border: 1px solid;
     }
 
+    & input{
+        background-color: rgba(249, 245, 246, 0.6);
+    }
+
     & button{
         width: auto;
         margin-right: 0;
