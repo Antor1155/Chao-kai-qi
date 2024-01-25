@@ -20,12 +20,16 @@ function App() {
       <CartContext>
         <ScrollRestoration />
         <AnimatingBg />
+
         <Navbar setCatagoryOpen={setCatagoryOpen}></Navbar>
         <CatagoryBrands isCatagoryOpen={isCatagoryOpen} setCatagoryOpen={setCatagoryOpen}></CatagoryBrands>
+
         <mian style={{ width: "100vw", overflow: "hidden" }}>
           <Outlet></Outlet>
         </mian>
+
         <ToastContainer />
+
         <FooterSection></FooterSection>
       </CartContext>
     </>
