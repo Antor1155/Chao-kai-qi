@@ -31,6 +31,7 @@ const AllTabsCover = () => {
 
     useEffect(() => {
         setLoading(true)
+        setSelectedModels([])
 
         if (productName === "all") {
             instance.get(`/all-products/${starts.current}/${ends.current}`)
@@ -175,7 +176,12 @@ const AllTabsCover = () => {
 
                             {brand?.products.map(model => (
                                 <p key={model}>
-                                    <input type="checkbox" name={model} id={model} onChange={() => handleCheckboxChange(model)} />
+                                    <input 
+                                    type="checkbox" 
+                                    name={model} id={model} 
+                                    onChange={() => handleCheckboxChange(model)} 
+                                    checked={selectedModels.includes(model)}
+                                    />
                                     <label htmlFor={model}>{model}</label>
                                 </p>
                             ))}
