@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion"
 import languageButton from "../../assets/logos/language-options.svg";
 import cart from "../../assets/logos/cart.svg"
@@ -13,6 +13,8 @@ import { useContext, useState } from "react";
 const Navbar = ({ setCatagoryOpen }) => {
     const { cartData } = useContext(Ccontext)
     const [searchBarOpen, setSerchBarOpen] = useState(false)
+
+    const navigate = useNavigate()
 
     const container = {
         hidden: { opacity: 0 },
@@ -35,6 +37,13 @@ const Navbar = ({ setCatagoryOpen }) => {
 
     const handleSearch = (e) => {
         e.preventDefault()
+        const searchQuery = e.target.searchQuery.value
+        // console.log(searchQuery)
+        // e.target.reset()
+
+        navigate(`all-wholesale-tablet-covers/search?q=${searchQuery}`)
+        
+
     }
 
     return (
@@ -110,13 +119,20 @@ const Navbar = ({ setCatagoryOpen }) => {
                     <motion.form
                         id="searchForm"
                         onSubmit={handleSearch}
-                        initial={{x:500}}
-                        animate={{x: 0}}
+                        initial={{ x: "200%" }}
+                        animate={{ x: 0 }}
 
-                        exit={{x:500}}
+                        exit={{ x: "200%" }}
                     >
                         <input type="text" name="searchQuery" required />
-                        <motion.button >Search</motion.button>
+                        <motion.button
+                            initial={{}}
+                            whileHover={{scale:1.05}}
+                            whileTap={{scale: 0.8}}
+                        >
+                            Search
+
+                        </motion.button>
 
                     </motion.form>
                     :
