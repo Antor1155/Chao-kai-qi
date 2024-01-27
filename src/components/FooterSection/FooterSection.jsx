@@ -58,17 +58,17 @@ const FooterSection = () => {
                     </h3>
 
                     <p>
-                        <a href="">Xiaomi, </a>
-                        <a href="">Iphone, </a>
-                        <a href="">Ipad, </a>
-                        <a href="">Huawei, </a>
-                        <a href="">Samsung, </a>
-                        <a href="">Lenovo, </a>
-                        <a href="">Oppo, </a>
-                        <a href="">Vivo, </a>
-                        <a href="">Oneplus, </a>
-                        <a href="">Nokia, </a>
-                        <a href="">Infinix, </a>
+                        <Link to="/all-wholesale-tablet-covers/all">Xiaomi, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Iphone, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Ipad, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Huawei, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Samsung, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Lenovo, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Oppo, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Vivo, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Oneplus, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Nokia, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Infinix, </Link>
                     </p>
                 </div>
 
@@ -78,43 +78,36 @@ const FooterSection = () => {
                     </h3>
 
                     <p className="top-phones">
-                        <a href="">Xiaomi a23, </a>
-                        <a href="">Iphone 8, </a>
-                        <a href="">Ipad air 5, </a>
-                        <a href="">Huawei p2, </a>
-                        <a href="">Samsung s22, </a>
-                        <a href="">Lenovo A33, </a>
-                        <a href="">Oppo lx3, </a>
-                        <a href="">Vivo a22, </a>
-                        <a href="">Oneplus 9, </a>
-                        <a href="">Nokia x5, </a>
-                        <a href="">Infinix k9, </a>
+                        <Link to="/all-wholesale-tablet-covers/all">ipad Mini 6, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">iPad 9.7 Air1, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">iPad 9.7 Air2, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">iPad 10.2 2019, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">iPad 10.2 2020, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">iPad 10.2 2021, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">iPad 10.9 2022, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">ipad Pro 11, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">ipad Air4, </Link>
 
 
-                        <a href="">Xiaomi a23, </a>
-                        <a href="">Iphone 8, </a>
-                        <a href="">Ipad air 5, </a>
-                        <a href="">Huawei p2, </a>
-                        <a href="">Samsung s22, </a>
-                        <a href="">Lenovo A33, </a>
-                        <a href="">Oppo lx3, </a>
-                        <a href="">Vivo a22, </a>
-                        <a href="">Oneplus 9, </a>
-                        <a href="">Nokia x5, </a>
-                        <a href="">Infinix k9, </a>
+                        <Link to="/all-wholesale-tablet-covers/all">ipad Air5, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">ipad Pro 12.9 2022, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Mi 5, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Mi 5pro , </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Nokia T20, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB S6 Lite 10.4, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB S6 Lite 2022, </Link>
 
 
-                        <a href="">Xiaomi a23, </a>
-                        <a href="">Iphone 8, </a>
-                        <a href="">Ipad air 5, </a>
-                        <a href="">Huawei p2, </a>
-                        <a href="">Samsung s22, </a>
-                        <a href="">Lenovo A33, </a>
-                        <a href="">Oppo lx3, </a>
-                        <a href="">Vivo a22, </a>
-                        <a href="">Oneplus 9, </a>
-                        <a href="">Nokia x5, </a>
-                        <a href="">Infinix k9, </a>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB A7 Lite 8.7, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB A7 10.4 2020, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB S7 11, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB S8 11, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">TAB S8Ultra 14.6, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Huawei Matepad 10.4, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">OPPO Realme pad mini 8.7, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">OPPO pad Air 10.3 2022, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">HONOR 8 12 2022, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">Mi 6 2023, </Link>
 
 
                     </p>
