@@ -63,6 +63,8 @@ nav{
     border: none;
     position: relative;
     bottom: 3px;
+
+    background-color: transparent;
 }
 
 .searchIcon.open{
@@ -124,6 +126,8 @@ nav{
     #nav-menues.visible{
         top: 0;
         right: -5%;
+
+        z-index: 2;
     }
 
     #menu, #cancel{
@@ -167,7 +171,6 @@ nav{
     .searchIcon.mobile{
         display: inline-block;
         bottom: 0;
-        
     }
 }
 
