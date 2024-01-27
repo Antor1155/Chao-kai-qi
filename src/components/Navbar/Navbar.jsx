@@ -42,7 +42,7 @@ const Navbar = ({ setCatagoryOpen }) => {
         setSerchBarOpen(false)
 
         navigate(`all-wholesale-tablet-covers/search?q=${searchQuery}`)
-        
+
 
     }
 
@@ -51,9 +51,22 @@ const Navbar = ({ setCatagoryOpen }) => {
             <nav>
                 <Link to="/" className="company-font"> ChaoKaiQi</Link>
 
-                <button id="menu" onClick={handleNavMenues}>
-                    <img src={menu} alt="nav bar menu icon" />
-                </button>
+                <div>
+
+                    <button id="menu" onClick={handleNavMenues}>
+                        <img src={menu} alt="nav bar menu icon" />
+                    </button>
+
+                    <motion.button
+                        className={`searchIcon mobile ${searchBarOpen && "open"}`}
+                        variants={item}
+                        whileTap={{ scale: .7 }}
+                        onClick={() => setSerchBarOpen(prev => !prev)}
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+                    </motion.button>
+
+                </div>
 
                 <motion.div
                     variants={container}
@@ -127,8 +140,8 @@ const Navbar = ({ setCatagoryOpen }) => {
                         <input type="text" name="searchQuery" required />
                         <motion.button
                             initial={{}}
-                            whileHover={{scale:1.05}}
-                            whileTap={{scale: 0.8}}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.8 }}
                         >
                             Search
 

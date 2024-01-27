@@ -154,6 +154,21 @@ nav{
         }
 
     }
+
+    .searchIcon{
+        display: none;
+    }
+
+    #menu{
+        display: inline-block;
+        margin-right: 16px;
+    }
+
+    .searchIcon.mobile{
+        display: inline-block;
+        bottom: 0;
+        
+    }
 }
 
 @media screen and (max-width: 550px) {
