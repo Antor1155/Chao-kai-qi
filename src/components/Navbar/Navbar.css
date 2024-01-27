@@ -67,6 +67,10 @@ nav{
     background-color: transparent;
 }
 
+.searchIcon.mobile{
+    display: none;
+}
+
 .searchIcon.open{
     border-bottom: 2px solid;
 }
@@ -114,7 +118,7 @@ nav{
         right: 150%;
         top: 0;
 
-        transition: 1s;
+        transition: .5s;
 
         & span{
             border-bottom: 1px solid;
