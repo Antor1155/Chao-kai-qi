@@ -5,6 +5,8 @@
     background-color: white;
     z-index: 1;
 
+    max-width: 292px;
+
     transition:all .5s;
 
     & .image-container{
