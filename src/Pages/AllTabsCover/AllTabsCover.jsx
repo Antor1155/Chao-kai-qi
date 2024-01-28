@@ -27,7 +27,7 @@ const AllTabsCover = () => {
     const searchQuery = useRef("")
 
     const starts = useRef(0)
-    const ends = useRef(12)
+    const ends = useRef(36)
 
     useEffect(() => {
         setLoading(true)
