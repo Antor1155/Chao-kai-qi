@@ -188,46 +188,7 @@ const AllTabsCover = () => {
                         </div>
                     ))}
 
-                    {/* <div className="single-filter">
-                        <h2 className="company-font font-bold">Colors</h2>
-
-                        <div className="color-buttons">
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "red" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "green" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "yellow" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "black" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "cyan" }}
-                            ></motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.9 }}
-                                whileHover={{ scale: 1.1 }}
-                                style={{ background: "white" }}
-                            ></motion.button>
-
-
-
-                        </div>
-                    </div> */}
-
+                    
                     <div className="mobile-hide ">
                         <h2 className="company-font text-center">ChaoKaiQi</h2>
                         <img src={chaoKaiQiLogo} alt="chaoKaiQi company logo" />
