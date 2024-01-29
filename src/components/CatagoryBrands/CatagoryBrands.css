@@ -1,14 +1,16 @@
 #catagories{
-    position: absolute;
+    position: fixed;
     z-index: 11;
     background-color: var(--bg-color);
     width: 90vw;
-    height: auto;
+    height: 90vh;
     padding: 16px 16px 32px 16px;
 
     border: 1px solid;
     border-radius:8px 8px 16px 16px;
     left: 5vw;
+
+    overflow-y: scroll;
 
     transform: translateY(-47px);
 
