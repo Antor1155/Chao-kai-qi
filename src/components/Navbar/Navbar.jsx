@@ -9,10 +9,14 @@ import "./Navbar.css"
 import { Ccontext } from "../../CartContext";
 import { useContext, useState } from "react";
 
+import { useTranslation } from "react-i18next";
+
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ setCatagoryOpen }) => {
     const { cartData } = useContext(Ccontext)
     const [searchBarOpen, setSerchBarOpen] = useState(false)
+
+    const {i18n} = useTranslation()
 
     const navigate = useNavigate()
 
@@ -42,8 +46,15 @@ const Navbar = ({ setCatagoryOpen }) => {
         setSerchBarOpen(false)
 
         navigate(`all-wholesale-tablet-covers/search?q=${searchQuery}`)
+    }
 
-
+    const handleTranslate = () =>{
+        const ln = i18n.resolvedLanguage
+        if(ln === "en"){
+            i18n.changeLanguage("zh")
+        }else{
+            i18n.changeLanguage("en")
+        }
     }
 
     return (
@@ -97,7 +108,7 @@ const Navbar = ({ setCatagoryOpen }) => {
                     <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/about-us">ABOUT US</Link></motion.span>
                     <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/contact-us">CONTACT US</Link></motion.span>
 
-                    <motion.span variants={item} whileTap={{ scale: .7 }}>
+                    <motion.span variants={item} whileTap={{ scale: .7 }} onClick={handleTranslate}>
                         <img src={languageButton} alt="language changing button" className="logo" />
                     </motion.span>
 

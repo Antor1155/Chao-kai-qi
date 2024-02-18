@@ -43,10 +43,14 @@ import Slider from "react-slick";
 import { toast } from "react-toastify";
 import instance from "../../axiosInstance";
 import { Link } from "react-router-dom";
+import { useTranslation, Trans } from "react-i18next";
+
 
 const Home = () => {
     const [products, setProducts] = useState([])
     const [mobileScreen, setMobileScreen] = useState(false)
+
+    const {t} = useTranslation()
 
     const sliderSetting = {
         dots: false,
@@ -133,6 +137,10 @@ const Home = () => {
                             Tablet / Phone <span className="chinese-red">Case-Cover</span> <br />
                             From <span className="chinese-red">China</span>
                         </h1>
+
+                        <h2>
+                            {t("home.title")}
+                        </h2>
 
                         <div className="flex">
                             <div className="text-center">
