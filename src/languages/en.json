@@ -1,10 +1,12 @@
 {
     "header" : {
-        "home" : "",
-        "catagory": "",
-        "allP": "",
-        "aboutUs": "",
-        "contactUs": ""
+        "chaoKaiQi" : "ChaoKaiQi",
+        "home" : "HOME",
+        "catagory": "CATAGORY",
+        "allP": "ALL PRODUCTS",
+        "aboutUs": "ABOUT US",
+        "contactUs": "CONTACT US",
+        "search" : "Search"
     },
     "home" : {
         "h1FirstLine" : "Global Wholesale <1 className='chinese-red'>supplier Of </1>",

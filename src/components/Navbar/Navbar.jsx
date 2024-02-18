@@ -16,7 +16,7 @@ const Navbar = ({ setCatagoryOpen }) => {
     const { cartData } = useContext(Ccontext)
     const [searchBarOpen, setSerchBarOpen] = useState(false)
 
-    const {i18n} = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const navigate = useNavigate()
 
@@ -48,11 +48,11 @@ const Navbar = ({ setCatagoryOpen }) => {
         navigate(`all-wholesale-tablet-covers/search?q=${searchQuery}`)
     }
 
-    const handleTranslate = () =>{
+    const handleTranslate = () => {
         const ln = i18n.resolvedLanguage
-        if(ln === "en"){
+        if (ln === "en") {
             i18n.changeLanguage("zh")
-        }else{
+        } else {
             i18n.changeLanguage("en")
         }
     }
@@ -60,7 +60,7 @@ const Navbar = ({ setCatagoryOpen }) => {
     return (
         <header>
             <nav>
-                <Link to="/" className="company-font"> ChaoKaiQi</Link>
+                <Link to="/" className="company-font"> {t("header.chaoKaiQi")}</Link>
 
                 <div>
 
@@ -91,7 +91,9 @@ const Navbar = ({ setCatagoryOpen }) => {
                         <img src={cancel} alt="hide nav bar" />
                     </motion.button>
 
-                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/">HOME</Link></motion.span>
+                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/">
+                        {t("header.home")}
+                    </Link></motion.span>
 
                     <motion.span
                         variants={item}
@@ -101,12 +103,12 @@ const Navbar = ({ setCatagoryOpen }) => {
                         onMouseLeave={() => setCatagoryOpen(false)}
                         whileHover={{ color: "#C90A1E" }}
                     >
-                        CATAGORY
+                        {t("header.catagory")}
                     </motion.span>
 
-                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/all-wholesale-tablet-covers/all">ALL PRODUCTS</Link></motion.span>
-                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/about-us">ABOUT US</Link></motion.span>
-                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/contact-us">CONTACT US</Link></motion.span>
+                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/all-wholesale-tablet-covers/all">{t("header.allP")}</Link></motion.span>
+                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/about-us">{t("header.aboutUs")}</Link></motion.span>
+                    <motion.span variants={item} whileTap={{ scale: .7 }}><Link to="/contact-us">{t("header.contactUs")}</Link></motion.span>
 
                     <motion.span variants={item} whileTap={{ scale: .7 }} onClick={handleTranslate}>
                         <img src={languageButton} alt="language changing button" className="logo" />
@@ -154,7 +156,7 @@ const Navbar = ({ setCatagoryOpen }) => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.8 }}
                         >
-                            Search
+                            {t("header.search")}
 
                         </motion.button>
 
