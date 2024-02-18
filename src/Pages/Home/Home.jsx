@@ -50,7 +50,7 @@ const Home = () => {
     const [products, setProducts] = useState([])
     const [mobileScreen, setMobileScreen] = useState(false)
 
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const sliderSetting = {
         dots: false,
@@ -80,9 +80,9 @@ const Home = () => {
     }
 
     useEffect(() => {
-        instance.get("/random-products/12").then(data =>{
+        instance.get("/random-products/12").then(data => {
             setProducts(data.data)
-        }).catch(error=>{
+        }).catch(error => {
             console.log(error)
         })
 
@@ -90,7 +90,7 @@ const Home = () => {
         // checking the device is phone or desktop 
         const mq = window.matchMedia("(max-width: 768px)");
 
-        if(mq.matches){
+        if (mq.matches) {
             setMobileScreen(true)
         }
 
@@ -99,7 +99,7 @@ const Home = () => {
     const handleInfoSubmit = (e) => {
         e.preventDefault()
 
-        const customerData ={
+        const customerData = {
             name: e.target.name.value,
             country: e.target.country.name,
             organization: e.target.organization.value,
@@ -108,11 +108,11 @@ const Home = () => {
             note: e.target.note.value,
         }
 
-        instance.post("/mail-and-orders/mail", {customerData})
-        .then()
-        .catch(error =>{
-            console.log(error)
-        })
+        instance.post("/mail-and-orders/mail", { customerData })
+            .then()
+            .catch(error => {
+                console.log(error)
+            })
 
 
         e.target.reset()
@@ -120,36 +120,43 @@ const Home = () => {
         toast("Thanks for your input. We will get back to you soon ! Hope you have a good day.")
     }
 
-    const handleContactNow = () =>{
-        document.getElementById("contact-section").scrollIntoView({behavior: "smooth"})
+    const handleContactNow = () => {
+        document.getElementById("contact-section").scrollIntoView({ behavior: "smooth" })
     }
 
     return (
         <>
-            <motion.button whileHover={{scale: "1.05"}} whileTap={{scale: .95}} id="contact-now" onClick={handleContactNow}>
-               Contact Now !
+            <motion.button whileHover={{ scale: "1.05" }} whileTap={{ scale: .95 }} id="contact-now" onClick={handleContactNow}>
+                Contact Now !
             </motion.button>
 
             <section id="landing-screen">
                 <div className="main-content">
                     <div className="title-container">
-                        <h1>Global Wholesale <span className="chinese-red">supplier Of </span> <br />
-                            Tablet / Phone <span className="chinese-red">Case-Cover</span> <br />
-                            From <span className="chinese-red">China</span>
-                        </h1>
+                        <h1>
+                            <Trans i18nKey="home.h1FirstLine">
+                                Global Wholesale <span className="chinese-red">supplier Of </span>
+                            </Trans>
+                            <br />
 
-                        <h2>
-                            {t("home.title")}
-                        </h2>
+                            <Trans i18nKey="home.h1SecondLine">
+                                Tablet / Phone <span className="chinese-red">Case-Cover</span>
+                            </Trans>
+                            <br />
+
+                            <Trans i18nKey="home.h1ThirdLine">
+                                From <span className="chinese-red">China</span>
+                            </Trans>
+                        </h1>
 
                         <div className="flex">
                             <div className="text-center">
-                                <h2 className="font-20 mb-8">Since <br /> <span className="chinese-red">2012</span></h2>
+                                <h2 className="font-20 mb-8">{t("home.since")} <br /> <span className="chinese-red">2012</span></h2>
                                 <img className="logo" src={trusted} alt="truested supplier" />
                             </div>
 
                             <div className="text-center">
-                                <h2 className="font-20 mb-8">Overseas supplier <br /> <span className="chinese-red">4M units</span></h2>
+                                <h2 className="font-20 mb-8">{t("home.overseas")}<br /> <span className="chinese-red">4M {t("home.units")}</span></h2>
                                 <img className="logo" src={globalSupplier} alt="Global supplier" />
                             </div>
                         </div>
@@ -174,7 +181,7 @@ const Home = () => {
                                 srcSet={`${mobileBanner2} 480w, ${banner2} 800w`}
                                 sizes="(max-width: 550px) 10vw, 800px"
                                 src={banner2}
-                                
+
                                 alt="chaoKaiQi company banner"
                             />
                             <img
@@ -183,7 +190,7 @@ const Home = () => {
                                 srcSet={`${mobileBanner3} 480w, ${banner3} 800w`}
                                 sizes="(max-width: 550px) 10vw, 800px"
                                 src={banner3}
-                                
+
                                 alt="ChaoKaiQi company banner"
                             />
                         </Slider>
@@ -191,7 +198,7 @@ const Home = () => {
                 </div>
 
                 <div className="brands">
-                    <h2 className="font-20 text-center mb-32">Brands <br /> We cover</h2>
+                    <h2 className="font-20 text-center mb-32">{t("home.brands")} <br /> {t("home.weCover")}</h2>
 
                     <div className="brands-logo">
                         <Slider {...branSliderSetting}>
@@ -213,8 +220,12 @@ const Home = () => {
 
             <section className="products-section">
                 <div className="d-flex-between">
-                    <h2>Our <span className="chinese-red">Top</span> Products</h2>
-                    <h2>At Best Price</h2>
+                    <h2>
+                        <Trans i18nKey="home.outTopProducts">
+                            Our <span className="chinese-red">Top</span> Products
+                        </Trans>
+                    </h2>
+                    <h2>{t("home.atBestPrice")}</h2>
                 </div>
 
                 <div className="top-product-container">
@@ -223,13 +234,13 @@ const Home = () => {
             </section>
 
             <Link id="show-all-products-btn" to="/all-wholesale-tablet-covers/all">
-                SHOW ALL PRODUCTS
+            {t("home.showAllProducts")}
             </Link>
 
             <section className="contact-section" id="contact-section">
                 <div className="d-flex-between">
-                    <h2>Get to know more about us</h2>
-                    <h2 className="chinese-red">Special Service</h2>
+                    <h2>{t("home.getToKnow")}</h2>
+                    <h2 className="chinese-red">{t("home.special")}</h2>
                 </div>
 
                 <div className="content">
@@ -245,62 +256,62 @@ const Home = () => {
 
                     <div className="form-and-info">
                         <div className="info">
-                            <p className="font-20 info-blue">We will send you with</p>
+                            <p className="font-20 info-blue">{t("home.weWill")}</p>
 
                             <div className="list">
                                 <div className="info-point"></div>
-                                <p>Product List</p>
+                                <p>{t("home.pList")}</p>
                             </div>
                             <div className="list">
                                 <div className="info-point"></div>
-                                <p>Special price</p>
+                                <p>{t("home.sPrice")}</p>
                             </div>
                             <div className="list">
                                 <div className="info-point"></div>
-                                <p>Transport query</p>
+                                <p>{t("home.trans")}</p>
                             </div>
                             <div className="list">
                                 <div className="info-point"></div>
-                                <p>Any specific query</p>
+                                <p>{t("home.anyQ")}</p>
                             </div>
                             <div className="list">
                                 <div className="info-point"></div>
-                                <p>Terms and conditions</p>
+                                <p>{t("home.terms")}</p>
                             </div>
 
-                            <h2 className="company-font">ChaoKaiQi</h2>
+                            <h2 className="company-font">{t("home.chaoKaiQi")}</h2>
 
                         </div>
 
                         <div className="form-container home-form">
                             <form onSubmit={handleInfoSubmit}>
                                 <div>
-                                    <label htmlFor="name">Name *</label>
+                                    <label htmlFor="name">{t("home.name")} *</label>
                                     <input id="name" name="name" type="text" required />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="country">Country *</label>
-                                    <input id="country" name="country" type="text" required/>
+                                    <label htmlFor="country">{t("home.country")} *</label>
+                                    <input id="country" name="country" type="text" required />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="organization">Organization name *</label>
-                                    <input id="organization" name="organization" type="text" required/>
+                                    <label htmlFor="organization">{t("home.org")} *</label>
+                                    <input id="organization" name="organization" type="text" required />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email">Email *</label>
-                                    <input id="email" name="email" type="email" required/>
+                                    <label htmlFor="email">{t("home.email")} *</label>
+                                    <input id="email" name="email" type="email" required />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="mobile">Phone number *</label>
-                                    <input id="mobile" name="mobile" type="text" required/>
+                                    <label htmlFor="mobile">{t("home.phone")} *</label>
+                                    <input id="mobile" name="mobile" type="text" required />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="note">Special note</label>
+                                    <label htmlFor="note">{t("home.specialN")}</label>
                                     <textarea name="note" id="note" cols="22" rows="4"></textarea>
                                 </div>
 
@@ -308,7 +319,7 @@ const Home = () => {
                                     type="submit"
                                     className="fw-button"
                                     whileTap={{ scale: 0.95 }}
-                                >SUBMIT</motion.button>
+                                >{t("home.submit")}</motion.button>
                             </form>
                         </div>
                     </div>
