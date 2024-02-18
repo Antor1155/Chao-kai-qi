@@ -127,7 +127,7 @@ const Home = () => {
     return (
         <>
             <motion.button whileHover={{ scale: "1.05" }} whileTap={{ scale: .95 }} id="contact-now" onClick={handleContactNow}>
-                Contact Now !
+            {t("home.contactNow")}
             </motion.button>
 
             <section id="landing-screen">
@@ -328,8 +328,8 @@ const Home = () => {
 
             <section className="about-us mb-gapping-tape">
                 <h2 className="company-font text-center font-bold">
-                    About <br />
-                    ChaoKaiQi
+                {t("home.about")} <br />
+                {t("home.chaoKaiQi")}
                 </h2>
 
                 <div className="content mb-32">
@@ -340,35 +340,34 @@ const Home = () => {
                     <div className="info">
                         <h3 className="font-24 mb-16">
                             <span className="chinese-red">
-                                Chao Kai Qi
-                            </span> : Globally Trusted Name
+                            {t("home.ckq")}
+                            </span> : {t("home.golbally")}
                         </h3>
-                        <p className="mb-16"><span className="chinese-red">Name </span>
-                            : Shenzen Chao kai Qi Technology Co. Ltd
+                        <p className="mb-16"><span className="chinese-red">{t("home.name")} </span>
+                            : {t("home.shenzen")}
                         </p>
 
                         <p className="mb-16">
-                            <span className="chinese-red">Email</span>
+                            <span className="chinese-red">{t("home.email")}</span>
                             : <a href="mailto:Chaokaiqi@outlook.com">Chaokaiqi@outlook.com</a>
                         </p>
 
                         <p className="mb-16">
                             <span className="chinese-red">
-                                Phone
+                            {t("home.pSm")}
                             </span>
                             : <a href="tel:+86 13798587275">+86 13798587275 (WhatsApp)</a>
                         </p>
 
                         <p className="mb-16">
                             <span className="chinese-red">
-                                Address
+                            {t("home.address")}
                             </span>
-                            : 3rd floor, No 11 Furong road, Xirong industry area, Bao’an district,
-                            Shenzen, China.
+                            : {t("home.addressDetail")}
                         </p>
 
                         <p>
-                            Welcome to Chao Kai Qi Technology Co. Ltd, a trusted global wholesaler for premium phone cases and quality cover. We take pride in delivering innovative, durable, and stylish products to phone case sellers worldwide. Based in Shenzen, China, our mission is to redefine the market with quality, affordability, and unwavering trust. Join us in shaping the future of phone accessories.
+                        {t("home.aboutP")}
                         </p>
 
                     </div>
