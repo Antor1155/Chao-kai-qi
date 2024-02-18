@@ -118,7 +118,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
                                             <h2 className="mb-16 chinese-red">{brands[5]._id}</h2>
 
                                             {brands[5].products.map(model => (
-                                                <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
+                                                <Link key={model} to={`/all-wholesale-tablet-covers/${model.replace(/\//g, " ")}`}>
                                                     <motion.span
                                                         whileHover={{ color: "#25CBE1" }}
                                                         onClick={() => setCatagoryOpen(false)}
