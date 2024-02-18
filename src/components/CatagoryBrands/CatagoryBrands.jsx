@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import "./CatagoryBrands.css"
 
-import cancel from "../../assets/logos/cancel.svg"
+import cancel from "../../assets/logos/Cancel.svg"
 
 
 // eslint-disable-next-line react/prop-types
