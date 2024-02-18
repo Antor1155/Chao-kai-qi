@@ -50,18 +50,20 @@
         "title": "are you okay"
     },
     "footer" : {
-        "cUs" : "",
-        "email" : "",
-        "phone" : "",
-        "follow" : "",
-        "aboutUs" : "",
-        "privacy" : "",
-        "shipping": "",
-        "return" : "",
-        "payment" : "",
-        "best" : "",
-        "top" : "",
-        "allRights" : "",
-        "design" : ""
+        "cUs" : "Contact Us",
+        "email" : "Email",
+        "phone" : "Phone",
+        "follow" : "Follow us",
+        "aboutUs" : "About us",
+        "privacy" : "Privacy policy",
+        "shipping": "Shipping policy",
+        "return" : "Return policy",
+        "payment" : "Payment methods",
+        "best" : "Best selling catagory",
+        "top" : "Top Phone Covers",
+        "allRights" : "All rights reserved by @",
+        "ckq" : "Chao Kai Qi",
+        "techno": "Technology co. Ltd",
+        "design" : "Designed and developed by @"
     }
 }
