@@ -1,6 +1,6 @@
 {
     "home" : {
-        "title" : "hello world from i18n"
+        "h1" : "hello <1 class='chinese-red'> world </1>"
     },
     "product" :{
         "title": "are you okay"
