@@ -223,5 +223,31 @@
         "ckq" : "Chao Kai Qi",
         "techno": "Technology co. Ltd",
         "design" : "Designed and developed by @"
+    },
+    "brands":{
+        "Apple": "Apple",
+        "Samsung": "Samsung",
+        "HONOR": "HONOR",
+        "Huawei": "Huawei",
+        "Xiaomi": "Xiaomi",
+        "OPPO": "HONOR",
+        "Nokia": "Nokia",
+        "Lenovo": "Lenovo",
+        "Vivo": "Vivo"
+    },
+    "coverName": {
+       "Snap Rotation Style": "Snap Rotation Style", 
+       "Snap Closure Full Package" : "Snap Closure Full Package", 
+       "Magnetic Detachable Rotating Style" : "Magnetic Detachable Rotating Style", 
+       "Acrylic 360-Degree Rotating Protective Case" : "Acrylic 360-Degree Rotating Protective Case", 
+       "Acrylic Two-in-One Magnetic Detachable" : "Acrylic Two-in-One Magnetic Detachable", 
+       "Acrylic Two-in-One Integrated Side Sticker" : "Acrylic Two-in-One Integrated Side Sticker", 
+       "Acrylic Two-in-One Y Fold Side Sticker" : "Acrylic Two-in-One Y Fold Side Sticker", 
+       "Skin-like Back Sticker Solid Color TPU with Pen Slot" : "Skin-like Back Sticker Solid Color TPU with Pen Slot", 
+       "Painted Back Sticker Solid Color TPU with Pen Slot" : "Painted Back Sticker Solid Color TPU with Pen Slot", 
+       "Snowflake Pattern Anti-drop Transparent Sticker with Pen Slot" : "Snowflake Pattern Anti-drop Transparent Sticker with Pen Slot", 
+       "Solid Color TPU Side Sticker without Pen Slot" : "Solid Color TPU Side Sticker without Pen Slot", 
+       "Skin-like Transparent PC Side Sticker without Pen Slot" : "Skin-like Transparent PC Side Sticker without Pen Slot", 
+       "Skin-like Transparent without Pen Slot" : "Skin-like Transparent without Pen Slot"
     }
 }
