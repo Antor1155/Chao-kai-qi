@@ -153,7 +153,7 @@ const Home = () => {
 
                         <div className="flex">
                             <div className="text-center">
-                                <h2 className="font-20 mb-8">{t("home.since")} <br /> <span className="chinese-red">2012</span></h2>
+                                <h2 className="font-20 mb-8">{t("home.since")} <br /> <span className="chinese-red">2013</span></h2>
                                 <img className="logo" src={trusted} alt="truested supplier" />
                             </div>
 
