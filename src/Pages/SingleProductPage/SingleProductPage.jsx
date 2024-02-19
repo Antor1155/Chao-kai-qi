@@ -33,7 +33,7 @@ const SingleProductPage = () => {
 
     const [randomProducts, setRandomProducts] = useState([])
 
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
 
     // this section for order when add to cart 
 
@@ -121,7 +121,9 @@ const SingleProductPage = () => {
 
         e.target.reset()
 
-        toast(`Added to cart: ${product?.productName} cover | ${orderQuantity} units | color: ${selectedColor?.name}`,
+        const message = i18n.resolvedLanguage === "en"? `Added to cart: ${product?.productName} cover | ${orderQuantity} units | color: ${selectedColor?.name}` : "产品已添加到购物车"
+
+        toast(message,
             {
                 position: "top-center",
                 autoClose: 4000,

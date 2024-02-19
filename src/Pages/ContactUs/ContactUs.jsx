@@ -5,7 +5,7 @@ import instance from "../../axiosInstance";
 import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
@@ -25,7 +25,9 @@ const ContactUs = () => {
             console.log(error)
         })
 
-        toast("Thank you for contacting us. We wil get back to you shortly")
+        const message = i18n.resolvedLanguage === "en"? "Thank you for contacting us. We will get back to you shortly" : "感谢您与我们联系。我们将尽快给您回复"
+
+        toast(message)
         e.target.reset()
     }
 

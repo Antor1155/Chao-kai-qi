@@ -50,7 +50,7 @@ const Home = () => {
     const [products, setProducts] = useState([])
     const [mobileScreen, setMobileScreen] = useState(false)
 
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const sliderSetting = {
         dots: false,
@@ -117,7 +117,9 @@ const Home = () => {
 
         e.target.reset()
 
-        toast("Thanks for your input. We will get back to you soon ! Hope you have a good day.")
+        const message = i18n.resolvedLanguage === "en"? "Thanks for your input. We will get back to you soon ! Hope you have a good day." : "谢谢。我们会尽快给您回复！希望您今天过得愉快。"
+
+        toast(message)
     }
 
     const handleContactNow = () => {
