@@ -152,7 +152,7 @@ const SingleProductPage = () => {
 
                 <div className="content-section">
                     <h1 className="mb-4"><span className="chinese-red">{product?.productName}</span> {t("singleProductPage.cover")}</h1>
-                    <h2 className="font-16 mb-4"> <span className="title">{t("singleProductPage.coverName")}</span> : {product?.coverName}</h2>
+                    <h2 className="font-16 mb-4"> <span className="title">{t("singleProductPage.coverName")}</span> : {t(`coverName.${product?.coverName}`)}</h2>
                     <h2 className="font-24 mb-4">$ {product?.pricePerUnit} USD <span className="title">{t("singleProductPage.perUnit")}</span></h2>
 
                     <p className="review-stars mb-8">
