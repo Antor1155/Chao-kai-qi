@@ -175,7 +175,7 @@ const AllTabsCover = () => {
 
                     {brands.map(brand => (
                         <div key={brand._id} className="single-filter">
-                            <h2>{brand._id}</h2>
+                            <h2>{t(`brands.${brand._id}`)}</h2>
 
                             {brand?.products.map(model => (
                                 <p key={model}>
