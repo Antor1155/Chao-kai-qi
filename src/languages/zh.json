@@ -187,7 +187,7 @@
         "returnC" : "退回定制产品",
         "returnCP" :"Customized products are your unique creative expressions. Returns on customized item(s) for reasons other than CHAOKAIQI error will be subject to a 50% processing fee on the refund amount (after adjustment of discount/shipping, if required).",
         "refund" :"退款政策",
-        "refundP" :"退货将以原始付款方式退还。如果使用信用卡/借记卡或银行账户付款，PayPal（我们的信用卡结算服务提供商）可能需要一段时间与您的银行建立信用交易。"
+        "refundP" :"退货将以原始付款方式退还。如果使用信用卡/借记卡或银行账户付款,PayPal (我们的信用卡结算服务提供商）可能需要一段时间与您的银行建立信用交易。"
     },
     "shipping": {
         "title": "Shipping Policy of ChaoKaiQi",
