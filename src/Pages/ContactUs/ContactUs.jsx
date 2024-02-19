@@ -2,8 +2,10 @@ import { toast } from "react-toastify";
 import "./ContactUs.css"
 import { motion } from "framer-motion"
 import instance from "../../axiosInstance";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+    const { t } = useTranslation()
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
@@ -31,65 +33,65 @@ const ContactUs = () => {
     return (
         <section id="contact-us">
             <div className="info-container">
-                <h2 className="company-font mb-16">Query about</h2>
+                <h2 className="company-font mb-16">{t("contactUs.query")}</h2>
 
-                <p className="point">Get to know us better.</p>
-                <p className="point">Do query about any specific product.</p>
-                <p className="point">Want to know about offers.</p>
-                <p className="point">Our transport facility.</p>
-                <p className="point">Book a visit to our company.</p>
-                <p className="point">Any personal query you have.</p>
+                <p className="point">{t("contactUs.getToKnow")}</p>
+                <p className="point">{t("contactUs.doQ")}</p>
+                <p className="point">{t("contactUs.wantT")}</p>
+                <p className="point">{t("contactUs.ourT")}</p>
+                <p className="point">{t("contactUs.bookA")}</p>
+                <p className="point">{t("contactUs.anyP")}</p>
 
                 <div className="info">
-                    <p className="font-24 info-blue mb-32 mt-gapping-tape">We will reply you with :</p>
+                    <p className="font-24 info-blue mb-32 mt-gapping-tape">{t("contactUs.weWill")}</p>
 
 
-                    <p className="point">Product List</p>
+                    <p className="point">{t("contactUs.pList")}</p>
 
-                    <p className="point">Special price</p>
+                    <p className="point">{t("contactUs.sPrice")}</p>
 
-                    <p className="point">Transport query</p>
+                    <p className="point">{t("contactUs.trans")}</p>
 
-                    <p className="point">Any specific query</p>
+                    <p className="point">{t("contactUs.anyQ")}</p>
 
-                    <p className="point">Terms and conditions</p>
+                    <p className="point">{t("contactUs.terms")}</p>
 
 
-                    <h2 className="company-font text-center mt-32">ChaoKaiQi</h2>
+                    <h2 className="company-font text-center mt-32">{t("contactUs.chaoKaiQi")}</h2>
 
                 </div>
             </div>
 
             <div className="contact-form-container">
-                <h1 className="company-font mb-16">Contact Us</h1>
+                <h1 className="company-font mb-16">{t("contactUs.contact")}</h1>
                 <form onSubmit={handleInfoSubmit} className="contact-form">
                     <div>
-                        <label htmlFor="name">Name *</label>
+                        <label htmlFor="name">{t("contactUs.name")} *</label>
                         <input id="name" name="name" type="text" required />
                     </div>
 
                     <div>
-                        <label htmlFor="country">Country *</label>
+                        <label htmlFor="country">{t("contactUs.country")} *</label>
                         <input id="country" name="country" type="text" required />
                     </div>
 
                     <div>
-                        <label htmlFor="organization">Organization name *</label>
+                        <label htmlFor="organization">{t("contactUs.org")} *</label>
                         <input id="organization" name="organization" type="text" required />
                     </div>
 
                     <div>
-                        <label htmlFor="email">Email *</label>
+                        <label htmlFor="email">{t("contactUs.email")} *</label>
                         <input id="email" name="email" type="email" required />
                     </div>
 
                     <div>
-                        <label htmlFor="mobile">Phone number *</label>
+                        <label htmlFor="mobile">{t("contactUs.phone")} *</label>
                         <input id="mobile" name="mobile" type="text" required />
                     </div>
 
                     <div>
-                        <label htmlFor="note">Special note</label>
+                        <label htmlFor="note">{t("contactUs.specialN")}</label>
                         <textarea name="note" id="note" cols="22" rows="4"></textarea>
                     </div>
 
@@ -98,7 +100,7 @@ const ContactUs = () => {
                         className="fw-button"
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                    >SUBMIT</motion.button>
+                    >{t("contactUs.submit")}</motion.button>
                 </form>
             </div>
         </section>

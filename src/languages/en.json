@@ -88,9 +88,30 @@
         "lastP": "Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.",
         "thank": "Thank you for choosing ",
         "where": "- where style meets functionality!"
-
-
-
+    },
+    "contactUs" : {
+        "query" : "Query about",
+        "getToKnow" : "Get to know us better.",
+        "doQ": "Do query about any specific product.",
+        "wantT": "Want to know about offers.",
+        "ourT": "Our transport facility.",
+        "bookA" : "Book a visit to our company.",
+        "anyP" : "Any personal query you have.",
+        "weWill": "We will send you with :",
+        "pList":"Product List",
+        "sPrice": "Special price",
+        "trans":"Transport query",
+        "anyQ":"Any specific query",
+        "terms": "Terms and conditions",
+        "chaoKaiQi": "ChaoKaiQi",
+        "contact": "Contact Us",
+        "name":"Name",
+        "country":"Country",
+        "org":"Organization name",
+        "email":"Email",
+        "phone":"Phone number",
+        "specialN": "Special note",
+        "submit" : "SUBMIT"
     },
     "footer" : {
         "cUs" : "Contact Us",
