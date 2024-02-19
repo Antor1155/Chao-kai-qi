@@ -24,9 +24,9 @@ function App() {
         <Navbar setCatagoryOpen={setCatagoryOpen}></Navbar>
         <CatagoryBrands isCatagoryOpen={isCatagoryOpen} setCatagoryOpen={setCatagoryOpen}></CatagoryBrands>
 
-        <main style={{overflow: "hidden" }}>
-          <Outlet></Outlet>
-        </main>
+
+        <Outlet></Outlet>
+
 
         <ToastContainer />
 
