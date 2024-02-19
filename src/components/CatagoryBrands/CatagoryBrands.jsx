@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import instance from "../../axiosInstance";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./CatagoryBrands.css"
 
@@ -13,7 +14,8 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
 
     const [brands, setBrands] = useState([])
 
-    console.log(brands)
+    const { t } = useTranslation()  
+
 
     useEffect(() => {
         instance.get("/brands")
@@ -52,7 +54,9 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
 
                                 <>
                                     <div className="single-brans">
-                                        <h2 className="mb-16 chinese-red">{brands[0]._id}</h2>
+                                        <h2 className="mb-16 chinese-red">
+                                            {t(`brands.${brands[0]._id}`)}
+                                            </h2>
 
                                         {brands[0].products.map(model => (
                                             <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -67,7 +71,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
                                     </div>
 
                                     <div className="single-brans">
-                                        <h2 className="mb-16 chinese-red">{brands[6]._id}</h2>
+                                        <h2 className="mb-16 chinese-red">{t(`brands.${brands[6]._id}`)}</h2>
 
                                         {brands[6].products.map(model => (
                                             <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -83,7 +87,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
 
                                     <div>
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[1]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[1]._id}`)}</h2>
 
                                             {brands[1].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -98,7 +102,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
                                         </div>
 
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[2]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[2]._id}`)}</h2>
 
                                             {brands[2].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -115,7 +119,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
 
                                     <div>
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[5]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[5]._id}`)}</h2>
 
                                             {brands[5].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model.replace(/\//g, " ")}`}>
@@ -130,7 +134,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
                                         </div>
 
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[8]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[8]._id}`)}</h2>
 
                                             {brands[8].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -147,7 +151,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
 
                                     <div>
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[3]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[3]._id}`)}</h2>
 
                                             {brands[3].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -162,7 +166,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
                                         </div>
 
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[4]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[4]._id}`)}</h2>
 
                                             {brands[4].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
@@ -177,7 +181,7 @@ const CatagoryBrands = ({ isCatagoryOpen, setCatagoryOpen }) => {
                                         </div>
 
                                         <div className="single-brans">
-                                            <h2 className="mb-16 chinese-red">{brands[7]._id}</h2>
+                                            <h2 className="mb-16 chinese-red">{t(`brands.${brands[7]._id}`)}</h2>
 
                                             {brands[7].products.map(model => (
                                                 <Link key={model} to={`/all-wholesale-tablet-covers/${model}`}>
