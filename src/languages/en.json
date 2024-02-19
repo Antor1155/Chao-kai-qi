@@ -60,6 +60,38 @@
         "apply": "APPLY",
         "loading" :"Loading ..."
     },
+    "aboutUs" : {
+        "about" : "About",
+        "chaoKaiQi": "ChaoKaiQi",
+        "ckq": "Chao Kai Qi",
+        "globallyT" : "A globally trusted name for",
+        "Wholesale" : "Wholesale phone case-cover supplier",
+        "chaoParFirst" : "Welcome to Chao Kai Qi Technology Co. Ltd, your trusted global wholesaler for premium phone cases and quality covers. Based in Shenzen, China, we pride ourselves on delivering innovative, durable, and stylish products to phone case sellers worldwide. Our mission is simple: to redefine the market with a perfect blend of quality, affordability, and unwavering trust. At Chao Kai Qi, we are not just providing phone accessories; we are shaping the future of the industry. Explore our collection and experience the difference. For inquiries, contact us at ",
+        "chaoParSecond" : "Let's redefine phone case excellence together.",
+        "name" : "Name",
+        "shenzen" : "Shenzen Chao kai Qi Technology Co. Ltd",
+        "email" :"Email",
+        "phone" :"Phone",
+        "address": "Address",
+        "addressDetail": "3rd floor, No 11 Furong road, Xiorng industry area, Bao'an district, Shenzen, China.",
+        "ourStory" : "Our Story",
+        "storyP" : "Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.",
+        "whatS" : "What Set Us Apart",
+        "at" : "At",
+        "weTake" : "we take pride in our commitment to excellence. Here's what sets us apart",
+        "quality" : "Quality Assurance :",
+        "qualityP" : "We believe in delivering products that stand the test of time. Each phone case cover undergoes rigorous quality checks to ensure durability and style.",
+        "wideS":"Wide Selection :",
+        "widesP": "Explore our extensive catalog featuring the latest trends and timeless classics. We strive to offer a diverse range of phone case covers to meet the unique preferences of our customers.",
+        "competitive": "Competitive Pricing :",
+        "competitiveP": "We understand the importance of affordability for businesses. Our pricing is competitive without compromising on quality, making us a cost-effective choice for your wholesale needs.",
+        "lastP": "Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.",
+        "thank": "Thank you for choosing ",
+        "where": "- where style meets functionality!"
+
+
+
+    },
     "footer" : {
         "cUs" : "Contact Us",
         "email" : "Email",

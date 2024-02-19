@@ -22,9 +22,12 @@ import wechatContact2 from "../../assets/logos/wechatContact2.webp"
 import "./AboutUs.css"
 import Slider from "react-slick";
 import { useEffect, useState } from "react"
+import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {
     const [mobileScreen, setMobileScreen] = useState(false)
+
+    const { t } = useTranslation()
 
     const sliderSetting = {
         dots: false,
@@ -52,21 +55,21 @@ const AboutUs = () => {
 
     return (
         <>
-            <h1 className="company-font text-center mb-gapping-tape">About <br />ChaoKaiQi</h1>
+            <h1 className="company-font text-center mb-gapping-tape">{t("aboutUs.about")} <br />{t("aboutUs.chaoKaiQi")}</h1>
 
             <section className="about-first mb-gapping-tape">
                 <img src={companyImg4} alt="Chao Kai Qi company Image" />
 
                 <div>
                     <h2 className="mb-16">
-                        <span className="chinese-red">Chao Kai Qi :</span> <br />
+                        <span className="chinese-red">{t("aboutUs.ckq")} :</span> <br />
                         <span className="font-24">
-                            A globally trusted name for <br />
-                            Wholesale phone case-cover supplier
+                        {t("aboutUs.globallyT")} <br/>
+                        {t("aboutUs.Wholesale")}
                         </span>
                     </h2>
 
-                    <p>Welcome to Chao Kai Qi Technology Co. Ltd, your trusted global wholesaler for premium phone cases and quality covers. Based in Shenzen, China, we pride ourselves on delivering innovative, durable, and stylish products to phone case sellers worldwide. Our mission is simple: to redefine the market with a perfect blend of quality, affordability, and unwavering trust. At Chao Kai Qi, we are not just providing phone accessories; we are shaping the future of the industry. Explore our collection and experience the difference. For inquiries, contact us at <a href="mailto:Chaokaiqi@outlook.com">Chaokaiqi@outlook.com</a> or <a href="tel:+86 13798587275">+86 13798587275</a> (WhatsApp). Let&#39;s redefine phone case excellence together.</p>
+                    <p>{t("aboutUs.chaoParFirst")} <a href="mailto:Chaokaiqi@outlook.com">Chaokaiqi@outlook.com</a> or <a href="tel:+86 13798587275">+86 13798587275</a> (WhatsApp). {t("aboutUs.chaoParSecond")}</p>
                 </div>
             </section>
 
@@ -100,67 +103,66 @@ const AboutUs = () => {
                 </div>
 
                 <div>
-                    <p className="mb-16"><span className="chinese-red">Name </span>
-                        : Shenzen Chao kai Qi Technology Co. Ltd
+                    <p className="mb-16"><span className="chinese-red">{t("aboutUs.name")} </span>
+                        : {t("aboutUs.shenzen")}
                     </p>
 
                     <p className="mb-16">
-                        <span className="chinese-red">Email</span>
+                        <span className="chinese-red">{t("aboutUs.email")}</span>
                         : <a href="mailto:Chaokaiqi@outlook.com">Chaokaiqi@outlook.com</a>
                     </p>
 
                     <p className="mb-16">
                         <span className="chinese-red">
-                            Phone
+                        {t("aboutUs.phone")}
                         </span>
                         : <a href="tel:+86 13798587275">+86 13798587275 (WhatsApp)</a>
                     </p>
 
                     <p className="mb-16">
                         <span className="chinese-red">
-                            Address
+                        {t("aboutUs.address")}
                         </span>
-                        : 3rd floor, No 11 Furong road, Xirong industry area, Bao’an district,
-                        Shenzen, China.
+                        : {t("aboutUs.addressDetail")}
                     </p>
 
                 </div>
             </section>
 
             <section className="our-story mb-double-gapping-tape">
-                <h2 className="company-font text-center mb-gapping-tape">Our Story</h2>
+                <h2 className="company-font text-center mb-gapping-tape">{t("aboutUs.ourStory")}</h2>
 
                 <img className="mb-32" src={companyImg1} alt="Chao Kai Qi compnay story image" loading="lazy" />
 
-                <p className="text-center">Chao Kai Qi began with a vision: to offer innovative and stylish phone case covers at competitive prices. Our journey started in 2012 when a team of passionate individuals came together with a shared commitment to quality and customer satisfaction.</p>
+                <p className="text-center">{t("aboutUs.storyP")}</p>
             </section>
 
             <section className="mb-double-gapping-tape">
-                <h2 className="company-font text-center mb-gapping-tape">What Set Us Apart</h2>
+                <h2 className="company-font text-center mb-gapping-tape">{t("aboutUs.whatS")}</h2>
 
-                <p className="text-center mb-32">At <span className="chinese-red">Chao Kai Qi </span>, we take pride in our commitment to excellence. Here&#39;s what sets us apart</p>
+                <p className="text-center mb-32">{t("aboutUs.at")} <span className="chinese-red">{t("aboutUs.ckq")} </span>, {t("aboutUs.weTake")}</p>
 
                 <div className="mission-cards mb-32">
                     <div className="mission-card">
                         <img src={companyImg8} alt="chao kai qi compnay image" loading="lazy" />
-                        <h2 className="font-20 chinese-red">Quality Assurance</h2>
-                        <p>We believe in delivering products that stand the test of time. Each phone case cover undergoes rigorous quality checks to ensure durability and style.</p>
+                        <h2 className="font-20 chinese-red">{t("aboutUs.quality")}</h2>
+                        <p>{t("aboutUs.qualityP")}</p>
                     </div>
 
                     <div className="mission-card">
                         <img src={companyImg1} alt="chao kai qi compnay image" loading="lazy" />
-                        <h2 className="font-20 chinese-red">Wide Selection:</h2>
-                        <p>Explore our extensive catalog featuring the latest trends and timeless classics. We strive to offer a diverse range of phone case covers to meet the unique preferences of our customers.</p>
+                        <h2 className="font-20 chinese-red">{t("aboutUs.wideS")}</h2>
+                        <p>{t("aboutUs.widesP")}</p>
                     </div>
 
                     <div className="mission-card">
                         <img src={companyImg6} alt="chao kai qi compnay image" loading="lazy" />
-                        <h2 className="font-20 chinese-red">Competitive Pricing:</h2>
-                        <p>We understand the importance of affordability for businesses. Our pricing is competitive without compromising on quality, making us a cost-effective choice for your wholesale needs.</p>
+                        <h2 className="font-20 chinese-red">{t("aboutUs.competitive")}</h2>
+                        <p>{t("aboutUs.competitiveP")}</p>
                     </div>
                 </div>
 
-                <p className="text-center mobile-text-justify">Our mission is to be your go-to partner for wholesale phone case covers, providing top-notch products and exceptional service. We aim to build lasting relationships with our clients by consistently exceeding expectations.</p>
+                <p className="text-center mobile-text-justify">{t("aboutUs.lastP")}</p>
             </section>
 
             <section className="image-sliders mb-double-gapping-tape">
@@ -184,7 +186,7 @@ const AboutUs = () => {
             </section>
 
             <p className="text-center company-font font-24 font-bold">
-                Thank you for  choosing  <span className="chinese-red">Chao Kai Qi</span> – where style meets functionality!
+                {t("aboutUs.thank")} <span className="chinese-red"> {t("aboutUs.chaoKaiQi")}</span> {t("aboutUs.where")}
             </p>
         </>
     );
