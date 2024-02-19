@@ -8,6 +8,7 @@ import filter from "../../assets/logos/Filter.svg"
 import cancel from "../../assets/logos/Cancel.svg"
 import instance from "../../axiosInstance";
 import { useParams, useSearchParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import chaoKaiQiLogo from "../../assets/compnayLogo/chaoKaiQi.png"
 
@@ -28,6 +29,8 @@ const AllTabsCover = () => {
 
     const starts = useRef(0)
     const ends = useRef(36)
+
+    const { t } = useTranslation()
 
     useEffect(() => {
         setLoading(true)
@@ -147,7 +150,7 @@ const AllTabsCover = () => {
 
     return (
         <section className="all-products-page">
-            <h1 className="align-center">Tablet covers by <span className="chinese-red">Chao Kai Qi</span></h1>
+            <h1 className="align-center">{t("allProducts.title")} <span className="chinese-red">{t("allProducts.ckq")}</span></h1>
 
             <motion.button
                 className="filter-button"
@@ -190,15 +193,15 @@ const AllTabsCover = () => {
 
                     
                     <div className="mobile-hide ">
-                        <h2 className="company-font text-center">ChaoKaiQi</h2>
+                        <h2 className="company-font text-center">{t("allProducts.chaoKaiQi")}</h2>
                         <img src={chaoKaiQiLogo} alt="chaoKaiQi company logo" />
 
                         <ul>
-                            <li>Globally trusted name</li>
-                            <li>All major transport facility</li>
-                            <li>Fast global delivery</li>
-                            <li>Secure payment methods</li>
-                            <li>Major bank-cards payment accepted</li>
+                            <li>{t("allProducts.golbally")}</li>
+                            <li>{t("allProducts.allM")}</li>
+                            <li>{t("allProducts.fast")}</li>
+                            <li>{t("allProducts.secure")}</li>
+                            <li>{t("allProducts.major")}</li>
 
                         </ul>
 
@@ -210,7 +213,7 @@ const AllTabsCover = () => {
                             whileTap={{ scale: 0.9 }}
                             onClick={() => setMobileFilterVisible(false)}
                         >
-                            APPLY
+                            {t("allProducts.apply")}
                         </motion.button>
                     </div>
 
@@ -218,7 +221,7 @@ const AllTabsCover = () => {
 
                 {loading ?
                     <div>
-                        <p className="text-center">Loading ...</p>
+                        <p className="text-center">{t("allProducts.loading")}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 20 400 300"><circle fill="#25CBE1" stroke="%23FFC820" strokeWidth="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#ECC35C" stroke="%23FFC820" strokeWidth="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#C90A1E" stroke="%23FFC820" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
                     </div>
 
@@ -231,7 +234,7 @@ const AllTabsCover = () => {
                                 </>
                                 :
                                 <p className="text-center font-24">
-                                    No product found with search Term <br />
+                                    {t("allProducts.noP")} <br />
                                     <span className="chinese-red font-32"> {searchQuery.current}</span>                                    
                                 </p>
                         }
@@ -247,7 +250,7 @@ const AllTabsCover = () => {
                 onClick={handleLoadMore}
                 disabled={disableLoadMore}
             >
-                LOAD MORE COVER
+                {t("allProducts.loadM")}
             </motion.button>
 
         </section>

@@ -1,8 +1,69 @@
 {
+    "header" : {
+        "chaoKaiQi" : "ChaoKaiQi",
+        "home" : "HOME",
+        "catagory": "CATAGORY",
+        "allP": "ALL PRODUCTS",
+        "aboutUs": "ABOUT US",
+        "contactUs": "CONTACT US",
+        "search" : "Search"
+    },
     "home" : {
-        "h1FirstLine" : "欢迎来到我们的网站"
+        "h1FirstLine" : "Global Wholesale <1 className='chinese-red'>supplier Of </1>",
+        "h1SecondLine" : "Tablet / Phone <1 className='chinese-red'>Case-Cover</1>",
+        "h1ThirdLine" : "From <1 className='chinese-red'>China</1>",
+        "since": "Since",
+        "overseas": "Overseas supplier ",
+        "units" : "units",
+        "brands": "Brands",
+        "weCover": "We cover",
+        "contactNow": "Contact Now !",
+        "outTopProducts": "Our <1 className='chinese-red'>Top</1> Products",
+        "atBestPrice": "At Best Price",
+        "showAllProducts": "SHOW ALL PRODUCTS",
+        "getToKnow": "Get to know more about us",
+        "special": "Special Service",
+        "weWill": "We will send you with",
+        "pList":"Product List",
+        "sPrice": "Special price",
+        "trans":"Transport query",
+        "anyQ":"Any specific query",
+        "terms": "Terms and conditions",
+        "chaoKaiQi": "ChaoKaiQi",
+        "name":"Name",
+        "country":"Country",
+        "org":"Organization name",
+        "email":"Email",
+        "phone":"Phone number",
+        "specialN": "Special note",
+        "submit" : "SUBMIT",
+        "about" :"About",
+        "ckq": "Chao Kai Qi",
+        "golbally": "Globally Trusted Name",
+        "shenzen" : "Shenzen Chao kai Qi Technology Co. Ltd",
+        "pSm" : "Phone",
+        "address" : "Address",
+        "addressDetail": "3rd floor, No 11 Furong road, Xiorng industry area, Bao'an district, shenzen, China",
+        "aboutP" : "Welcome to Chao Kai Qi Technology Co. Ltd, a trusted global wholesaler for premium phone cases and quality cover. We take pride in delivering innovative, durable, and stylish products to phone case sellers worldwide. Based in Shenzen, China, our mission is to redefine the market with quality, affordability, and unwavering trust. Join us in shaping the future of phone accessories."
     },
     "product" :{
-        "title": "到我们的"
+        "title": "are you okay"
+    },
+    "footer" : {
+        "cUs" : "Contact Us",
+        "email" : "Email",
+        "phone" : "Phone",
+        "follow" : "Follow us",
+        "aboutUs" : "About us",
+        "privacy" : "Privacy policy",
+        "shipping": "Shipping policy",
+        "return" : "Return policy",
+        "payment" : "Payment methods",
+        "best" : "Best selling catagory",
+        "top" : "Top Phone Covers",
+        "allRights" : "All rights reserved by @",
+        "ckq" : "Chao Kai Qi",
+        "techno": "Technology co. Ltd",
+        "design" : "Designed and developed by @"
     }
 }
