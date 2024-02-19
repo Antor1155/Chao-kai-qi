@@ -3,6 +3,9 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import { useTranslation, Trans } from "react-i18next";
+
+
 
 import "./Cart.css"
 
@@ -14,11 +17,15 @@ const Cart = () => {
     const {setCartData} = useContext(Ccontext)
     const navigate = useNavigate()
 
+    const { t, i18n } = useTranslation()
+
     const handleInfoSubmit = (e) => {
         e.preventDefault()
         e.target.reset()
 
-        toast("Thanks for placing the quota. Our team will contact you very fast to talk about processing the order ")
+        const message = i18n.resolvedLanguage === "en"? "Thank you for placing the quota. Our team will contact you very fast to talk about processing the order " : "感谢您下达配额。我们的团队将尽快与您联系，商讨订单处理事宜。"
+
+        toast(message)
     }
 
     const handleCancel = (e, item) => {
@@ -83,11 +90,14 @@ const Cart = () => {
                     })}
                 </AnimatePresence>
                 :
-                <h2 className="chinese-red font-24">No Product in Cart <br />
+                <h2 className="chinese-red font-24">
+                    <Trans i18nKey="cart.noProduct">
+                    No Product in Cart <br />
                     Please continue shopping <br />
                     or <br />
                     Send us an empty order to contact us. <br />
                     We will still contact you back !!
+                    </Trans>
                 </h2>
                 }
             </motion.div>
@@ -96,32 +106,32 @@ const Cart = () => {
                 <div className="form-container">
                     <form onSubmit={handleInfoSubmit}>
                         <div>
-                            <label htmlFor="name">Name *</label>
+                            <label htmlFor="name">{t("cart.name")} *</label>
                             <input id="name" name="name" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="country">Country *</label>
+                            <label htmlFor="country">{t("cart.country")} *</label>
                             <input id="country" name="country" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="organization">Organization name *</label>
+                            <label htmlFor="organization">{t("cart.org")} *</label>
                             <input id="organization" name="organization" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="email">Email *</label>
+                            <label htmlFor="email">{t("cart.email")} *</label>
                             <input id="email" name="email" type="email" required />
                         </div>
 
                         <div>
-                            <label htmlFor="mobile">Phone number *</label>
+                            <label htmlFor="mobile">{t("cart.phone")} *</label>
                             <input id="mobile" name="mobile" type="text" required />
                         </div>
 
                         <div>
-                            <label htmlFor="note">Special note</label>
+                            <label htmlFor="note">{t("cart.specialN")}</label>
                             <textarea name="note" id="note" cols="22" rows="4"></textarea>
                         </div>
 
@@ -129,7 +139,7 @@ const Cart = () => {
                             type="submit"
                             className="fw-button"
                             whileTap={{ scale: 0.95 }}
-                        >PLACE ORDER</motion.button>
+                        >{t("cart.placeOrder")}</motion.button>
                     </form>
                 </div>
             </div>

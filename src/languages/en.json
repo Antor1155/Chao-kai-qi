@@ -113,6 +113,16 @@
         "specialN": "Special note",
         "submit" : "SUBMIT"
     },
+    "cart":{
+        "noProduct": "No Product in Cart <1 /> Please continue shopping <1 /> or <1 /> Send us an empty order to contact us. <1 /> We will still contact you back !!",
+        "name":"Name",
+        "country":"Country",
+        "org":"Organization name",
+        "email":"Email",
+        "phone":"Phone number",
+        "specialN": "Special note",
+        "placeOrder" : "PLACE ORDER"
+    },
     "footer" : {
         "cUs" : "Contact Us",
         "email" : "Email",
