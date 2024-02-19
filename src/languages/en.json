@@ -189,6 +189,24 @@
         "noteP": "The delivery time will vary a lot from country to country. In short, the shipping time alone could be around,",
         "lastP":"Delivery time is not guaranteed for Standard Shipping as there are a lot of factors affecting its speed, thus we would suggest Express Shipping if there is a date that you would like to meet. The above are estimated time provided by the postal service and do not include the processing time of the Customs in the destination country. In some cases, the local Customs office of your country may require additional documents and time to have your package cleared, and this may also cause further delay on the delivery."
     },
+    "singleProductPage": {
+        "cover": "cover",
+        "coverName": "Cover name",
+        "perUnit" :"per unit",
+        "description":"Protect your tablet in style! Durable material, all-sided shielding, rugged design for ultimate defense.",
+        "size": "Product size",
+        "weight": "Gross weight",
+        "minimum": "Minimum order quantity",
+        "units" : "units",
+        "colors": "Colors",
+        "orderAmount": "Order amount",
+        "addToCart": "ADD TO CART",
+        "weAccept" : "We accept all major bank cards accepted by Chinese banks along with AliPay and WeChat Pay",
+        "weShip": " We ship product globally with proper care and make arrangements accordingly",
+        "chaoKaiQi":"ChaoKaiQi",
+        "globally": "Globally trusted name",
+        "ourTop":"Our Top suggestions"
+    },
     "footer" : {
         "cUs" : "Contact Us",
         "email" : "Email",

@@ -18,11 +18,13 @@ import globeBlack from "../../assets/logos/globeBlack.svg"
 import box from "../../assets/logos/Box.svg"
 
 import chaoKaiQi from "../../assets/compnayLogo/chaoKaiQi.png"
+
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 import { toast } from "react-toastify";
 import instance from "../../axiosInstance";
 import { useParams } from "react-router-dom";
 import { Ccontext } from "../../CartContext";
+import { useTranslation } from "react-i18next"; 
 
 
 const SingleProductPage = () => {
@@ -30,6 +32,8 @@ const SingleProductPage = () => {
     const [mainImage, setMainImage] = useState("")
 
     const [randomProducts, setRandomProducts] = useState([])
+
+    const {t} = useTranslation()
 
     // this section for order when add to cart 
 
@@ -147,9 +151,9 @@ const SingleProductPage = () => {
                 </div>
 
                 <div className="content-section">
-                    <h1 className="mb-4"><span className="chinese-red">{product?.productName}</span> cover</h1>
-                    <h2 className="font-16 mb-4"> <span className="title">Cover name</span> : {product?.coverName}</h2>
-                    <h2 className="font-24 mb-4">$ {product?.pricePerUnit} USD <span className="title">per unit</span></h2>
+                    <h1 className="mb-4"><span className="chinese-red">{product?.productName}</span> {t("singleProductPage.cover")}</h1>
+                    <h2 className="font-16 mb-4"> <span className="title">{t("singleProductPage.coverName")}</span> : {product?.coverName}</h2>
+                    <h2 className="font-24 mb-4">$ {product?.pricePerUnit} USD <span className="title">{t("singleProductPage.perUnit")}</span></h2>
 
                     <p className="review-stars mb-8">
                         <img src={star} alt="client review star" />
@@ -159,15 +163,15 @@ const SingleProductPage = () => {
                         <img src={star} alt="client review star" />
                     </p>
 
-                   <p className="mb-16">Description about the tablet case cover. Good quality material, both side protection and ruggid body.</p>
+                   <p className="mb-16">{t("singleProductPage.description")}</p>
 
-                    <h2 className="font-14 mb-4"> <span className="title">Product size</span> : {product?.productSize} cm</h2>
+                    <h2 className="font-14 mb-4"> <span className="title">{t("singleProductPage.size")}</span> : {product?.productSize} cm</h2>
 
-                    <h2 className="font-14 mb-4"> <span className="title">Gross weight</span> : {product?.productGrossWeight} g</h2>
+                    <h2 className="font-14 mb-4"> <span className="title">{t("singleProductPage.weight")}</span> : {product?.productGrossWeight} g</h2>
 
-                    <h2 className="font-14 mb-16"> <span className="title">Minimum order quantity</span> : {product?.minimOrderQuantity} units</h2>
+                    <h2 className="font-14 mb-16"> <span className="title">{t("singleProductPage.minimum")}</span> : {product?.minimOrderQuantity} {t("singleProductPage.units")}</h2>
 
-                    <h2 className="company-font font-bold font-32 mb-8 colors-label">Colors</h2>
+                    <h2 className="company-font font-bold font-32 mb-8 colors-label">{t("singleProductPage.colors")}</h2>
 
                     <div className="color-buttons mb-32 colors-label">
                         {
@@ -196,7 +200,7 @@ const SingleProductPage = () => {
                     <form onSubmit={handleAddToCard} className="order-amount-form mb-gapping-tape">
                         <label className="font-24" htmlFor="orderQuantity">
                             <span className="title">
-                                Order amount
+                            {t("singleProductPage.orderAmount")}
                             </span>
                         </label>
 
@@ -207,7 +211,7 @@ const SingleProductPage = () => {
                             type="submit"
                             whileTap={{ scale: 0.95 }}
                         >
-                            ADD TO CART
+                            {t("singleProductPage.addToCart")}
                         </motion.button>
                     </form>
 
@@ -222,7 +226,7 @@ const SingleProductPage = () => {
                     <motion.p
                         className="font-14 mb-gapping-tape"
                     >
-                        We accept all major bank cards accepted by Chinese banks along with AliPay and WeChat Pay
+                        {t("singleProductPage.weAccept")}
                     </motion.p>
 
 
@@ -237,15 +241,15 @@ const SingleProductPage = () => {
                     <motion.p
                         className="font-14 mb-gapping-tape"
                     >
-                        We ship product globally with proper care and make arrangements accordingly
+                        {t("singleProductPage.weShip")}
                     </motion.p>
 
 
                     <div className="company-info">
                         <img src={chaoKaiQi} alt="chaokaiQi | ChaoKaiQi company logo" loading="lazy"/>
 
-                        <h2 className="font-24"> <span className="company-font">ChaoKaiQi</span> <br />
-                            Globally trusted name
+                        <h2 className="font-24"> <span className="company-font">{t("singleProductPage.chaoKaiQi")}</span> <br />
+                            {t("singleProductPage.globally")}
                         </h2>
                     </div>
 
@@ -253,7 +257,7 @@ const SingleProductPage = () => {
                 </div>
             </section>
 
-            <h2 className="mb-gapping-tape mobile-text-center">Our Top suggestions</h2>
+            <h2 className="mb-gapping-tape mobile-text-center">{t("singleProductPage.ourTop")}</h2>
 
             <section className="suggested-products">
                 {randomProducts.map((prod, ind) => <SingleProduct key={ind} product={prod} />
