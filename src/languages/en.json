@@ -234,6 +234,13 @@
         "techno": "Technology co. Ltd",
         "design" : "Designed and developed by @"
     },
+    "singleProduct" : {
+        "cover" : "Cover",
+        "minimum" : "Minimum order quantity",
+        "units" : "units",
+        "price": "Price / unit",
+        "see" : "SEE THE COVER"
+    },
     "brands":{
         "Apple": "Apple",
         "Samsung": "Samsung",
