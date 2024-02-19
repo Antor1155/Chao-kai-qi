@@ -66,23 +66,31 @@ const Cart = () => {
                                 <img src={item?.mainImage + ".jpg"} alt={item?.productName + " cover"} />
 
                                 <div>
-                                    <h2 className="chinese-red">{item?.productName} cover</h2>
-                                    <p><span className="label">Cover name: </span>{item?.coverName}</p>
+                                    <h2 className="chinese-red">{item?.productName} {t("cart.cover")}</h2>
+                                    <p><span className="label">{t("cart.coverName")} </span>
+                                    
+                                    {t(`coverName.${item?.coverName}`)}
+                                    
+                                    </p>
 
                                     <div className="inline-p">
-                                        <p><span className="label">Color: </span>{item?.color?.name}</p>
-                                        <p><span className="label">Brand: </span>{item?.brand}</p>
+                                        <p><span className="label">{t("cart.color")}: </span>{item?.color?.name}</p>
+                                        <p><span className="label">{t("cart.brand")}: </span>
+                                        
+                                        {t(`brands.${item?.brand}`)}
+                                        
+                                        </p>
                                     </div>
 
                                     <div className="inline-p small-font">
-                                        <p><span className="label">Price / unit : </span>{item?.priceperUnit} USD</p>
-                                        <p><span className="label">Weight / unit : </span>{item?.productGrossWeight} g</p>
-                                        <p><span className="label">Size / unit : </span>{item?.productSize} cm</p>
+                                        <p><span className="label">{t("cart.price")} : </span>{item?.priceperUnit} USD</p>
+                                        <p><span className="label">{t("cart.weight")} : </span>{item?.productGrossWeight} g</p>
+                                        <p><span className="label">{t("cart.size")} </span>{item?.productSize} cm</p>
                                     </div>
 
                                     <div className="inline-p">
-                                        <p className="font-bold"><span >Total order: </span>{item?.orderAmount} units</p>
-                                        <p className="font-bold"><span >Total price: </span>$ {item?.totalPrice} USD</p>
+                                        <p className="font-bold"><span >{t("cart.totalOrder")}: </span>{item?.orderAmount} {t("cart.units")}</p>
+                                        <p className="font-bold"><span >{t("cart.totalPrice")}: </span>$ {item?.totalPrice} USD</p>
                                     </div>
                                 </div>
                             </motion.div>

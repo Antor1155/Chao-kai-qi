@@ -121,7 +121,17 @@
         "email":"Email",
         "phone":"Phone number",
         "specialN": "Special note",
-        "placeOrder" : "PLACE ORDER"
+        "placeOrder" : "PLACE ORDER",
+        "cover": "cover",
+        "coverName" :"Cover name:",
+        "color" : "Color",
+        "brand" : "Brand",
+        "price" : "Price / unit",
+        "weight" : "Weight / unit",
+        "size" : "Size / unit :",
+        "totalOrder" : "Total order",
+        "units" : "units",
+        "totalPrice" : "Total price"
     },
     "paymentM": {
         "title": "Payment Methods for ChaoKaiQi Product Purchase",
