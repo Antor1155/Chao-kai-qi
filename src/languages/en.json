@@ -169,7 +169,25 @@
         "changeOfP1" : "We reserve the right to update this Privacy Policy at any time. The effective date will be posted at the beginning of this policy.",
         "contactI": "Contact Information",
         "contactP": "If you have any questions or concerns about our Privacy Policy, please contact us at"
-
+    },
+    "return": {
+        "title":"Return And Refund Policy of ChaoKaiQi",
+        "returnN" : "Returning Normal Products",
+        "returnP" : "Please be advised that shipping fee and express shipping fee are non-refundable. Any discounts that were applied with a minimum purchase requirement may not be applicable after a removal of product(s) in an order. For discounts that are applicable on second/subsequent item, the discount will be revoked on partial return of the order, and the unreturned item will be charged in original price. Shipping fee may also be applied.",
+        "returnC" : "Returning Customized Products",
+        "returnCP" :"Customized products are your unique creative expressions. Returns on customized item(s) for reasons other than CHAOKAIQI error will be subject to a 50% processing fee on the refund amount (after adjustment of discount/shipping, if required).",
+        "refund" :"Refund Policy",
+        "refundP" :"Returns made will be refunded in your original form of payment. If the payment was made using credit / debit card or bank account, there might be a lead time required by PayPal (our credit card settlement service provider) to set up the credit transaction with your bank."
+    },
+    "shipping": {
+        "title": "Shipping Policy of ChaoKaiQi",
+        "forU" : "For US orders:",
+        "bDays" : "6-15 business days",
+        "forG" : "For non-US orders:",
+        "bDG" :"5-30 business days",
+        "note" : "Note:",
+        "noteP": "The delivery time will vary a lot from country to country. In short, the shipping time alone could be around,",
+        "lastP":"Delivery time is not guaranteed for Standard Shipping as there are a lot of factors affecting its speed, thus we would suggest Express Shipping if there is a date that you would like to meet. The above are estimated time provided by the postal service and do not include the processing time of the Customs in the destination country. In some cases, the local Customs office of your country may require additional documents and time to have your package cleared, and this may also cause further delay on the delivery."
     },
     "footer" : {
         "cUs" : "Contact Us",
