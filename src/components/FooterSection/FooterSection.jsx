@@ -61,17 +61,15 @@ const FooterSection = () => {
                     </h3>
 
                     <p>
-                        <Link to="/all-wholesale-tablet-covers/all">Xiaomi, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Iphone, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Ipad, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Huawei, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Samsung, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Lenovo, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Oppo, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Vivo, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Oneplus, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Nokia, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">Infinix, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Apple")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Samsung")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.HONOR")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Huawei")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Xiaomi")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.OPPO")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Nokia")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Lenovo")}, </Link>
+                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Vivo")}, </Link>
                     </p>
                 </div>
 
