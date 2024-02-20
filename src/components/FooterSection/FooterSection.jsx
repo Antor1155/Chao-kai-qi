@@ -67,8 +67,6 @@ const FooterSection = () => {
                         <Link to="/all-wholesale-tablet-covers/all">{t("brands.Huawei")}, </Link>
                         <Link to="/all-wholesale-tablet-covers/all">{t("brands.Xiaomi")}, </Link>
                         <Link to="/all-wholesale-tablet-covers/all">{t("brands.OPPO")}, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Nokia")}, </Link>
-                        <Link to="/all-wholesale-tablet-covers/all">{t("brands.Lenovo")}, </Link>
                         <Link to="/all-wholesale-tablet-covers/all">{t("brands.Vivo")}, </Link>
                     </p>
                 </div>

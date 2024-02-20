@@ -86,13 +86,25 @@ const Home = () => {
             console.log(error)
         })
 
-
         // checking the device is phone or desktop 
         const mq = window.matchMedia("(max-width: 768px)");
 
+        // preloading image and useEffect works after first render before the paint 
+        const img1 = new Image()
+
         if (mq.matches) {
             setMobileScreen(true)
+            img1.src = mobileBanner1
+        }else{
+            img1.src = banner1
         }
+
+        return () => {
+            if (img1) {
+              img1.src = ''; // Clear the src to release memory
+            }
+          };
+
 
     }, [])
 
