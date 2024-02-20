@@ -11,6 +11,7 @@ import "./Cart.css"
 
 import cancel from "../../assets/logos/Cancel.svg"
 import { Ccontext } from "../../CartContext";
+import instance from "../../axiosInstance";
 
 const Cart = () => {
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("chaoKaiQi-cart")) ?? [])
@@ -21,10 +22,26 @@ const Cart = () => {
 
     const handleInfoSubmit = (e) => {
         e.preventDefault()
+
+        const customerData ={
+            name: e.target.name.value,
+            country: e.target.country.name,
+            organization: e.target.organization.value,
+            email: e.target.email.value,
+            phone: e.target.mobile.value,
+            note: e.target.note.value,
+        }
+
         e.target.reset()
 
-        const message = i18n.resolvedLanguage === "en"? "Thank you for placing the quota. Our team will contact you very fast to talk about processing the order " : "感谢您下达配额。我们的团队将尽快与您联系，商讨订单处理事宜。"
+        instance.post("/mail-and-orders/order", {customerData, cart})
+        .then()
+        .catch(error =>{
+            console.log(error)
+        })
 
+        
+        const message = i18n.resolvedLanguage === "en"? "Thank you for placing the quota. Our team will contact you very fast to talk about processing the order " : "感谢您下达配额。我们的团队将尽快与您联系，商讨订单处理事宜。"
         toast(message)
     }
 
