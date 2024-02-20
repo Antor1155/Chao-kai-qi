@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Inder";
-  src: url("./assets/font/Inder-Regular.ttf") format("truetype");
+  src: url("/font/Inder-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Imperial Script";
-  src: url("./assets/font/ImperialScript-Regular.ttf") format("truetype");
+  src: url("/font/ImperialScript-Regular.ttf") format("truetype");
 }
 
 :root {
