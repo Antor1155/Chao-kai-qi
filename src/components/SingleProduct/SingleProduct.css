@@ -16,6 +16,10 @@
         margin-bottom: 16px;
         overflow: hidden;
 
+        background-image: url("/productBack.webp");
+        background-size: cover;
+        background-position: center;
+
         & img{
             width: 100%;
             height: 100%;
