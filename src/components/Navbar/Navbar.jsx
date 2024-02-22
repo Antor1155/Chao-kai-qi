@@ -64,7 +64,7 @@ const Navbar = ({ setCatagoryOpen }) => {
 
                 <div>
 
-                    <button id="menu" onClick={handleNavMenues}>
+                    <button id="menu" aria-label="menu" onClick={handleNavMenues}>
                         <img src={menu} alt="nav bar menu icon" />
                     </button>
 
@@ -73,6 +73,7 @@ const Navbar = ({ setCatagoryOpen }) => {
                         variants={item}
                         whileTap={{ scale: .7 }}
                         onClick={() => setSerchBarOpen(prev => !prev)}
+                        aria-label="search icon"
                     >
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
                     </motion.button>
@@ -87,7 +88,7 @@ const Navbar = ({ setCatagoryOpen }) => {
                     id="nav-menues"
                     onClick={handleNavMenues}
                 >
-                    <motion.button whileTap={{ scale: .7 }} id="cancel">
+                    <motion.button aria-label="cencel menu" whileTap={{ scale: .7 }} id="cancel">
                         <img src={cancel} alt="hide nav bar" />
                     </motion.button>
 
@@ -132,6 +133,7 @@ const Navbar = ({ setCatagoryOpen }) => {
                         variants={item}
                         whileTap={{ scale: .7 }}
                         onClick={() => setSerchBarOpen(prev => !prev)}
+                        aria-label="search"
                     >
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
                     </motion.button>
