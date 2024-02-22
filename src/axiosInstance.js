@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const instance = axios.create({
-    baseURL: "http://localhost:3000"
-})
+// const instance = axios.create({
+//     baseURL: "http://localhost:3000"
+// })
 
 // cyclic backend 
 // const instance = axios.create({
@@ -10,9 +10,9 @@ const instance = axios.create({
 // })
 
 // render backend 
-// const instance = axios.create({
-//     baseURL: "https://chaokaiqi.onrender.com"
-// })
+const instance = axios.create({
+    baseURL: "https://chaokaiqi.onrender.com"
+})
 
 
 export default instance
