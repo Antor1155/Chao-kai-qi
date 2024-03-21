@@ -10,8 +10,12 @@ import axios from "axios";
 // })
 
 // render backend 
+// const instance = axios.create({
+//     baseURL: "https://chaokaiqi.onrender.com"
+// })
+
 const instance = axios.create({
-    baseURL: "https://chaokaiqi.onrender.com"
+    baseURL: "http://www.chaokaiqi.com:3000"
 })
 
 
