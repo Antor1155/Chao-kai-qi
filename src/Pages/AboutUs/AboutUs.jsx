@@ -23,6 +23,7 @@ import "./AboutUs.css"
 import Slider from "react-slick";
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet"
 
 const AboutUs = () => {
     const [mobileScreen, setMobileScreen] = useState(false)
@@ -55,6 +56,11 @@ const AboutUs = () => {
 
     return (
         <>
+            <Helmet>
+                <title>About Us - ChaoKaiQi | Wholesale Tablet Cover Seller</title>
+                <meta name="description" content="Learn more about ChaoKaiQi, a leading wholesale tablet cover seller, dedicated to providing high-quality tablet covers at competitive prices. Discover our company's mission, values, and commitment to customer satisfaction." />
+            </Helmet>
+
             <h1 className="company-font text-center mb-gapping-tape">{t("aboutUs.about")} <br />{t("aboutUs.chaoKaiQi")}</h1>
 
             <section className="about-first mb-gapping-tape">
@@ -64,8 +70,8 @@ const AboutUs = () => {
                     <h2 className="mb-16">
                         <span className="chinese-red">{t("aboutUs.ckq")} :</span> <br />
                         <span className="font-24">
-                        {t("aboutUs.globallyT")} <br/>
-                        {t("aboutUs.Wholesale")}
+                            {t("aboutUs.globallyT")} <br />
+                            {t("aboutUs.Wholesale")}
                         </span>
                     </h2>
 
@@ -77,8 +83,8 @@ const AboutUs = () => {
 
                 <div className="contact-icons">
                     <div className="qr-code">
-                        <img src={wechatContact1} alt="chaikaiqi wechat contact qr code" loading="lazy"/>
-                        <img src={wechatContact2} alt="chaikaiqi wechat contact qr code" loading="lazy"/>
+                        <img src={wechatContact1} alt="chaikaiqi wechat contact qr code" loading="lazy" />
+                        <img src={wechatContact2} alt="chaikaiqi wechat contact qr code" loading="lazy" />
                     </div>
 
                     <div className="flex-column">
@@ -114,14 +120,14 @@ const AboutUs = () => {
 
                     <p className="mb-16">
                         <span className="chinese-red">
-                        {t("aboutUs.phone")}
+                            {t("aboutUs.phone")}
                         </span>
                         : <a href="tel:+86 13798587275">+86 13798587275 (WhatsApp)</a>
                     </p>
 
                     <p className="mb-16">
                         <span className="chinese-red">
-                        {t("aboutUs.address")}
+                            {t("aboutUs.address")}
                         </span>
                         : {t("aboutUs.addressDetail")}
                     </p>

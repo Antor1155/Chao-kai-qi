@@ -3,6 +3,7 @@ import "./ContactUs.css"
 import { motion } from "framer-motion"
 import instance from "../../axiosInstance";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
     const { t, i18n } = useTranslation()
@@ -10,7 +11,7 @@ const ContactUs = () => {
     const handleInfoSubmit = (e) => {
         e.preventDefault()
 
-        const customerData ={
+        const customerData = {
             name: e.target.name.value,
             country: e.target.country.name,
             organization: e.target.organization.value,
@@ -19,13 +20,13 @@ const ContactUs = () => {
             note: e.target.note.value,
         }
 
-        instance.post("/mail-and-orders/mail", {customerData})
-        .then()
-        .catch(error =>{
-            console.log(error)
-        })
+        instance.post("/mail-and-orders/mail", { customerData })
+            .then()
+            .catch(error => {
+                console.log(error)
+            })
 
-        const message = i18n.resolvedLanguage === "en"? "Thank you for contacting us. We will get back to you shortly" : "感谢您与我们联系。我们将尽快给您回复"
+        const message = i18n.resolvedLanguage === "en" ? "Thank you for contacting us. We will get back to you shortly" : "感谢您与我们联系。我们将尽快给您回复"
 
         toast(message)
         e.target.reset()
@@ -34,6 +35,11 @@ const ContactUs = () => {
 
     return (
         <section id="contact-us">
+            <Helmet>
+                <title>Contact Us - ChaoKaiQi | Wholesale Tablet Cover Seller</title>
+                <meta name="description" content="Get in touch with ChaoKaiQi for inquiries, feedback, or assistance regarding our tablet covers. Our customer support team is here to help you with any questions you may have. Reach out to us via phone, email, or through our online contact form." />
+            </Helmet>
+
             <div className="info-container">
                 <h2 className="company-font mb-16">{t("contactUs.query")}</h2>
 

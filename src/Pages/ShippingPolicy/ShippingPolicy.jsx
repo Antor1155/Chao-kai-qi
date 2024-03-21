@@ -5,12 +5,18 @@ import globeIcon from "../../assets/logos/Globe.svg"
 import { useTranslation } from "react-i18next"
 
 import "./ShippingPolicy.css"
+import { Helmet } from "react-helmet"
 
 const ShippingPolicy = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <section className="shipping-policy">
+            <Helmet>
+                <title>Shopping Policy - ChaoKaiQi | Wholesale Tablet Cover Seller</title>
+                <meta name="description" content="Explore ChaoKaiQi's Shopping Policy to understand our guidelines and terms related to purchasing tablet covers from us. Learn about our shipping, payment, and return procedures to ensure a smooth shopping experience. Shop with confidence knowing you're supported by our policies." />
+            </Helmet>
+
             <h1>{t("shipping.title")}</h1>
             <img className="main-img" src={exImg} alt="Shipping policy image of ChaoKaiQi" />
 

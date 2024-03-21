@@ -24,7 +24,8 @@ import { toast } from "react-toastify";
 import instance from "../../axiosInstance";
 import { useParams } from "react-router-dom";
 import { Ccontext } from "../../CartContext";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 
 const SingleProductPage = () => {
@@ -33,11 +34,11 @@ const SingleProductPage = () => {
 
     const [randomProducts, setRandomProducts] = useState([])
 
-    const {t, i18n} = useTranslation()
+    const { t, i18n } = useTranslation()
 
     // this section for order when add to cart 
 
-    const {setCartData} = useContext(Ccontext)
+    const { setCartData } = useContext(Ccontext)
 
     const [selectedColor, setSelectedColor] = useState({
         name: "all",
@@ -93,35 +94,35 @@ const SingleProductPage = () => {
         e.preventDefault()
         let orderQuantity = e.target.orderQuantity.value ? e.target.orderQuantity.value : product.minimOrderQuantity
 
-        
+
 
         // saving order items to local storage 
         const cartItems = JSON.parse(localStorage.getItem("chaoKaiQi-cart")) ?? []
 
         const orderedProduct = {
-            productName : product.productName,
+            productName: product.productName,
             coverName: product.coverName,
             brand: product.brand,
             priceperUnit: product.pricePerUnit,
             totalPrice: (product.pricePerUnit * orderQuantity).toFixed(2),
-            mainImage : mainImage,
-            orderAmount : orderQuantity,
+            mainImage: mainImage,
+            orderAmount: orderQuantity,
             color: selectedColor,
             productGrossWeight: product.productGrossWeight,
             productSize: product.productSize,
             productId: product._id,
-            minimOrderQuantity : product?.minimOrderQuantity,
+            minimOrderQuantity: product?.minimOrderQuantity,
         }
 
         cartItems.push(orderedProduct)
-        
+
         localStorage.setItem("chaoKaiQi-cart", JSON.stringify(cartItems))
 
         setCartData(cartItems)
 
         e.target.reset()
 
-        const message = i18n.resolvedLanguage === "en"? `Added to cart: ${product?.productName} cover | ${orderQuantity} units | color: ${selectedColor?.name}` : "产品已添加到购物车"
+        const message = i18n.resolvedLanguage === "en" ? `Added to cart: ${product?.productName} cover | ${orderQuantity} units | color: ${selectedColor?.name}` : "产品已添加到购物车"
 
         toast(message,
             {
@@ -133,6 +134,10 @@ const SingleProductPage = () => {
     return (
         <>
             <section id="singleProductPage" className="mb-double-gapping-tape">
+                <Helmet>
+                    <title>{product?.productName ? `${product.productName} - ChaoKaiQi | Wholesale Tablet Cover Seller` : "ChaoKaiQi | Wholesale Tablet Cover Seller"}</title>
+                    <meta name="description" content={`Discover the ${product?.productName} offered by ChaoKaiQi. Explore our high-quality tablet cover designed to protect and enhance your tablet. Browse features, specifications, and customer reviews to find the perfect ${product?.productName} for your needs.`} />
+                </Helmet>
 
                 <div className="image-section">
                     <div className="image-div">
@@ -165,7 +170,7 @@ const SingleProductPage = () => {
                         <img src={star} alt="client review star" />
                     </p>
 
-                   <p className="mb-16">{t("singleProductPage.description")}</p>
+                    <p className="mb-16">{t("singleProductPage.description")}</p>
 
                     <h2 className="font-14 mb-4"> <span className="title">{t("singleProductPage.size")}</span> : {product?.productSize} cm</h2>
 
@@ -202,7 +207,7 @@ const SingleProductPage = () => {
                     <form onSubmit={handleAddToCard} className="order-amount-form mb-gapping-tape">
                         <label className="font-24" htmlFor="orderQuantity">
                             <span className="title">
-                            {t("singleProductPage.orderAmount")}
+                                {t("singleProductPage.orderAmount")}
                             </span>
                         </label>
 
@@ -248,7 +253,7 @@ const SingleProductPage = () => {
 
 
                     <div className="company-info">
-                        <img src={chaoKaiQi} alt="chaokaiQi | ChaoKaiQi company logo" loading="lazy"/>
+                        <img src={chaoKaiQi} alt="chaokaiQi | ChaoKaiQi company logo" loading="lazy" />
 
                         <h2 className="font-24"> <span className="company-font">{t("singleProductPage.chaoKaiQi")}</span> <br />
                             {t("singleProductPage.globally")}

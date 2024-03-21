@@ -44,6 +44,7 @@ import { toast } from "react-toastify";
 import instance from "../../axiosInstance";
 import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -95,15 +96,15 @@ const Home = () => {
         if (mq.matches) {
             setMobileScreen(true)
             img1.src = mobileBanner1
-        }else{
+        } else {
             img1.src = banner1
         }
 
         return () => {
             if (img1) {
-              img1.src = ''; // Clear the src to release memory
+                img1.src = ''; // Clear the src to release memory
             }
-          };
+        };
 
 
     }, [])
@@ -129,7 +130,7 @@ const Home = () => {
 
         e.target.reset()
 
-        const message = i18n.resolvedLanguage === "en"? "Thanks for your input. We will get back to you soon ! Hope you have a good day." : "谢谢。我们会尽快给您回复！希望您今天过得愉快。"
+        const message = i18n.resolvedLanguage === "en" ? "Thanks for your input. We will get back to you soon ! Hope you have a good day." : "谢谢。我们会尽快给您回复！希望您今天过得愉快。"
 
         toast(message)
     }
@@ -140,8 +141,15 @@ const Home = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description"
+                    content="Discover quality and style at ChaoKaiQi, your premier global wholesale table cover seller. Explore a diverse range of table covers to elevate your events. Find the perfect blend of elegance and durability for all your wholesale table covering needs." />
+
+                <title>Global wholesale tablet cover seller | ChaoKaiQi</title>
+            </Helmet>
+
             <motion.button whileHover={{ scale: "1.05" }} whileTap={{ scale: .95 }} id="contact-now" onClick={handleContactNow}>
-            {t("home.contactNow")}
+                {t("home.contactNow")}
             </motion.button>
 
             <section id="landing-screen">
@@ -248,7 +256,7 @@ const Home = () => {
             </section>
 
             <Link id="show-all-products-btn" to="/all-wholesale-tablet-covers/all">
-            {t("home.showAllProducts")}
+                {t("home.showAllProducts")}
             </Link>
 
             <section className="contact-section" id="contact-section">
@@ -342,8 +350,8 @@ const Home = () => {
 
             <section className="about-us mb-gapping-tape">
                 <h2 className="company-font text-center font-bold">
-                {t("home.about")} <br />
-                {t("home.chaoKaiQi")}
+                    {t("home.about")} <br />
+                    {t("home.chaoKaiQi")}
                 </h2>
 
                 <div className="content mb-32">
@@ -354,7 +362,7 @@ const Home = () => {
                     <div className="info">
                         <h3 className="font-24 mb-16">
                             <span className="chinese-red">
-                            {t("home.ckq")}
+                                {t("home.ckq")}
                             </span> : {t("home.golbally")}
                         </h3>
                         <p className="mb-16"><span className="chinese-red">{t("home.name")} </span>
@@ -368,20 +376,20 @@ const Home = () => {
 
                         <p className="mb-16">
                             <span className="chinese-red">
-                            {t("home.pSm")}
+                                {t("home.pSm")}
                             </span>
                             : <a href="tel:+86 13798587275">+86 13798587275 (WhatsApp)</a>
                         </p>
 
                         <p className="mb-16">
                             <span className="chinese-red">
-                            {t("home.address")}
+                                {t("home.address")}
                             </span>
                             : {t("home.addressDetail")}
                         </p>
 
                         <p>
-                        {t("home.aboutP")}
+                            {t("home.aboutP")}
                         </p>
 
                     </div>

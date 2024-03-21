@@ -11,6 +11,7 @@ import { useParams, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import chaoKaiQiLogo from "../../assets/compnayLogo/chaoKaiQi.png"
+import { Helmet } from "react-helmet";
 
 const AllTabsCover = () => {
     const [products, setProducts] = useState([])
@@ -150,6 +151,12 @@ const AllTabsCover = () => {
 
     return (
         <section className="all-products-page">
+            <Helmet>
+                <title>All Tablet Covers - ChaoKaiQi | Wholesale Tablet Cover Seller</title>
+                <meta name="description" content="Explore our wide selection of tablet covers at ChaoKaiQi. We offer a diverse range of high-quality tablet covers, including protective cases, sleeves, and accessories. Find the perfect tablet cover to suit your style and device." />
+
+            </Helmet>
+
             <h1 className="align-center">{t("allProducts.title")} <span className="chinese-red">{t("allProducts.ckq")}</span></h1>
 
             <motion.button
@@ -179,11 +186,11 @@ const AllTabsCover = () => {
 
                             {brand?.products.map(model => (
                                 <p key={model}>
-                                    <input 
-                                    type="checkbox" 
-                                    name={model} id={model} 
-                                    onChange={() => handleCheckboxChange(model)} 
-                                    checked={selectedModels.includes(model)}
+                                    <input
+                                        type="checkbox"
+                                        name={model} id={model}
+                                        onChange={() => handleCheckboxChange(model)}
+                                        checked={selectedModels.includes(model)}
                                     />
                                     <label htmlFor={model}>{model}</label>
                                 </p>
@@ -191,7 +198,7 @@ const AllTabsCover = () => {
                         </div>
                     ))}
 
-                    
+
                     <div className="mobile-hide ">
                         <h2 className="company-font text-center">{t("allProducts.chaoKaiQi")}</h2>
                         <img src={chaoKaiQiLogo} alt="chaoKaiQi company logo" />
@@ -235,7 +242,7 @@ const AllTabsCover = () => {
                                 :
                                 <p className="text-center font-24">
                                     {t("allProducts.noP")} <br />
-                                    <span className="chinese-red font-32"> {searchQuery.current}</span>                                    
+                                    <span className="chinese-red font-32"> {searchQuery.current}</span>
                                 </p>
                         }
                     </div>

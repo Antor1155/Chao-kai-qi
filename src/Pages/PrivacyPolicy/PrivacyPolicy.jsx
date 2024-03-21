@@ -1,11 +1,17 @@
+import { Helmet } from "react-helmet";
 import "./PrivacyPolicy.css"
 import { useTranslation } from "react-i18next";
 
 const PrivacyPolicy = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <section id="privacy-policy">
+      <Helmet>
+        <title>Privacy Policy - ChaoKaiQi | Wholesale Tablet Cover Seller</title>
+        <meta name="description" content="Read ChaoKaiQi's Privacy Policy to understand how we collect, use, and protect your personal information when you visit our website or purchase tablet covers from us. We are committed to safeguarding your privacy and ensuring the security of your data." />
+      </Helmet>
+
       <h1>{t("privacy.title")} <span className="chinese-red">{t("privacy.ckq")}</span> </h1>
       <div>
         <p className="font-bold">{t("privacy.effectiveD")}</p>
