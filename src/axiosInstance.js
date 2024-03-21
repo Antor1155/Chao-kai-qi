@@ -15,7 +15,7 @@ import axios from "axios";
 // })
 
 const instance = axios.create({
-    baseURL: "http://www.chaokaiqi.com:3000"
+    baseURL: "https://www.chaokaiqi.com:3000"
 })
 
 
